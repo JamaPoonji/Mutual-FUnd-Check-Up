@@ -1,0 +1,47 @@
+group,category,nse_benchmark_tri,bse_benchmark_tri,note
+Equity,Multi Cap,Nifty 500 Multicap 50:25:25 TRI,BSE 500 TRI,
+Equity,Large Cap,Nifty 100 TRI,BSE 100 TRI,
+Equity,Large & Mid Cap,Nifty LargeMidcap 250 TRI,BSE 250 LargeMidCap TRI,
+Equity,Mid Cap,Nifty Midcap 150 TRI,BSE 150 MidCap TRI,
+Equity,Small Cap,Nifty Smallcap 250 TRI,BSE 250 SmallCap TRI,
+Equity,ELSS,Nifty 500 TRI,BSE 500 TRI,
+Equity,Flexi Cap,Nifty 500 TRI,BSE 500 TRI,
+Equity,Focused,Nifty 500 TRI,BSE 500 TRI,
+Equity,Dividend Yield,Nifty Dividend Opportunities 50 TRI,BSE Dividend Stability TRI,
+Equity,Value / Contra,Nifty500 Value 50 TRI,BSE Enhanced Value TRI,
+Thematic/Sector,Banking / Bank,Nifty Bank TRI,BSE Bankex TRI,sector
+Thematic/Sector,Financial Services,Nifty Financial Services TRI,BSE Finance TRI,sector
+Thematic/Sector,IT / Technology,Nifty IT TRI,BSE Teck TRI,sector
+Thematic/Sector,Pharma / Healthcare,Nifty Pharma TRI / Nifty Healthcare TRI,BSE Healthcare TRI,sector
+Thematic/Sector,FMCG,Nifty FMCG TRI,BSE FMCG TRI,sector
+Thematic/Sector,Infrastructure,Nifty Infrastructure TRI,BSE India Infrastructure TRI,thematic
+Thematic/Sector,Consumption,Nifty India Consumption TRI,BSE Consumer Discretionary TRI,thematic
+Thematic/Sector,PSU,Nifty PSE TRI,BSE PSU TRI,thematic
+Thematic/Sector,Energy / Oil & Gas,Nifty Energy TRI / Nifty Oil & Gas TRI,BSE Energy / BSE Oil & Gas TRI,thematic
+Thematic/Sector,Auto / Metal / Realty / Media / MNC / Services etc.,matching NIFTY sector or theme index (TRI),matching BSE index,see AMFI list
+Hybrid,Aggressive Hybrid,Nifty 50 Hybrid Composite Debt 65:35 Index,,CRISIL Hybrid 35+65 Aggressive alt.
+Hybrid,Balanced Hybrid,Nifty 50 Hybrid Composite Debt 50:50 Index,,CRISIL Hybrid 50+50 Moderate alt.
+Hybrid,Conservative Hybrid,Nifty 50 Hybrid Composite Debt 15:85 Index,,CRISIL Hybrid 85+15 Conservative alt.
+Hybrid,Dynamic Asset Allocation / Balanced Advantage,Nifty 50 Hybrid Composite Debt 50:50 Index (65:35 if min equity 65%),,CRISIL Hybrid 35+65 Aggressive alt.
+Hybrid,Equity Savings,Nifty Equity Savings Index,,CRISIL Equity Savings alt.
+Hybrid,Arbitrage,Nifty 50 Arbitrage Index,,CRISIL Arbitrage alt.
+Hybrid,Multi Asset Allocation,NA in AMFI list: use scheme's own SID benchmark,,
+Debt,Liquid,Nifty Liquid Index,,CRISIL Liquid Fund Index alt.
+Debt,Overnight,Nifty 1D Rate Index,,CRISIL Overnight Index alt.
+Debt,Ultra Short Duration,Nifty Ultra Short Duration Debt Index,,
+Debt,Low Duration,Nifty Low Duration Debt Index,,
+Debt,Money Market,Nifty Money Market Index,,
+Debt,Short Duration,Nifty Short Duration Debt Index,,
+Debt,Medium Duration,Nifty Medium Duration Debt Index,,
+Debt,Medium to Long Duration,Nifty Medium to Long Duration Debt Index,,
+Debt,Long Duration,Nifty Long Duration Debt Index,,
+Debt,Dynamic Bond,Nifty Composite Debt Index,,
+Debt,Corporate Bond,Nifty Corporate Bond Index,,
+Debt,Credit Risk,Nifty Credit Risk Bond Index,,
+Debt,Banking & PSU,Nifty Banking and PSU Debt Index,,
+Debt,Gilt,Nifty All Duration G-Sec Index,,
+Debt,Gilt 10-yr Constant Duration,Nifty 10 yr Benchmark G-Sec Index,,
+Debt,Floater,by Macaulay duration band (CRISIL Liquid ... Long Term Debt),,
+Index/ETF,Nifty 50 index fund,Nifty 50 TRI,BSE Sensex TRI (for Sensex funds),benchmark = the index the fund tracks
+Index/ETF,Nifty Next 50 index fund,Nifty Next 50 TRI,,benchmark = the index the fund tracks
+Index/ETF,Midcap / Smallcap / other index fund,its own underlying index TRI,,benchmark = the index the fund tracks

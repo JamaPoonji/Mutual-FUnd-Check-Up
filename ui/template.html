@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your mutual fund check-up</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --ground:#F3F4F6; --surface:#FFFFFF; --line:#E2E5EA; --ink:#16181D; --muted:#565D6B;
+  --accent:#1E4FB3; --fund:#2F6FDE; --index:#B5BBC6; --typical:#4A5568;
+  --good-bg:#E4EDFD; --good:#1E4FB3; --ok-bg:#ECEEF2; --ok:#3F4652;
+  --watch-bg:#FFEFD1; --watch:#7F4C00; --watch-bar:#E3A23B;
+  --attn-bg:#FCE2D5; --attn:#9E330A; --attn-bar:#D4561B;
+  --na:#565D6B; --na-line:#B9BFC9; --soft:#3F4652;
+  --font:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.45}
+button,input{font:inherit}
+a{color:var(--accent)}
+.page{max-width:1160px;margin:0 auto;padding:32px 20px 56px;display:flex;flex-direction:column;gap:22px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px}
+.h2{margin:0;font-size:20px;font-weight:700;color:var(--accent);letter-spacing:-0.01em}
+.sub{margin:4px 0 0;font-size:14px;color:var(--muted);line-height:1.45}
+.eyebrow{margin:0;font-size:13px;font-weight:600;letter-spacing:.14em;color:var(--muted)}
+h1{margin:6px 0 0;font-size:44px;line-height:1.1;font-weight:800;letter-spacing:-0.02em}
+.meta{margin:10px 0 0;font-size:16px;color:var(--soft)}
+.head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px;padding-bottom:20px;border-bottom:1px solid #DADDE3}
+.pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:20px}
+.answer{margin:0;font-size:26px;line-height:1.3;font-weight:700;letter-spacing:-0.01em}
+.hot{color:var(--attn)}
+.bar{display:flex;height:28px;border-radius:8px;overflow:hidden;gap:2px}
+.legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px 16px;font-size:14px;margin:0;padding:0;list-style:none}
+.legend li{display:flex;gap:8px;align-items:baseline}
+.sw{width:10px;height:10px;border-radius:3px;flex:none;display:inline-block}
+.checks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.tile{border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.tile p{margin:0}
+.tile-t{font-size:14px;font-weight:600;color:var(--soft)}
+.tile-n{margin-top:6px;font-size:30px;font-weight:800}
+.tile-n span{font-size:18px;color:var(--muted);font-weight:600}
+.segs{display:flex;gap:4px;margin-top:8px}
+.keyline{margin:0;font-size:13px;color:var(--muted)}
+.scroll{overflow-x:auto}
+.table{min-width:980px}
+.cols{display:grid;grid-template-columns:2.1fr 1.35fr 1.5fr 1.4fr 1.3fr 1.2fr .6fr;gap:16px;align-items:center}
+.th{padding:10px 24px;background:#F7F8FA;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.th span{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.row{padding:16px 24px;border-bottom:1px solid #ECEEF2}
+.fname{margin:0;font-size:15px;font-weight:700}
+.fmeta{margin:2px 0 0;font-size:13px;color:var(--muted)}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:5px 11px;border-radius:999px;font-size:13px;font-weight:600;white-space:nowrap;text-decoration:none}
+.pill svg{flex:none}
+.good{background:var(--good-bg);color:var(--good)}
+.ok{background:var(--ok-bg);color:var(--ok)}
+.watch{background:var(--watch-bg);color:var(--watch)}
+.attn{background:var(--attn-bg);color:var(--attn)}
+.na{background:#fff;color:var(--na);border:1px dashed var(--na-line)}
+.cell{display:flex;gap:8px;align-items:flex-start;font-size:14px;line-height:1.35}
+.cell small{display:block;color:var(--muted);font-size:12.5px;margin-top:2px}
+.ic{flex:none;width:24px;height:24px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center}
+.ic.good{background:var(--good-bg);color:var(--good)}
+.ic.ok{background:var(--ok-bg);color:var(--ok)}
+.ic.watch{background:var(--watch-bg);color:var(--watch)}
+.ic.attn{background:var(--attn-bg);color:var(--attn)}
+.ic.na{background:#fff;color:var(--na)}
+.open{background:none;border:0;padding:12px 0;color:var(--accent);font-weight:600;cursor:pointer;white-space:nowrap}
+.back{align-self:flex-start;background:none;border:0;padding:10px 0;color:var(--accent);font-weight:600;cursor:pointer}
+.look{display:flex;flex-direction:column;gap:14px}
+.look article{border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.look h3{margin:0 0 8px;font-size:16px}
+.look ul{margin:0;padding-left:18px}
+.look li{margin:4px 0}
+.ask{color:var(--soft)}
+.mixrow{display:grid;grid-template-columns:140px 1fr auto;gap:12px;align-items:center;margin-top:10px;font-size:14px}
+.mixbar{height:10px;background:#ECEEF2;border-radius:6px;overflow:hidden}
+.mixbar i{display:block;height:100%;background:var(--fund)}
+.gaps{margin:0;padding-left:18px}
+.gaps li{margin:6px 0}
+.foot{font-size:13px;color:var(--muted);line-height:1.5}
+.foot p{margin:0 0 8px}
+.again{margin-top:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;padding:5px 12px;border-radius:999px;background:#fff;border:1px solid #DADDE3;font-size:14px;color:#2A2F38}
+.chip.cat{background:var(--good-bg);border-color:#C9DBFB;color:var(--accent);font-weight:600}
+.verdict{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+.verdict .pill{font-size:18px;padding:9px 16px}
+.summary{background:#fff;border:1px solid #C9DBFB;border-radius:16px;padding:22px 24px;display:flex;flex-direction:column;gap:16px}
+.summary p{margin:0;font-size:20px;line-height:1.45;font-weight:600}
+.score4{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
+.score4 div{border-radius:12px;padding:12px 14px}
+.score4 .k{margin:0;font-size:13px;color:var(--muted)}
+.score4 .v{margin:2px 0 0;font-size:17px;font-weight:700}
+.grid{display:grid;grid-template-columns:1fr;gap:20px}
+.span{grid-column:1 / -1}
+@media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
+.panel{display:flex;flex-direction:column;gap:14px;min-width:0}
+.lg{display:flex;flex-wrap:wrap;gap:8px 16px;margin:0;padding:0;list-style:none;font-size:13px;color:var(--soft)}
+.lg li{display:inline-flex;align-items:center;gap:6px}
+.years{display:grid;grid-template-columns:repeat(auto-fit,minmax(90px,1fr));gap:12px;align-items:end;border-bottom:1px solid #DADDE3;min-height:180px}
+.yr{text-align:center}
+.yr p{margin:8px 0 0;font-size:13px;color:var(--muted);font-weight:600}
+.bars{display:flex;justify-content:center;align-items:flex-end;gap:4px;height:160px}
+.barcol{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:4px;height:100%}
+.barcol span{font-size:12px;color:var(--muted)}
+.barcol b{font-size:13px;color:var(--ink)}
+.barcol i{display:block;width:28px;border-radius:6px 6px 0 0}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.money{margin:0;font-size:14px}
+.ytile{border:1px solid var(--line);border-radius:12px;padding:12px}
+.ytile b{display:block;font-size:18px}
+.ytile small{display:block;color:var(--muted)}
+.yeargrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.dots{display:flex;gap:6px}
+.dots i{width:22px;height:22px;border-radius:4px;background:#E6E9EE}
+.dots i.on{background:var(--fund)}
+.fall{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
+.fall div{background:#F7F8FA;border-radius:12px;padding:12px}
+.qline{display:grid;grid-template-columns:72px 1fr;gap:10px;align-items:center;margin-top:8px}
+.qbox{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
+.qbox i{text-align:center;font-size:12px;font-style:normal;padding:6px 2px;border-radius:6px;background:#F3F4F6;color:var(--muted)}
+.qbox i.on{background:var(--good-bg);color:var(--good);font-weight:700}
+.meter{position:relative;height:10px;background:#ECEEF2;border-radius:6px}
+.meter i{position:absolute;top:-4px;width:4px;height:18px;background:var(--ink);border-radius:2px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.facts div{background:#F7F8FA;border-radius:12px;padding:12px 14px}
+.facts b{display:block;font-size:13px;color:var(--muted);font-weight:600}
+.mean{background:none;border:0;padding:0;color:var(--accent);font-size:13px;font-weight:600;cursor:pointer;text-align:left}
+.mean-body{margin:6px 0 0;font-size:13px;color:var(--muted)}
+.panel .sent{margin:0;font-size:14px;color:var(--soft)}
+.start{display:flex;flex-direction:column;gap:16px}
+.start h2{margin:0;font-size:32px;line-height:1.15;font-weight:800;letter-spacing:-0.02em}
+.drop{display:flex;flex-direction:column;gap:4px;border:1.5px dashed var(--na-line);border-radius:16px;padding:22px;background:#fff;cursor:pointer}
+.drop.over{border-color:var(--accent);background:var(--good-bg)}
+.drop input{margin-top:8px}
+.privacy{background:var(--good-bg);color:var(--good);border-radius:12px;padding:12px 14px;margin:0}
+.pass{display:flex;flex-direction:column;gap:4px;font-weight:600}
+.pass span{font-weight:400;color:var(--muted);font-size:14px}
+.pass input{margin-top:4px;padding:10px 12px;border:1px solid var(--line);border-radius:10px}
+.pick h3{margin:0 0 6px;font-size:18px}
+.pick-box{position:relative}
+.pick-box input{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:12px}
+.pick-list{position:absolute;z-index:2;left:0;right:0;margin:4px 0 0;padding:6px;list-style:none;background:#fff;border:1px solid var(--line);border-radius:12px;max-height:280px;overflow:auto}
+.pick-list button,.picks button{width:100%;text-align:left;background:none;border:0;padding:8px 10px;cursor:pointer}
+.pick-list small{display:block;color:var(--muted)}
+.picks{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0;padding:0;list-style:none}
+.picks button{width:auto;border:1px solid var(--line);border-radius:999px;background:#fff}
+.pick-actions{display:flex;gap:8px}
+.btn{border:1px solid var(--line);background:#fff;border-radius:999px;padding:10px 16px;cursor:pointer;font-weight:600}
+.btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+.btn:disabled{opacity:.45;cursor:default}
+.alt{display:flex;align-items:center;gap:10px}
+.steps{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.steps li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px}
+.steps span,.checks small{display:block;color:var(--muted);font-weight:400;font-size:14px}
+.start .checks{display:block}
+.start .checks ul{margin:8px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px}
+.start .checks li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-weight:600}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.err{color:var(--attn);font-weight:600}
+.state{padding:48px 0;text-align:center}
+.spin{width:28px;height:28px;margin:0 auto 12px;border:3px solid var(--line);border-top-color:var(--accent);border-radius:50%;animation:spin .8s linear infinite}
+@media(prefers-reduced-motion:reduce){.spin{animation:none}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:700px){
+  h1{font-size:32px}
+  .checks{grid-template-columns:1fr}
+  .answer{font-size:22px}
+}
+</style>
+</head>
+<body>
+<div id="app" aria-live="polite"></div>
+<script id="report" type="application/json">__REPORT_JSON__</script>
+<script id="sample" type="application/json">__SAMPLE_JSON__</script>
+<script>
+(function(){
+"use strict";
+const esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function inr(x){const n=Math.round(Number(x)||0);let s=String(Math.abs(n));
+  if(s.length>3){let h=s.slice(0,-3),t=s.slice(-3),p=[];while(h.length>2){p.unshift(h.slice(-2));h=h.slice(0,-2)}if(h)p.unshift(h);s=p.concat(t).join(",")}
+  return (n<0?"-":"")+"₹"+s}
+function pct(x){return Number(x).toFixed(1)+"%"}
+function show(s){
+  const words={1:"top 25%",2:"upper middle",3:"lower middle",4:"bottom 25%"};
+  return esc(String(s==null?"":s).replace(/\s*\(Q[1-4]\)/g,"").replace(/\bQ([1-4])\b/g,(_,n)=>words[n]));
+}
+function pts(x){const n=Number(x);return (n>=0?"+":"\u2212")+Math.abs(n).toFixed(1)}
+function icon(k){
+  const a='<svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">';
+  if(k==="good")return a+'<circle cx="8" cy="8" r="6.5"></circle><path d="M5 8.2l2 2 4-4.4"></path></svg>';
+  if(k==="ok")return a+'<circle cx="8" cy="8" r="6.5"></circle><path d="M5 8h6"></path></svg>';
+  if(k==="watch")return a+'<path d="M8 2.2l6.3 11.3H1.7z"></path><path d="M8 6.6v3"></path><path d="M8 11.6v.2"></path></svg>';
+  if(k==="attn")return a+'<path d="M8 1.6l6.2 6.2L8 14.4 1.8 7.8z"></path></svg>';
+  return a+'<circle cx="8" cy="8" r="6.5" stroke-dasharray="2.5 2.2"></circle></svg>';
+}
+function kind(status){if(status==="attention")return "attn";if(status==="good"||status==="ok"||status==="watch")return status;return "na"}
+function pillKind(f){return (f.verdict==="Limited data"||f.verdict==="Not enough data")?"na":kind(f.status)}
+function find(f,topic){
+  for(const s of f.sections||[])for(const i of s.insights||[])if(i.topic===topic)return i;
+  return null;
+}
+function score(f,topic){return (f.scorecard||[]).find(s=>s.topic===topic)}
+function cell(status,html){const k=kind(status);return '<div class="cell"><span class="ic '+k+'">'+icon(k)+'</span><span>'+html+'</span></div>'}
+const QLAB={1:"Top 25%",2:"Upper middle",3:"Lower middle",4:"Bottom 25%"};
+const VCOL={"Doing well":"#2F6FDE","On track":"#9AA3B2","Worth a closer look":"#E3A23B","Needs attention":"#D4561B","Limited data":"#DADDE2","Not enough data":"#DADDE2"};
+const CHECKS=[["returns","Beat its index?"],["risk","Falls less in crashes?"],["peers","Rank among similar funds"],["costs","What you pay"]];
+function samplePill(R){return (R.data_source&&/illustrative/i.test(R.data_source))||(R.as_of&&/sample/i.test(R.as_of))}
+function meta(R){
+  const n=R.funds.length,eq=!!R.equal_weight,total=R.funds.reduce((s,f)=>s+(Number(f.value)||0),0);
+  let s=n+" fund"+(n===1?"":"s");
+  s+=eq?" · weighted equally":" · "+inr(total)+" in total";
+  if(R.as_of&&!/sample/i.test(String(R.as_of)))s+=" · Data as of "+R.as_of;
+  return s;
+}
+function splits(R){
+  const order=["Doing well","On track","Worth a closer look","Needs attention","Limited data","Not enough data"];
+  const map={};
+  R.funds.forEach(f=>{if(!map[f.verdict])map[f.verdict]={n:0,v:0};map[f.verdict].n++;map[f.verdict].v+=Number(f.value)||0});
+  const total=R.equal_weight?R.funds.length:R.funds.reduce((s,f)=>s+(Number(f.value)||0),0)||1;
+  return order.filter(k=>map[k]).map(k=>({name:k,n:map[k].n,v:map[k].v,pct:(R.equal_weight?map[k].n:map[k].v)/total*100}));
+}
+function shortAnswer(R){
+  const n=R.funds.length,who=R.equal_weight?"in this comparison":"your";
+  const fine=R.funds.filter(f=>f.verdict==="Doing well"||f.verdict==="On track").length;
+  const look=R.funds.filter(f=>f.verdict==="Worth a closer look"||f.verdict==="Needs attention").length;
+  const limited=n-fine-look;
+  const noun=n===1?"fund":"funds";
+  let s=(fine===0?"None":String(fine))+" of "+who+" "+n+" "+noun+(fine===1?" is":" are")+" doing fine.";
+  if(look)s+=' <span class="hot">'+look+(look===1?" is":" are")+" worth a closer look.</span>";
+  if(limited)s+=" "+limited+(limited===1?" could":" could")+" not be fully judged.";
+  return s;
+}
+function growthCell(f){
+  const ins=find(f,"returns"),sc=score(f,"returns");
+  if(!ins)return cell("na","<b>Not checked</b>");
+  const row=(ins.numbers.by_horizon||[]).slice().sort((a,b)=>b.years-a.years)[0];
+  if(!row)return cell("na","<b>Not checked</b>");
+  let small="index "+pct(row.bench);
+  if(row.typical!=null)small+="<small>Typical fund "+pct(row.typical)+"</small>";
+  return cell(sc&&sc.status,"<b>"+pct(row.fund)+"</b> · "+small);
+}
+function crashCell(f){
+  const sc=score(f,"risk");
+  if(!sc||sc.status==="na")return cell("na","<b>"+esc((sc&&sc.label)||"Not checked")+"</b>");
+  return cell(sc.status,"<b>"+esc(sc.label)+"</b>"+(sc.note?"<small>"+show(sc.note)+"</small>":""));
+}
+function rankCell(f){
+  const sc=score(f,"peers");
+  if(!sc||sc.status==="na"||sc.label==="Not ranked")return cell("na","<b>"+esc((sc&&sc.label)||"Not ranked")+"</b>");
+  const ins=find(f,"peers");
+  if(!ins||!ins.numbers.quartiles)return cell(sc.status,"<b>"+esc(sc.label)+"</b>");
+  const hs=Object.keys(ins.numbers.quartiles).map(Number).sort((a,b)=>b-a);
+  const q=ins.numbers.quartiles[String(hs[0])]!=null?ins.numbers.quartiles[String(hs[0])]:ins.numbers.quartiles[hs[0]];
+  const n=ins.numbers.peer_count;
+  return cell(sc.status,"<b>"+esc(QLAB[q]||sc.label)+"</b>"+(n?"<small>of "+n+" funds</small>":""));
+}
+function costCell(f){
+  const ins=find(f,"costs"),sc=score(f,"costs");
+  if(!ins||ins.numbers.ter==null)return cell(sc&&sc.status,"<b>"+esc((sc&&sc.label)||"Not checked")+"</b>");
+  const med=ins.numbers.category_median;
+  return cell(sc&&sc.status,"<b>"+Number(ins.numbers.ter).toFixed(2)+"%</b>"+(med!=null?"<small>Typical "+Number(med).toFixed(2)+"%</small>":""));
+}
+function holdLine(R,f){
+  if(R.equal_weight)return esc(f.category)+" · "+Number(f.share_pct).toFixed(1)+"% of this comparison";
+  return esc(f.category)+" · "+inr(f.value)+" · "+Number(f.share_pct).toFixed(1)+"%";
+}
+function mean(R,term){
+  const g=R.glossary&&R.glossary[term];
+  if(!g)return "";
+  return '<button type="button" class="mean">What does this mean?</button><p class="mean-body" hidden><b>'+esc(g.title)+'.</b> '+esc(g.text)+'</p>';
+}
+function panel(title,sub,body,sentence,R,term,wide){
+  return '<section class="card panel'+(wide?" span":"")+'"><div><h2 class="h2">'+esc(title)+'</h2>'+(sub?'<p class="sub">'+sub+'</p>':"")+'</div>'+body+(sentence?'<p class="sent">'+show(sentence)+'</p>':"")+mean(R,term)+'</section>';
+}
+function growthPanel(f,R){
+  const ins=find(f,"returns");
+  if(!ins)return "";
+  const n=ins.numbers,rows=n.by_horizon||[];
+  if(!rows.length)return "";
+  const vals=[];
+  rows.forEach(r=>{vals.push(Number(r.fund),Number(r.bench));if(r.typical!=null)vals.push(Number(r.typical))});
+  const max=Math.max(1,...vals.map(v=>Math.max(0,v)));
+  const h=v=>Math.max(8,Math.max(0,Number(v))/max*132);
+  const anyT=rows.some(r=>r.typical!=null);
+  const bench=esc((f.facts&&f.facts.benchmark)||"its index");
+  const cols=rows.map(r=>{
+    const bits=[[r.fund,"#2F6FDE",true],[r.bench,"#B5BBC6",false]];
+    if(r.typical!=null)bits.push([r.typical,"#4A5568",false]);
+    return '<div class="yr"><div class="bars">'+bits.map(b=>'<div class="barcol"><span>'+(b[2]?"<b>":"")+pct(b[0])+(b[2]?"</b>":"")+'</span><i style="height:'+h(b[0]).toFixed(0)+'px;background:'+b[1]+'"></i></div>').join("")+'</div><p>'+r.years+(r.years===1?" year":" years")+'</p></div>';
+  }).join("");
+  const head=rows.slice().sort((a,b)=>b.years-a.years)[0];
+  let chips="";
+  if(head){
+    const bits=[];
+    if(head.gap!=null)bits.push(pts(head.gap)+" vs index");
+    if(head.typical_gap!=null)bits.push(pts(head.typical_gap)+" vs typical");
+    if(bits.length)chips='<div class="pills">'+bits.map(t=>'<span class="chip">'+esc(t)+'</span>').join("")+'</div>';
+  }
+  let money="";
+  if(n.fund_value!=null&&n.horizon_years>1){
+    money='<p class="money">₹1,00,000 invested '+n.horizon_years+' years ago would now be <b>'+inr(n.fund_value)+'</b> in this fund, <b>'+inr(n.bench_value)+'</b> in the index'+(n.typical_value!=null?", <b>"+inr(n.typical_value)+"</b> in the typical fund":"")+".</p>";
+  }
+  const legend='<ul class="lg"><li><i class="sw" style="background:#2F6FDE"></i>This fund</li><li><i class="sw" style="background:#B5BBC6"></i>'+bench+'</li>'+(anyT?'<li><i class="sw" style="background:#4A5568"></i>Typical '+esc(f.category)+' fund</li>':"")+'</ul>';
+  return panel("Growth vs its index","Average growth per year.",legend+'<div class="years">'+cols+'</div>'+chips+money,ins.sentence,R,"cagr");
+}
+function capturePanel(f,R){
+  const ins=find(f,"capture");
+  if(!ins||ins.numbers.upside==null)return "";
+  const n=ins.numbers;
+  const body='<p class="money">When the index gained ₹100, this fund made <b>₹'+Math.round(n.upside)+'</b>.</p><p class="money">When the index lost ₹100, this fund lost <b>₹'+Math.round(n.downside)+'</b>.</p>';
+  return panel("When markets rise and fall","",body,ins.sentence,R,"capture");
+}
+function yearPanel(f,R){
+  const ins=find(f,"calendar");
+  if(!ins||!(ins.numbers.years||[]).length)return "";
+  const n=ins.numbers;
+  const tiles=n.years.map((y,i)=>{
+    let extra="";
+    if(n.typical&&n.typical[i]!=null)extra='<small>Typical '+pct(n.typical[i])+(n.typical_margin&&n.typical_margin[i]!=null?" · "+pts(n.typical_margin[i]):"")+'</small>';
+    return '<div class="ytile"><small>'+y+'</small><b>'+pct(n.fund[i])+'</b><small>Index '+pct(n.bench[i])+' · '+pts(n.alpha[i])+'</small>'+extra+'</div>';
+  }).join("");
+  const chips=['<span class="chip">Beat the index '+n.beats+' of '+n.n+' years · avg '+pts(n.avg_alpha)+'</span>'];
+  if(n.typical_n)chips.push('<span class="chip">Beat the typical fund '+n.typical_beats+' of '+n.typical_n+' years · avg '+pts(n.typical_avg)+'</span>');
+  return panel("Year by year","",'<div class="yeargrid">'+tiles+'</div><div class="pills">'+chips.join("")+'</div>',ins.sentence,R,"calendar",true);
+}
+function rollPanel(f,R){
+  const ins=find(f,"consistency");
+  if(!ins||ins.numbers.beat_pct==null)return "";
+  const k=Math.max(0,Math.min(10,Math.round(ins.numbers.beat_pct/10)));
+  let d="";for(let i=0;i<10;i++)d+='<i class="'+(i<k?"on":"")+'"></i>';
+  return panel("Every possible start date",'Beat its index '+k+' times in 10.','<div class="dots" role="img" aria-label="'+k+' out of 10">'+d+'</div>',ins.sentence,R,"rolling_returns");
+}
+function fallPanel(f,R){
+  const ins=find(f,"risk");
+  if(!ins||ins.numbers.fund_after==null)return "";
+  const n=ins.numbers;
+  const box=(title,after,fall,months)=>'<div><b>'+esc(title)+'</b><p class="money">₹1,00,000 fell to <b>'+inr(after)+'</b></p><small>'+pct(fall)+(months!=null?" · "+months+" months to recover":"")+'</small></div>';
+  let body='<div class="fall">'+box("This fund",n.fund_after,n.fund_drawdown,n.still_underwater?null:n.recovery_months)+box("Index",n.bench_after,n.bench_drawdown,n.bench_recovery_months);
+  if(n.typical_after!=null)body+=box("Typical fund",n.typical_after,n.typical_drawdown,n.typical_recovery_months);
+  body+="</div>";
+  return panel("Worst fall","",body,ins.sentence,R,"drawdown");
+}
+function rankPanel(f,R){
+  const ins=find(f,"peers");
+  const sc=score(f,"peers");
+  if(sc&&sc.label==="Not ranked")return panel("Rank among similar funds","",'<p class="sent">'+esc(sc.label)+'.</p>',(f.notes||[]).find(x=>/not ranked/i.test(x))||"",R,"quartile");
+  if(!ins||!ins.numbers.quartiles)return "";
+  const hs=Object.keys(ins.numbers.quartiles).map(Number).sort((a,b)=>a-b);
+  const rows=hs.map(h=>{
+    const q=ins.numbers.quartiles[String(h)]!=null?ins.numbers.quartiles[String(h)]:ins.numbers.quartiles[h];
+    return '<div class="qline"><span>'+h+(h===1?" year":" years")+'</span><span class="qbox">'+[1,2,3,4].map(j=>'<i class="'+(j===q?"on":"")+'">'+esc(QLAB[j])+'</i>').join("")+'</span></div>';
+  }).join("");
+  const n=ins.numbers.peer_count;
+  return panel(n?"Rank among "+n+" funds":"Rank among similar funds","",rows,ins.sentence,R,"quartile");
+}
+function costPanel(f,R){
+  const ins=find(f,"costs");
+  if(!ins||ins.numbers.ter==null)return "";
+  const n=ins.numbers,med=n.category_median;
+  let body='<p class="money">Yearly charge <b>'+Number(n.ter).toFixed(2)+'%</b>'+(med!=null?" · typical fund "+Number(med).toFixed(2)+"%":"")+'</p>';
+  if(med!=null){
+    const top=Math.max(Number(n.ter),Number(med),0.01);
+    body+='<div class="meter" role="img" aria-label="Charge compared with the typical fund"><i style="left:'+Math.min(98,Number(n.ter)/top*100).toFixed(1)+'%"></i></div>';
+  }
+  if(n.annual_cost!=null)body+='<p class="money">About <b>'+inr(n.annual_cost)+'</b> a year on this holding, already taken out of the return.</p>';
+  return panel("What you pay","",body,ins.sentence,R,"ter");
+}
+function factsPanel(f,R){
+  const topics=[["riskometer","Risk"],["size","Size"],["age","Track record"],["manager","Manager"],["exit","Exit load"]];
+  const bits=topics.map(([t,label])=>{const i=find(f,t);return i?'<div><b>'+label+'</b><span>'+show(i.sentence)+'</span></div>':""}).join("");
+  if(!bits)return "";
+  return panel("Good to know","",'<div class="facts">'+bits+'</div>',"",R,find(f,"riskometer")?"riskometer":"");
+}
+function questions(f){
+  if(!f.questions||!f.questions.length)return "";
+  return '<section class="card panel span"><h2 class="h2">Questions to discuss</h2><ul>'+f.questions.map(q=>'<li class="ask">'+esc(q)+'</li>').join("")+'</ul></section>';
+}
+function summaryLine(f){
+  const name={returns:"Returns",risk:"Ups and downs",peers:"Rank among similar funds",costs:"What you pay"};
+  const bits=(f.scorecard||[]).filter(s=>s.status!=="na").map(s=>(name[s.topic]||s.title)+" "+(s.label||"").toLowerCase());
+  return bits.join(". ")+(bits.length?".":"");
+}
+function fundView(R,i){
+  const f=R.funds[i];
+  if(!f)return portfolio(R);
+  const bench=(f.facts&&f.facts.benchmark)||"";
+  const peers=find(f,"peers");
+  const n=peers&&peers.numbers.peer_count;
+  const compared=bench?("Compared with: "+bench+(/TRI/i.test(bench)?"":" (TRI)")+(n?" and "+n+" "+f.category+" funds":"")):"";
+  const hold=R.equal_weight?("Equal weight · "+Number(f.share_pct).toFixed(1)+"% of this comparison"):("You hold "+inr(f.value)+" · "+Number(f.share_pct).toFixed(1)+"% of your money");
+  const tiles=(f.scorecard||[]).map(s=>{
+    const title={returns:"Returns",risk:"Ups and downs",peers:"Rank among peers",costs:"Cost"}[s.topic]||s.title;
+    const k=kind(s.status);
+    return '<div class="'+k+'"><p class="k">'+esc(title)+'</p><p class="v">'+esc(s.label)+'</p></div>';
+  }).join("");
+  const pk=pillKind(f);
+  app().innerHTML='<div class="page"><button class="back" type="button" data-back="1">← All your funds</button>'
+    +'<header class="head"><div><p class="eyebrow">FUND REPORT CARD</p><h1>'+esc(f.name)+'</h1><div class="chips"><span class="chip cat">'+esc(f.category)+'</span><span class="chip">'+esc(hold)+'</span>'+(compared?'<span class="chip">'+esc(compared)+'</span>':"")+'</div></div>'
+    +'<div class="verdict"><span style="font-size:13px;color:var(--muted)">Our verdict</span><span class="pill '+pk+'">'+icon(pk)+esc(f.verdict)+'</span></div></header>'
+    +'<section class="summary"><p>'+esc(summaryLine(f))+'</p><div class="score4">'+tiles+'</div></section>'
+    +'<div class="grid">'+growthPanel(f,R)+capturePanel(f,R)+yearPanel(f,R)+rollPanel(f,R)+fallPanel(f,R)+rankPanel(f,R)+costPanel(f,R)+factsPanel(f,R)+questions(f)+'</div>'
+    +'<footer class="foot"><p>'+esc(R.disclaimer||"")+'</p></footer></div>';
+  bind(R);
+  window.scrollTo(0,0);
+}
+function mixBlock(R){
+  if(R.equal_weight)return "";
+  const groups={};
+  R.funds.forEach(f=>{const k=f.category||"Other";if(!groups[k])groups[k]=0;groups[k]+=Number(f.share_pct)||0});
+  const rows=Object.keys(groups).sort((a,b)=>groups[b]-groups[a]);
+  if(!rows.length)return "";
+  const card=(R.cards||[]).find(c=>c.topic==="mix");
+  const notes=card?(card.insights||[]).filter(i=>i.status&&i.status!=="ok"&&i.sentence).map(i=>'<p class="sent">'+show(i.sentence)+'</p>').join(""):"";
+  const bars=rows.map(k=>'<div class="mixrow"><span>'+esc(k)+'</span><span class="mixbar"><i style="width:'+Math.min(100,groups[k]).toFixed(1)+'%"></i></span><b>'+groups[k].toFixed(1)+'%</b></div>').join("");
+  return '<section class="card"><h2 class="h2">Where your money is</h2><p class="sub">Share of this portfolio by category.</p>'+bars+notes+'</section>';
+}
+function gapBlock(R){
+  const lines=(R.data_gaps||[]).slice();
+  R.funds.forEach(f=>(f.notes||[]).forEach(n=>{if(/not compared/i.test(n))lines.push(f.name+": "+n)}));
+  if(!lines.length)return "";
+  return '<section class="card"><h2 class="h2">What we couldn\u2019t check</h2><ul class="gaps">'+lines.map(l=>'<li>'+esc(l)+'</li>').join("")+'</ul></section>';
+}
+function portfolio(R){
+  const parts=splits(R);
+  const bar=parts.map(p=>'<div style="width:'+p.pct.toFixed(2)+'%;background:'+(VCOL[p.name]||"#DADDE2")+'"></div>').join("");
+  const legend=parts.map(p=>'<li><i class="sw" style="background:'+(VCOL[p.name]||"#DADDE2")+'"></i><span><b>'+esc(p.name)+'</b> · '+p.n+" fund"+(p.n===1?"":"s")+"<br><span style=\"color:var(--muted)\">"+(R.equal_weight?p.pct.toFixed(1)+"%":inr(p.v)+" ("+p.pct.toFixed(1)+"%)")+"</span></span></li>").join("");
+  const tiles=CHECKS.map(([t,title])=>{
+    const items=[];
+    R.funds.forEach(f=>{const s=score(f,t);if(s&&s.status!=="na")items.push(s.status)});
+    if(!items.length)return "";
+    const fine=items.filter(s=>s==="good"||s==="ok").length;
+    const segs=items.map(s=>'<span style="flex:1;height:6px;border-radius:3px;background:'+(s==="attention"?"#D4561B":s==="watch"?"#E3A23B":"#2F6FDE")+'"></span>').join("");
+    return '<div class="tile"><p class="tile-t">'+esc(title)+'</p><p class="tile-n">'+fine+'<span> of '+items.length+' fine</span></p><div class="segs">'+segs+'</div></div>';
+  }).join("");
+  const rows=R.funds.map((f,i)=>'<div class="cols row"><div><p class="fname">'+esc(f.name)+'</p><p class="fmeta">'+holdLine(R,f)+'</p></div><div><span class="pill '+pillKind(f)+'">'+icon(pillKind(f))+esc(f.verdict)+'</span></div>'+growthCell(f)+crashCell(f)+rankCell(f)+costCell(f)+'<button class="open" type="button" data-open="'+i+'">Open →</button></div>').join("");
+  const closer=R.funds.filter(f=>f.verdict==="Worth a closer look"||f.verdict==="Needs attention");
+  const look=closer.length?'<section class="card look"><h2 class="h2">Worth a closer look</h2>'+closer.map(f=>'<article><h3>'+esc(f.name)+'</h3><ul>'+(f.look_at||[]).slice(0,3).map(x=>'<li>'+show(x)+'</li>').join("")+(f.questions||[]).slice(0,2).map(q=>'<li class="ask">Ask: '+esc(q)+'</li>').join("")+'</ul></article>').join("")+'</section>':"";
+  app().innerHTML='<div class="page"><header class="head"><div><p class="eyebrow">YOUR MUTUAL FUND CHECK-UP</p><h1>Portfolio report card</h1><p class="meta">'+esc(meta(R))+'</p></div><div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center">'+(samplePill(R)?'<span class="pill na">Sample data, not a real portfolio</span>':"")+'<a class="pill na" href="https://jamapoonji.com/">JamaPoonji</a></div></header>'
+    +(R.equal_weight?'<p class="sub">'+esc(R.equal_weight_note||"These funds are weighted equally, because no amounts were given.")+'</p>':"")
+    +'<div class="pair"><section class="card" style="display:flex;flex-direction:column;gap:18px"><div><h2 class="h2">The short answer</h2><p class="sub">Each fund gets one verdict. The bar shows how much of '+(R.equal_weight?"this comparison":"your money")+' sits in each.</p></div><p class="answer">'+shortAnswer(R)+'</p><div class="bar" role="img">'+bar+'</div><ul class="legend">'+legend+'</ul></section>'
+    +'<section class="card" style="display:flex;flex-direction:column;gap:16px"><div><h2 class="h2">Four checks, across all your funds</h2><p class="sub">How many funds passed each check. Funds the check does not apply to are left out.</p></div><div class="checks">'+tiles+'</div><p class="keyline">Blue = fine. Amber = worth a look. Orange = needs attention.</p></section></div>'
+    +'<section class="card" style="padding:24px 0 8px"><div style="padding:0 24px 16px"><h2 class="h2">Each fund at a glance</h2><p class="sub">Growth is the longest yearly return we have, next to its index'+(R.funds.some(f=>find(f,"returns")&&(find(f,"returns").numbers.by_horizon||[]).some(r=>r.typical!=null))?" and the typical fund in its category":"")+'. Open a fund to see the full picture.</p></div><div class="scroll"><div class="table"><div class="cols th"><span>Fund</span><span>Verdict</span><span>Growth · index · typical</span><span>In crashes</span><span>Rank</span><span>Cost</span><span></span></div>'+rows+'</div></div></section>'
+    +look+mixBlock(R)+gapBlock(R)
+    +'<footer class="foot"><p>'+esc(R.disclaimer||"")+'</p>'+(R.credits?'<p>'+esc(R.credits)+'</p>':"")+'<p class="again"><button class="btn" id="again" type="button">Check another file</button></p></footer></div>';
+  bind(R);
+  window.scrollTo(0,0);
+}
+function bind(R){
+  app().querySelectorAll("[data-open]").forEach(b=>b.addEventListener("click",()=>fundView(R,Number(b.dataset.open))));
+  app().querySelectorAll("[data-back]").forEach(b=>b.addEventListener("click",()=>portfolio(R)));
+  app().querySelectorAll(".mean").forEach(b=>b.addEventListener("click",()=>{const p=b.nextElementSibling;if(p)p.hidden=!p.hidden}));
+  const ag=document.getElementById("again");if(ag)ag.addEventListener("click",()=>landing());
+}
+function mount(R){portfolio(R)}
+const app=()=>document.getElementById("app");
+function top(){return '<header class="head"><div><p class="eyebrow">YOUR MUTUAL FUND CHECK-UP</p><h1>Your mutual fund check-up</h1></div><a class="pill na" href="https://jamapoonji.com/">JamaPoonji</a></header>'}
+function landing(){
+  const api=window.MFAdvisor||{},accept=api.accept||".csv,.xlsx,.xls,.pdf";
+  app().innerHTML='<div class="page">'+top()+'<div class="start"><h2>See how your mutual funds are really doing</h2>'
+   +'<p class="sub">Upload your holdings and get a plain-language report: how each fund compares with its index and with similar funds, what it costs, and what is worth asking your adviser.</p>'
+   +'<label class="drop" id="drop"><b>Choose your holdings file</b><span>or drag it here. CSV, Excel or a statement PDF.</span><input id="file" type="file" accept="'+esc(accept)+'"></label>'
+   +'<p class="privacy"><b>Your file is not saved.</b> We use it only to build this report, then discard it. Close the page and the report is gone.</p>'
+   +'<label class="pass" for="caspass">Statement password<span>Only if the PDF is locked. For a CAMS, CDSL or NSDL statement this is usually your PAN. It is used to open the file, then discarded.</span><input id="caspass" type="password" autocomplete="off"></label>'
+   +'<div class="pick" id="pick"><h3>Or pick funds by name</h3>'
+   +'<p class="sub">Search the fund list and select up to 25. Each fund is weighted equally. Upload a file for real amounts.</p>'
+   +'<div class="pick-box"><label class="vh" for="q">Fund name</label><input id="q" type="search" placeholder="Type a fund name (e.g. HDFC Flexi Cap)" autocomplete="off">'
+   +'<ul class="pick-list" id="hits" hidden></ul></div><ul class="picks" id="chosen"></ul>'
+   +'<div class="pick-actions"><button class="btn primary" id="go" type="button" disabled>Analyze funds</button>'
+   +'<button class="btn" id="clearpicks" type="button" hidden>Clear selection</button></div></div>'
+   +'<div class="alt"><span>No file handy?</span><button class="btn" id="trysample" type="button">See a sample report</button></div><div id="loaderr" role="alert"></div>'
+   +'<ol class="steps"><li><b>Upload</b><span>Your broker holdings file or a CAMS/KFintech statement.</span></li><li><b>We compare</b><span>Each fund against its index and against funds of the same type.</span></li><li><b>You read</b><span>Short sentences, simple pictures, and questions to take to your adviser.</span></li></ol>'
+   +'<div class="checks"><h3>What we check for every fund</h3><ul>'
+   +[["Growth over 1, 3 and 5 years","Against its index"],["Year by year","And by how much it was ahead or behind"],["Every possible start date","Not just one lucky day"],["Rising and falling markets","How much of each the fund took"],["Its rank among similar funds","Top quarter to bottom quarter"],["What you pay","Against the middle fund in its category"]].map(x=>"<li>"+esc(x[0])+"<small>"+esc(x[1])+"</small></li>").join("")
+   +'</ul></div><footer class="foot"><p>This is general information to discuss with an adviser. It is not investment advice, and past performance does not guarantee future results.</p></footer></div></div>';
+  const drop=document.getElementById("drop"),inp=document.getElementById("file");
+  const pick=f=>{if(!f)return;if(api.onUpload){api.onUpload(f)}else{document.getElementById("loaderr").innerHTML='<p class="err">Uploading is not connected in this preview.</p>'}};
+  inp.addEventListener("change",()=>pick(inp.files[0]));
+  ["dragenter","dragover"].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.add("over")}));
+  ["dragleave","drop"].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.remove("over")}));
+  drop.addEventListener("drop",e=>pick(e.dataTransfer.files[0]));
+  document.getElementById("trysample").addEventListener("click",()=>{const s=document.getElementById("sample");if(s&&s.textContent.trim()!=="null")mount(JSON.parse(s.textContent))});
+  const q=document.getElementById("q"),hits=document.getElementById("hits"),chosen=document.getElementById("chosen"),go=document.getElementById("go"),clearPicks=document.getElementById("clearpicks");
+  let selected=[],timer=null;
+  const showPicked=()=>{
+    chosen.innerHTML=selected.map(s=>'<li><button type="button" data-code="'+s.scheme_code+'">'+esc(s.name)+' <span aria-hidden="true">×</span><span class="vh">Remove</span></button></li>').join("");
+    go.disabled=!selected.length;
+    go.textContent=selected.length?("Analyze "+selected.length+" fund"+(selected.length===1?"":"s")):"Analyze funds";
+    clearPicks.hidden=!selected.length;
+  };
+  chosen.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;selected=selected.filter(s=>String(s.scheme_code)!==b.dataset.code);showPicked()});
+  clearPicks.addEventListener("click",()=>{selected=[];hits.hidden=true;showPicked()});
+  q.addEventListener("input",()=>{
+    clearTimeout(timer);
+    const text=q.value.trim();
+    if(text.length<2){hits.hidden=true;hits.innerHTML="";return}
+    timer=setTimeout(async()=>{
+      try{
+        const res=await fetch("/api/schemes",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({q:text})});
+        const data=await res.json().catch(()=>({}));
+        if(!res.ok)throw new Error((data&&data.error)||"Fund search is not connected in this preview.");
+        const rows=(data.schemes||[]).filter(r=>!selected.some(s=>s.scheme_code===r.scheme_code));
+        hits.innerHTML=rows.map(r=>'<li><button type="button" data-code="'+r.scheme_code+'"><span>'+esc(r.name)+'</span><small>'+esc(r.category||"")+(r.isin?" · "+esc(r.isin):"")+'</small></button></li>').join("");
+        hits.hidden=!rows.length;
+      }catch(err){
+        hits.hidden=true;
+        const msg=err&&err.message&&err.message!=="Failed to fetch"?err.message:"Fund search is not connected in this preview.";
+        document.getElementById("loaderr").innerHTML='<p class="err">'+esc(msg)+'</p>';
+      }
+    },280);
+  });
+  hits.addEventListener("click",e=>{
+    const b=e.target.closest("button");if(!b)return;
+    const code=Number(b.dataset.code);
+    if(selected.some(s=>s.scheme_code===code))return;
+    if(selected.length>=25){document.getElementById("loaderr").innerHTML='<p class="err">You can select at most 25 funds.</p>';return}
+    selected.push({scheme_code:code,name:b.querySelector("span").textContent});
+    q.value="";hits.hidden=true;hits.innerHTML="";
+    document.getElementById("loaderr").innerHTML="";
+    showPicked();
+  });
+  go.addEventListener("click",async()=>{
+    if(!selected.length)return;
+    (api.loading||loading)();
+    try{
+      const res=await fetch("/api/analyze",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({schemes:selected.map(s=>s.scheme_code)})});
+      const data=await res.json().catch(()=>({}));
+      if(!res.ok)throw new Error((data&&data.error)||"We could not build your report.");
+      (api.show||mount)(data);
+    }catch(err){
+      (api.error||failure)((err&&err.message)||"We could not build your report.");
+    }
+  });
+  window.scrollTo(0,0);
+}
+function loading(msg){app().innerHTML='<div class="page">'+top()+'<div class="state" role="status"><div class="spin"></div><h2>'+esc(msg||"Building your check-up")+'</h2><p>This usually takes a few seconds.</p></div></div>'}
+function failure(msg){app().innerHTML='<div class="page">'+top()+'<div class="state" role="alert"><h2>We could not build your report</h2><p class="err">'+esc(msg||"Something went wrong.")+'</p><p><button class="btn primary" id="retry" type="button">Try again</button></p></div></div>';document.getElementById("retry").addEventListener("click",landing)}
+window.MFAdvisor=Object.assign(window.MFAdvisor||{},{show:mount,loading:loading,error:failure,start:landing});
+const first=JSON.parse(document.getElementById("report").textContent);
+if(first)mount(first);else landing();
+})();
+</script>
+</body>
+</html>

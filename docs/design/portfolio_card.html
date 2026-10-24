@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio report card (design reference)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F3F4F6}
+a{color:#1E4FB3}a:hover{color:#163C88}
+.card{background:#FFFFFF;border:1px solid #E2E5EA;border-radius:16px;padding:24px}
+.h2{margin:0;font-size:20px;font-weight:700;color:#1E4FB3;letter-spacing:-0.01em}
+.sub{margin:4px 0 0;font-size:14px;color:#565D6B}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:5px 11px;border-radius:999px;font-size:13px;font-weight:600;white-space:nowrap}
+.good{background:#E4EDFD;color:#1E4FB3}
+.ok{background:#ECEEF2;color:#3F4652}
+.watch{background:#FFEFD1;color:#7F4C00}
+.attn{background:#FCE2D5;color:#9E330A}
+.na{background:#FFFFFF;color:#565D6B;border:1px dashed #B9BFC9}
+.cell{display:flex;gap:8px;align-items:flex-start;font-size:14px;color:#16181D;line-height:1.35}
+.cell small{display:block;color:#565D6B;font-size:12.5px;margin-top:2px}
+.ic{flex:none;width:24px;height:24px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center}
+.th{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#565D6B}
+</style>
+</head>
+<body>
+<!-- Design reference only. Sample figures; the "typical fund" numbers are placeholders until the engine computes category medians. -->
+<div style="font-family: Inter, system-ui, sans-serif; color: #16181D; background: #F3F4F6; min-height: 100%; padding: 40px 20px 56px; box-sizing: border-box">
+<div style="max-width: 1160px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px">
+
+<header style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; padding-bottom: 20px; border-bottom: 1px solid #DADDE3">
+<div>
+<p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: .14em; color: #565D6B">YOUR MUTUAL FUND CHECK-UP</p>
+<h1 style="margin: 6px 0 0; font-size: 44px; line-height: 1.1; font-weight: 800; letter-spacing: -0.02em">Portfolio report card</h1>
+<p style="margin: 10px 0 0; font-size: 16px; color: #3F4652">6 funds · ₹11,50,000 in total · Data as of 9 Oct 2026</p>
+</div>
+<span class="pill na">Sample data, not a real portfolio</span>
+</header>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 20px">
+
+<section class="card" style="display: flex; flex-direction: column; gap: 18px">
+<div>
+<h2 class="h2">The short answer</h2>
+<p class="sub">Each fund gets one verdict. The bar shows how much of your money sits in each.</p>
+</div>
+<p style="margin: 0; font-size: 26px; line-height: 1.3; font-weight: 700; letter-spacing: -0.01em">3 of your 6 funds are doing fine. <span style="color: #9E330A">2 are worth a closer look.</span> 1 is too new to judge.</p>
+<div style="display: flex; height: 28px; border-radius: 8px; overflow: hidden; gap: 2px" role="img" aria-label="Money by verdict: Doing well 36.5%, On track 20%, Worth a closer look 22.6%, Needs attention 15.7%, Limited data 5.2%">
+<div style="width: 36.5%; background: #2F6FDE"></div>
+<div style="width: 20%; background: #9AA3B2"></div>
+<div style="width: 22.6%; background: #E3A23B"></div>
+<div style="width: 15.7%; background: #D4561B"></div>
+<div style="width: 5.2%; background: #DADDE2"></div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px 16px; font-size: 14px">
+<div style="display: flex; gap: 8px; align-items: baseline"><span style="width: 10px; height: 10px; border-radius: 3px; background: #2F6FDE; flex: none"></span><span><b>Doing well</b> · 1 fund<br><span style="color: #565D6B">₹4,20,000 (36.5%)</span></span></div>
+<div style="display: flex; gap: 8px; align-items: baseline"><span style="width: 10px; height: 10px; border-radius: 3px; background: #9AA3B2; flex: none"></span><span><b>On track</b> · 2 funds<br><span style="color: #565D6B">₹2,30,000 (20.0%)</span></span></div>
+<div style="display: flex; gap: 8px; align-items: baseline"><span style="width: 10px; height: 10px; border-radius: 3px; background: #E3A23B; flex: none"></span><span><b>Worth a closer look</b> · 1<br><span style="color: #565D6B">₹2,60,000 (22.6%)</span></span></div>
+<div style="display: flex; gap: 8px; align-items: baseline"><span style="width: 10px; height: 10px; border-radius: 3px; background: #D4561B; flex: none"></span><span><b>Needs attention</b> · 1<br><span style="color: #565D6B">₹1,80,000 (15.7%)</span></span></div>
+<div style="display: flex; gap: 8px; align-items: baseline"><span style="width: 10px; height: 10px; border-radius: 3px; background: #DADDE2; flex: none"></span><span><b>Limited data</b> · 1<br><span style="color: #565D6B">₹60,000 (5.2%)</span></span></div>
+</div>
+</section>
+
+<section class="card" style="display: flex; flex-direction: column; gap: 16px">
+<div>
+<h2 class="h2">Four checks, across all your funds</h2>
+<p class="sub">How many funds passed each check. Funds the check doesn't apply to are left out.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
+<div style="border: 1px solid #E2E5EA; border-radius: 12px; padding: 14px 16px">
+<p style="margin: 0; font-size: 14px; font-weight: 600; color: #3F4652">Beat its index?</p>
+<p style="margin: 6px 0 0; font-size: 30px; font-weight: 800">4<span style="font-size: 18px; color: #565D6B; font-weight: 600"> of 5 fine</span></p>
+<div style="display: flex; gap: 4px; margin-top: 8px"><span style="flex: 1; height: 6px; border-radius: 3px; background: #2F6FDE"></span><span style="flex: 1; height: 6px; border-radius: 3px; background: #2F6FDE"></span><span style="flex: 1; height: 6px; border-radius: 3px; background: #2F6FDE"></span><span style="flex: 1; height: 6px; border-radius: 3px; background: #2F6FDE"></span><span style="flex: 1; height: 6px; border-radius: 3px; background: #D4561B"></span></div>
+</div>
+<div style="border: 1px solid #E2E5EA; border-radius: 12px; padding: 14px 16px">
+<p style="margin: 0; font-size: 14px; font-weight: 600; color: #3F4652">Falls less in crashes?</p>
+<p style="margin: 6px 0 0; font-size: 30px; font-weight: 800">3<span style="font-size: 18px; color: #565D6B; font-weight: 600"> of 4 fine</span></p>
+<div style="display: flex; gap: 4px; margin-top: 8px"><span style="flex: 1; height: 6px; border-radius: 3px; background: #2F6FDE"></span><span style="flex: 1; height: 6px; border-radius: 3px; background: #2F6FDE"></span><span style="flex: 1; height: 6px; border-radius: 3px; background: #2F6FDE"></span><span style="flex: 1; height: 6px; border-radius: 3px; background: #D4561B"></span></div>
+</div>
+<div style="border: 1px solid #E2E5EA; border-radius: 12px; padding: 14px 16px">
+<p style="margin: 0; font-size: 14px; font-weight: 600; color: #3F4652">Rank among similar funds</p>
+<p style="margin: 6px 0 0; font-size: 30px; font-weight: 800">4<span style="font-size: 18px; color: #565D6B; font-weight: 600"> of 5 fine</span></p>
+<div style="display: flex; gap: 4px; margin-top: 8px"><span style="flex: 1; height: 6px; border-radius: 3px; background: #2F6FDE"></span><span style="flex: 1; height: 6px; border-radius: 3px; background: #2F6FDE"></span><span style="flex: 1; height: 6px; border-radius: 3px; background: #2F6FDE"></span><span style="flex: 1; height: 6px; border-radius: 3px; background: #2F6FDE"></span><span style="flex: 1; height: 6px; border-radius: 3px; background: #D4561B"></span></div>
+</div>
+<div style="border: 1px solid #E2E5EA; border-radius: 12px; padding: 14px 16px">
+<p style="margin: 0; font-size: 14px; font-weight: 600; color: #3F4652">What you pay</p>
+<p style="margin: 6px 0 0; font-size: 30px; font-weight: 800">4<span style="font-size: 18px; color: #565D6B; font-weight: 600"> of 6 fine</span></p>
+<div style="display: flex; gap: 4px; margin-top: 8px"><span style="flex: 1; height: 6px; border-radius: 3px; background: #2F6FDE"></span><span style="flex: 1; height: 6px; border-radius: 3px; background: #2F6FDE"></span><span style="flex: 1; height: 6px; border-radius: 3px; background: #2F6FDE"></span><span style="flex: 1; height: 6px; border-radius: 3px; background: #2F6FDE"></span><span style="flex: 1; height: 6px; border-radius: 3px; background: #E3A23B"></span><span style="flex: 1; height: 6px; border-radius: 3px; background: #E3A23B"></span></div>
+</div>
+</div>
+<p style="margin: 0; font-size: 13px; color: #565D6B">Blue = fine. Amber = worth a look. Orange = needs attention.</p>
+</section>
+</div>
+
+<section class="card" style="padding: 24px 0 8px">
+<div style="padding: 0 24px 16px">
+<h2 class="h2">Each fund at a glance</h2>
+<p class="sub">Growth is the average yearly return over 5 years, next to its index and the typical fund in its category (the middle one). Open a fund to see the full picture.</p>
+</div>
+<div style="overflow-x: auto">
+<div style="min-width: 980px">
+<div style="display: grid; grid-template-columns: 2.1fr 1.35fr 1.5fr 1.4fr 1.3fr 1.2fr 0.6fr; gap: 16px; padding: 10px 24px; background: #F7F8FA; border-top: 1px solid #E2E5EA; border-bottom: 1px solid #E2E5EA">
+<span class="th">Fund</span><span class="th">Verdict</span><span class="th">Growth · index · typical</span><span class="th">In crashes</span><span class="th">Rank</span><span class="th">Cost</span><span class="th"></span>
+</div>
+
+<div style="display: grid; grid-template-columns: 2.1fr 1.35fr 1.5fr 1.4fr 1.3fr 1.2fr 0.6fr; gap: 16px; padding: 16px 24px; border-bottom: 1px solid #ECEEF2; align-items: center">
+<div><p style="margin: 0; font-size: 15px; font-weight: 700">Sample Flexi Cap Fund A</p><p style="margin: 2px 0 0; font-size: 13px; color: #565D6B">Flexi Cap · ₹4,20,000 · 36.5%</p></div>
+<div><span class="pill good"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.5"></circle><path d="M5 8.2l2 2 4-4.4"></path></svg>Doing well</span></div>
+<div class="cell"><span class="ic good"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.5"></circle><path d="M5 8.2l2 2 4-4.4"></path></svg></span><span><b>17.1%</b> · index 14.6%<small>Typical fund 15.1%: ahead of both</small></span></div>
+<div class="cell"><span class="ic good"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.5"></circle><path d="M5 8.2l2 2 4-4.4"></path></svg></span><span>Fell less<small>Gains more, loses less</small></span></div>
+<div class="cell"><span class="ic good"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.5"></circle><path d="M5 8.2l2 2 4-4.4"></path></svg></span><span>Top 25%<small>of 34 funds</small></span></div>
+<div class="cell"><span class="ic ok"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.5"></circle><path d="M5 8h6"></path></svg></span><span>0.75%<small>Typical 0.82%</small></span></div>
+<a href="fund_card.html" style="font-size: 14px; font-weight: 600; text-decoration: none; padding: 12px 0">Open →</a>
+</div>
+
+<div style="display: grid; grid-template-columns: 2.1fr 1.35fr 1.5fr 1.4fr 1.3fr 1.2fr 0.6fr; gap: 16px; padding: 16px 24px; border-bottom: 1px solid #ECEEF2; align-items: center">
+<div><p style="margin: 0; font-size: 15px; font-weight: 700">Sample Mid Cap Fund B</p><p style="margin: 2px 0 0; font-size: 13px; color: #565D6B">Mid Cap · ₹2,60,000 · 22.6%</p></div>
+<div><span class="pill watch"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.2l6.3 11.3H1.7z"></path><path d="M8 6.6v3"></path><path d="M8 11.6v.2"></path></svg>Worth a closer look</span></div>
+<div class="cell"><span class="ic ok"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.5"></circle><path d="M5 8h6"></path></svg></span><span><b>22.5%</b> · index 23.1%<small>Typical fund 22.0%: about the same</small></span></div>
+<div class="cell"><span class="ic ok"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.5"></circle><path d="M5 8h6"></path></svg></span><span>About the same<small>Moves like its index</small></span></div>
+<div class="cell"><span class="ic ok"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.5"></circle><path d="M5 8h6"></path></svg></span><span>Upper half<small>of 28 funds</small></span></div>
+<div class="cell"><span class="ic watch"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.2l6.3 11.3H1.7z"></path><path d="M8 6.6v3"></path><path d="M8 11.6v.2"></path></svg></span><span>2.05%<small>Typical 1.85%</small></span></div>
+<a href="fund_card.html" style="font-size: 14px; font-weight: 600; text-decoration: none; padding: 12px 0">Open →</a>
+</div>
+
+<div style="display: grid; grid-template-columns: 2.1fr 1.35fr 1.5fr 1.4fr 1.3fr 1.2fr 0.6fr; gap: 16px; padding: 16px 24px; border-bottom: 1px solid #ECEEF2; align-items: center">
+<div><p style="margin: 0; font-size: 15px; font-weight: 700">Sample Large &amp; Mid Cap Fund C</p><p style="margin: 2px 0 0; font-size: 13px; color: #565D6B">Large &amp; Mid Cap · ₹1,80,000 · 15.7%</p></div>
+<div><span class="pill attn"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 1.6l6.4 6.4-6.4 6.4L1.6 8z"></path><path d="M8 5.2v3.4"></path><path d="M8 10.8v.2"></path></svg>Needs attention</span></div>
+<div class="cell"><span class="ic attn"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 1.6l6.4 6.4-6.4 6.4L1.6 8z"></path><path d="M8 5.2v3.4"></path><path d="M8 10.8v.2"></path></svg></span><span><b>11.8%</b> · index 15.4%<small>Typical fund 14.9%: behind both</small></span></div>
+<div class="cell"><span class="ic attn"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 1.6l6.4 6.4-6.4 6.4L1.6 8z"></path><path d="M8 5.2v3.4"></path><path d="M8 10.8v.2"></path></svg></span><span>Fell more<small>Smaller gains, bigger falls</small></span></div>
+<div class="cell"><span class="ic attn"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 1.6l6.4 6.4-6.4 6.4L1.6 8z"></path><path d="M8 5.2v3.4"></path><path d="M8 10.8v.2"></path></svg></span><span>Bottom 25%<small>of 26 funds</small></span></div>
+<div class="cell"><span class="ic watch"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.2l6.3 11.3H1.7z"></path><path d="M8 6.6v3"></path><path d="M8 11.6v.2"></path></svg></span><span>2.15%<small>Typical 1.80%</small></span></div>
+<a href="fund_card.html" style="font-size: 14px; font-weight: 600; text-decoration: none; padding: 12px 0">Open →</a>
+</div>
+
+<div style="display: grid; grid-template-columns: 2.1fr 1.35fr 1.5fr 1.4fr 1.3fr 1.2fr 0.6fr; gap: 16px; padding: 16px 24px; border-bottom: 1px solid #ECEEF2; align-items: center">
+<div><p style="margin: 0; font-size: 15px; font-weight: 700">Sample Large Cap Index Fund D</p><p style="margin: 2px 0 0; font-size: 13px; color: #565D6B">Index fund · ₹1,40,000 · 12.2%</p></div>
+<div><span class="pill ok"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.5"></circle><path d="M5 8h6"></path></svg>On track</span></div>
+<div class="cell"><span class="ic ok"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.5"></circle><path d="M5 8h6"></path></svg></span><span><b>13.4%</b> · index 13.6%<small>Tracks its index closely</small></span></div>
+<div class="cell"><span class="ic ok"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.5"></circle><path d="M5 8h6"></path></svg></span><span>Same as index<small>As expected</small></span></div>
+<div class="cell"><span class="ic ok"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.5"></circle><path d="M5 8h6"></path></svg></span><span>Upper half<small>of 12 funds</small></span></div>
+<div class="cell"><span class="ic ok"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.5"></circle><path d="M5 8h6"></path></svg></span><span>0.20%<small>Typical 0.18%</small></span></div>
+<a href="fund_card.html" style="font-size: 14px; font-weight: 600; text-decoration: none; padding: 12px 0">Open →</a>
+</div>
+
+<div style="display: grid; grid-template-columns: 2.1fr 1.35fr 1.5fr 1.4fr 1.3fr 1.2fr 0.6fr; gap: 16px; padding: 16px 24px; border-bottom: 1px solid #ECEEF2; align-items: center">
+<div><p style="margin: 0; font-size: 15px; font-weight: 700">Sample Corporate Bond Fund F</p><p style="margin: 2px 0 0; font-size: 13px; color: #565D6B">Debt · ₹90,000 · 7.8%</p></div>
+<div><span class="pill ok"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.5"></circle><path d="M5 8h6"></path></svg>On track</span></div>
+<div class="cell"><span class="ic na"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="6.5" stroke-dasharray="2.5 2.5"></circle></svg></span><span>Not compared<small>Debt funds are judged on rank and cost</small></span></div>
+<div class="cell"><span class="ic na"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="6.5" stroke-dasharray="2.5 2.5"></circle></svg></span><span>Not compared</span></div>
+<div class="cell"><span class="ic ok"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.5"></circle><path d="M5 8h6"></path></svg></span><span>Upper half<small>of 22 funds</small></span></div>
+<div class="cell"><span class="ic ok"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.5"></circle><path d="M5 8h6"></path></svg></span><span>0.35%<small>Typical 0.40%</small></span></div>
+<a href="fund_card.html" style="font-size: 14px; font-weight: 600; text-decoration: none; padding: 12px 0">Open →</a>
+</div>
+
+<div style="display: grid; grid-template-columns: 2.1fr 1.35fr 1.5fr 1.4fr 1.3fr 1.2fr 0.6fr; gap: 16px; padding: 16px 24px; align-items: center">
+<div><p style="margin: 0; font-size: 15px; font-weight: 700">Sample Thematic Fund E</p><p style="margin: 2px 0 0; font-size: 13px; color: #565D6B">Thematic · ₹60,000 · 5.2%</p></div>
+<div><span class="pill na"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="6.5" stroke-dasharray="2.5 2.5"></circle></svg>Limited data</span></div>
+<div class="cell"><span class="ic ok"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.5"></circle><path d="M5 8h6"></path></svg></span><span>Ahead over 1 year<small>Too young for 5 years</small></span></div>
+<div class="cell"><span class="ic na"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="6.5" stroke-dasharray="2.5 2.5"></circle></svg></span><span>Not enough history</span></div>
+<div class="cell"><span class="ic na"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="6.5" stroke-dasharray="2.5 2.5"></circle></svg></span><span>Not enough history</span></div>
+<div class="cell"><span class="ic ok"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.5"></circle><path d="M5 8h6"></path></svg></span><span>0.95%<small>Typical 0.85%</small></span></div>
+<a href="fund_card.html" style="font-size: 14px; font-weight: 600; text-decoration: none; padding: 12px 0">Open →</a>
+</div>
+</div>
+</div>
+</section>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 20px">
+
+<section class="card" style="display: flex; flex-direction: column; gap: 16px">
+<div>
+<h2 class="h2">Worth a closer look</h2>
+<p class="sub">What we noticed, and a question you could ask your adviser. These are observations, not instructions.</p>
+</div>
+<div style="border: 1px solid #F3C9B3; background: #FFF8F4; border-radius: 12px; padding: 16px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; align-items: center"><p style="margin: 0; font-size: 16px; font-weight: 700">Sample Large &amp; Mid Cap Fund C</p><span class="pill attn">Needs attention</span></div>
+<ul style="margin: 10px 0 0; padding-left: 18px; font-size: 14px; line-height: 1.6; color: #2A2F38">
+<li>Grew 3.6 points a year slower than its index over 5 years, and 3.1 points slower than the typical Large &amp; Mid Cap fund.</li>
+<li>Fell further than its index in the 2020 crash.</li>
+<li>In the bottom quarter of 26 similar funds, and costs more than most.</li>
+</ul>
+<p style="margin: 10px 0 0; font-size: 14px; color: #3F4652"><b>Ask:</b> Why has this fund trailed its index for so long, and what is expected to change?</p>
+</div>
+<div style="border: 1px solid #F0D9A8; background: #FFFBF2; border-radius: 12px; padding: 16px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; align-items: center"><p style="margin: 0; font-size: 16px; font-weight: 700">Sample Mid Cap Fund B</p><span class="pill watch">Worth a closer look</span></div>
+<ul style="margin: 10px 0 0; padding-left: 18px; font-size: 14px; line-height: 1.6; color: #2A2F38">
+<li>Charges 2.05% a year; the typical mid cap fund of this plan type charges 1.85%.</li>
+<li>The fund manager changed recently.</li>
+</ul>
+<p style="margin: 10px 0 0; font-size: 14px; color: #3F4652"><b>Ask:</b> Is there a lower-cost plan of this fund, and how has the new manager run money before?</p>
+</div>
+</section>
+
+<section class="card" style="display: flex; flex-direction: column; gap: 16px">
+<div>
+<h2 class="h2">Where your money is</h2>
+<p class="sub">By type of fund.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px; font-size: 14px">
+<div><div style="display: flex; justify-content: space-between"><span>Flexi Cap</span><b>36.5%</b></div><div style="height: 10px; background: #EEF0F3; border-radius: 5px; margin-top: 5px"><div style="width: 36.5%; height: 10px; background: #2F6FDE; border-radius: 5px"></div></div></div>
+<div><div style="display: flex; justify-content: space-between"><span>Mid Cap</span><b>22.6%</b></div><div style="height: 10px; background: #EEF0F3; border-radius: 5px; margin-top: 5px"><div style="width: 22.6%; height: 10px; background: #2F6FDE; border-radius: 5px"></div></div></div>
+<div><div style="display: flex; justify-content: space-between"><span>Large &amp; Mid Cap</span><b>15.7%</b></div><div style="height: 10px; background: #EEF0F3; border-radius: 5px; margin-top: 5px"><div style="width: 15.7%; height: 10px; background: #2F6FDE; border-radius: 5px"></div></div></div>
+<div><div style="display: flex; justify-content: space-between"><span>Large Cap index</span><b>12.2%</b></div><div style="height: 10px; background: #EEF0F3; border-radius: 5px; margin-top: 5px"><div style="width: 12.2%; height: 10px; background: #2F6FDE; border-radius: 5px"></div></div></div>
+<div><div style="display: flex; justify-content: space-between"><span>Corporate bond (debt)</span><b>7.8%</b></div><div style="height: 10px; background: #EEF0F3; border-radius: 5px; margin-top: 5px"><div style="width: 7.8%; height: 10px; background: #9AA3B2; border-radius: 5px"></div></div></div>
+<div><div style="display: flex; justify-content: space-between"><span>Thematic</span><b>5.2%</b></div><div style="height: 10px; background: #EEF0F3; border-radius: 5px; margin-top: 5px"><div style="width: 5.2%; height: 10px; background: #2F6FDE; border-radius: 5px"></div></div></div>
+</div>
+<div style="display: flex; gap: 10px; align-items: flex-start; background: #FFFBF2; border: 1px solid #F0D9A8; border-radius: 12px; padding: 12px 14px; font-size: 14px; color: #2A2F38">
+<span class="ic watch" style="margin-top: 1px"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.2l6.3 11.3H1.7z"></path><path d="M8 6.6v3"></path><path d="M8 11.6v.2"></path></svg></span>
+<span>One fund holds more than a third of your money (36.5%). Worth discussing how much you want riding on a single fund.</span>
+</div>
+</section>
+</div>
+
+<section class="card" style="display: flex; flex-direction: column; gap: 10px">
+<h2 class="h2" style="font-size: 17px">What we couldn't check</h2>
+<ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6; color: #3F4652">
+<li>Sample Thematic Fund E is under 2 years old, so its falls and its rank aren't scored yet.</li>
+<li>Sample Corporate Bond Fund F is a debt fund. A share-market index would mislead, so it is judged on rank and cost only.</li>
+</ul>
+</section>
+
+<footer style="font-size: 13px; line-height: 1.6; color: #565D6B; border-top: 1px solid #DADDE3; padding-top: 16px">
+<p style="margin: 0">This report describes how your funds behaved in the past. Past performance does not guarantee future results. It is general information to discuss with a registered adviser, not a recommendation to buy, sell or switch any fund. Growth figures are for the plan you hold (growth option), against total-return indices.</p>
+<p style="margin: 6px 0 0">Fund data: AMFI, compiled by TigZig MFPRO, released under CC0. Not affiliated with or endorsed by AMFI or TigZig.</p>
+</footer>
+</div>
+</div>
+</body>
+</html>

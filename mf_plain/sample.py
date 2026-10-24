@@ -1,0 +1,83 @@
+"""ILLUSTRATIVE sample portfolio for demos and tests.
+
+Fund names, benchmark names and every figure here are made up. They are not real
+schemes, real indices or real data. Do not show this to end users as if it were
+their portfolio.
+"""
+from .models import Fund, Portfolio
+
+
+def sample_portfolio() -> Portfolio:
+    funds = [
+        Fund(name="Sample Flexi Cap Fund A", category="Flexi Cap", value=420000, plan="direct",
+             ter=0.75, category_median_ter=0.82, benchmark_name="the Sample 500 index",
+             returns={1: 21.0, 3: 18.4, 5: 17.1}, bench_returns={1: 17.5, 3: 15.2, 5: 14.6},
+             calendar_returns={2021: 34.0, 2022: 6.5, 2023: 29.8, 2024: 21.2, 2025: 12.4},
+             bench_calendar_returns={2021: 31.6, 2022: 4.3, 2023: 26.9, 2024: 16.2, 2025: 9.9},
+             typical_returns={1: 19.2, 3: 15.8, 5: 15.1},
+             typical_calendar={2021: 30.5, 2022: 4.8, 2023: 27.4, 2024: 18.9, 2025: 10.6},
+             typical_max_drawdown=-36.0, typical_recovery_months=8,
+             rolling_beat_pct=82, rolling_window_years=3,
+             upside_capture=108, downside_capture=88, capture_years=5,
+             max_drawdown=-33.0, bench_max_drawdown=-38.0, drawdown_event="the March 2020 crash",
+             recovery_months=7, bench_recovery_months=9,
+             quartiles={1: 2, 3: 1, 5: 1}, peer_count=34,
+             category_group="Equity", history_years=11.2, capture_obs=1250, category_median_n=31,
+             aum_cr=48250, riskometer="Very High", benchmark_riskometer="Very High",
+             manager_names=["A. Sample"], manager_since="2019-04-01", allotment_date="2013-01-02",
+             exit_load="1% if redeemed within 1 year; nil after."),
+        Fund(name="Sample Mid Cap Fund B", category="Mid Cap", value=260000, plan="regular",
+             ter=2.05, category_median_ter=1.85, benchmark_name="the Sample Midcap index",
+             returns={1: 24.0, 3: 22.9, 5: 22.5}, bench_returns={1: 25.0, 3: 24.0, 5: 23.1},
+             calendar_returns={2021: 44.0, 2022: 3.1, 2023: 41.5, 2024: 26.0, 2025: 6.0},
+             bench_calendar_returns={2021: 43.5, 2022: 4.9, 2023: 44.1, 2024: 25.2, 2025: 5.1},
+             typical_returns={5: 22.0},
+             rolling_beat_pct=46, rolling_window_years=3,
+             upside_capture=99, downside_capture=103, capture_years=5,
+             max_drawdown=-41.0, bench_max_drawdown=-39.0, drawdown_event="the March 2020 crash",
+             recovery_months=11, bench_recovery_months=10,
+             quartiles={1: 3, 3: 2, 5: 2}, peer_count=28,
+             category_group="Equity", history_years=14.0, capture_obs=1250, category_median_n=24,
+             aum_cr=21400, riskometer="Very High", benchmark_riskometer="Very High",
+             manager_names=["B. Sample"], manager_since="2026-03-01", allotment_date="2010-06-14",
+             exit_load="1% if redeemed within 1 year; nil after."),
+        Fund(name="Sample Large & Mid Cap Fund C", category="Large & Mid Cap", value=180000,
+             plan="regular", ter=2.15, category_median_ter=1.80, benchmark_name="the Sample LargeMidcap index",
+             returns={1: 14.0, 3: 12.1, 5: 11.8}, bench_returns={1: 18.0, 3: 16.0, 5: 15.4},
+             calendar_returns={2021: 24.0, 2022: -2.0, 2023: 21.0, 2024: 12.0, 2025: 3.0},
+             bench_calendar_returns={2021: 30.0, 2022: 5.0, 2023: 27.0, 2024: 18.0, 2025: 9.0},
+             typical_returns={5: 14.9},
+             rolling_beat_pct=18, rolling_window_years=3,
+             upside_capture=82, downside_capture=112, capture_years=5,
+             max_drawdown=-45.0, bench_max_drawdown=-37.0, drawdown_event="the March 2020 crash",
+             recovery_months=15, bench_recovery_months=8,
+             quartiles={1: 4, 3: 4, 5: 4}, peer_count=26,
+             category_group="Equity", history_years=9.5, capture_obs=1250, category_median_n=19,
+             aum_cr=3120, riskometer="Very High", benchmark_riskometer="Very High",
+             manager_names=["C. Sample"], manager_since="2021-08-01", allotment_date="2017-02-20"),
+        Fund(name="Sample Large Cap Index Fund D", category="Large Cap Index", value=140000,
+             plan="direct", ter=0.20, category_median_ter=0.18, benchmark_name="the Sample 50 index",
+             returns={1: 12.9, 3: 13.6, 5: 13.4}, bench_returns={1: 13.1, 3: 13.8, 5: 13.6},
+             upside_capture=99.6, downside_capture=100.1, capture_years=5,
+             max_drawdown=-38.0, bench_max_drawdown=-38.2, drawdown_event="the March 2020 crash",
+             recovery_months=8, bench_recovery_months=8,
+             quartiles={3: 2, 5: 2}, peer_count=12,
+             category_group="Equity", history_years=8.0, capture_obs=1250, category_median_n=12,
+             aum_cr=6800, riskometer="Very High", benchmark_riskometer="Very High",
+             allotment_date="2018-03-12", exit_load="Nil."),
+        # Deliberately sparse: shows how missing data degrades gracefully
+        Fund(name="Sample Thematic Fund E", category="Thematic", value=60000, plan="direct",
+             ter=0.95, category_median_ter=0.85, benchmark_name="the Sample 500 index", returns={1: 28.0}, bench_returns={1: 17.5},
+             category_group="Equity", history_years=1.8, category_median_n=40,
+             aum_cr=62, riskometer="Very High", benchmark_riskometer="Very High",
+             allotment_date="2025-01-20"),
+        # A debt fund: judged on ranking and costs, not against an index
+        Fund(name="Sample Corporate Bond Fund F", category="Corporate Bond Fund", value=90000, plan="direct",
+             ter=0.35, category_median_ter=0.40, category_median_n=22, category_group="Debt",
+             quartiles={1: 2, 3: 2, 5: 1}, peer_count=22, history_years=12.0,
+             aum_cr=18700, riskometer="Moderate", benchmark_riskometer="Moderate",
+             manager_names=["F. Sample"], manager_since="2022-05-01", allotment_date="2012-08-03",
+             exit_load="Nil."),
+    ]
+    return Portfolio(funds=funds, as_of="(sample data)", as_of_date="2026-10-09",
+                     data_source="illustrative sample")

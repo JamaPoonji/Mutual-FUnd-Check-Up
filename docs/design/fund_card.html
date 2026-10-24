@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fund report card (design reference)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F3F4F6}
+a{color:#1E4FB3}a:hover{color:#163C88}
+.card{background:#FFFFFF;border:1px solid #E2E5EA;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:16px;min-width:0}
+.h2{margin:0;font-size:20px;font-weight:700;color:#1E4FB3;letter-spacing:-0.01em}
+.sub{margin:4px 0 0;font-size:14px;color:#565D6B;line-height:1.45}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:5px 11px;border-radius:999px;font-size:13px;font-weight:600;white-space:nowrap}
+.good{background:#E4EDFD;color:#1E4FB3}
+.ok{background:#ECEEF2;color:#3F4652}
+.chip{display:inline-flex;align-items:center;padding:5px 12px;border-radius:999px;background:#FFFFFF;border:1px solid #DADDE3;font-size:14px;color:#2A2F38}
+.foot{margin:0;padding-top:12px;border-top:1px solid #ECEEF2;font-size:13px;color:#565D6B;line-height:1.5}
+.lg{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:#3F4652}
+.sw{width:10px;height:10px;border-radius:3px;display:inline-block}
+</style>
+</head>
+<body>
+<!-- Design reference only. Sample figures; the "typical fund" numbers are placeholders until the engine computes category medians. -->
+<div style="font-family: Inter, system-ui, sans-serif; color: #16181D; background: #F3F4F6; min-height: 100%; padding: 32px 20px 56px; box-sizing: border-box">
+<div style="max-width: 1160px; margin: 0 auto; display: flex; flex-direction: column; gap: 22px">
+
+<a href="portfolio_card.html" style="font-size: 14px; font-weight: 600; text-decoration: none; align-self: flex-start; padding: 10px 0">← All your funds</a>
+
+<header style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 16px; padding-bottom: 20px; border-bottom: 1px solid #DADDE3">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: .14em; color: #565D6B">FUND REPORT CARD</p>
+<h1 style="margin: 0; font-size: 42px; line-height: 1.1; font-weight: 800; letter-spacing: -0.02em">Sample Flexi Cap Fund A</h1>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span class="chip" style="background: #E4EDFD; border-color: #C9DBFB; color: #1E4FB3; font-weight: 600">Flexi Cap</span>
+<span class="chip">You hold ₹4,20,000 · 36.5% of your money</span>
+<span class="chip">Compared with: Sample 500 index (TRI) and 34 Flexi Cap funds</span>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 6px">
+<span style="font-size: 13px; color: #565D6B">Our verdict</span>
+<span class="pill good" style="font-size: 18px; padding: 9px 16px"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.5"></circle><path d="M5 8.2l2 2 4-4.4"></path></svg>Doing well</span>
+</div>
+</header>
+
+<section style="background: #FFFFFF; border: 1px solid #C9DBFB; border-radius: 16px; padding: 22px 24px; display: flex; flex-direction: column; gap: 16px">
+<p style="margin: 0; font-size: 20px; line-height: 1.45; font-weight: 600">This fund grew faster than both its index and the typical Flexi Cap fund over 1, 3 and 5 years, fell less in the 2020 crash, ranks in the top quarter of similar funds, and costs about the same as a typical fund of its kind.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px">
+<div style="background: #F5F8FE; border-radius: 12px; padding: 12px 14px"><p style="margin: 0; font-size: 13px; color: #565D6B">Returns</p><p style="margin: 2px 0 0; font-size: 17px; font-weight: 700; color: #1E4FB3">Strong</p></div>
+<div style="background: #F5F8FE; border-radius: 12px; padding: 12px 14px"><p style="margin: 0; font-size: 13px; color: #565D6B">Ups and downs</p><p style="margin: 2px 0 0; font-size: 17px; font-weight: 700; color: #1E4FB3">Strong</p></div>
+<div style="background: #F5F8FE; border-radius: 12px; padding: 12px 14px"><p style="margin: 0; font-size: 13px; color: #565D6B">Rank among peers</p><p style="margin: 2px 0 0; font-size: 17px; font-weight: 700; color: #1E4FB3">Strong</p></div>
+<div style="background: #F5F6F8; border-radius: 12px; padding: 12px 14px"><p style="margin: 0; font-size: 13px; color: #565D6B">Cost</p><p style="margin: 2px 0 0; font-size: 17px; font-weight: 700; color: #3F4652">Fine</p></div>
+</div>
+</section>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 20px">
+
+<section class="card">
+<div>
+<h2 class="h2">Growth vs its index</h2>
+<p class="sub">Average growth per year.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px 16px"><span class="lg"><span class="sw" style="background: #2F6FDE"></span>This fund</span><span class="lg"><span class="sw" style="background: #B5BBC6"></span>Sample 500 index</span><span class="lg"><span class="sw" style="background: #4A5568"></span>Typical Flexi Cap fund (category median)</span></div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; align-items: end; border-bottom: 1px solid #DADDE3; height: 210px">
+<div style="display: flex; justify-content: center; align-items: flex-end; gap: 4px">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-size: 13px; font-weight: 700">21.0%</span><div style="width: 30px; height: 168px; background: #2F6FDE; border-radius: 6px 6px 0 0"></div></div>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-size: 12px; color: #565D6B">17.5%</span><div style="width: 30px; height: 140px; background: #B5BBC6; border-radius: 6px 6px 0 0"></div></div>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-size: 12px; color: #3F4652">19.2%</span><div style="width: 30px; height: 154px; background: #4A5568; border-radius: 6px 6px 0 0"></div></div>
+</div>
+<div style="display: flex; justify-content: center; align-items: flex-end; gap: 4px">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-size: 13px; font-weight: 700">18.4%</span><div style="width: 30px; height: 147px; background: #2F6FDE; border-radius: 6px 6px 0 0"></div></div>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-size: 12px; color: #565D6B">15.2%</span><div style="width: 30px; height: 122px; background: #B5BBC6; border-radius: 6px 6px 0 0"></div></div>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-size: 12px; color: #3F4652">15.8%</span><div style="width: 30px; height: 126px; background: #4A5568; border-radius: 6px 6px 0 0"></div></div>
+</div>
+<div style="display: flex; justify-content: center; align-items: flex-end; gap: 4px">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-size: 13px; font-weight: 700">17.1%</span><div style="width: 30px; height: 137px; background: #2F6FDE; border-radius: 6px 6px 0 0"></div></div>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-size: 12px; color: #565D6B">14.6%</span><div style="width: 30px; height: 117px; background: #B5BBC6; border-radius: 6px 6px 0 0"></div></div>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-size: 12px; color: #3F4652">15.1%</span><div style="width: 30px; height: 121px; background: #4A5568; border-radius: 6px 6px 0 0"></div></div>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; text-align: center">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 6px"><p style="margin: 0; font-size: 16px; font-weight: 700">1 year</p><span class="pill good">+3.5 vs index</span><span class="pill good">+1.8 vs typical</span></div>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 6px"><p style="margin: 0; font-size: 16px; font-weight: 700">3 years</p><span class="pill good">+3.2 vs index</span><span class="pill good">+2.6 vs typical</span></div>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 6px"><p style="margin: 0; font-size: 16px; font-weight: 700">5 years</p><span class="pill good">+2.5 vs index</span><span class="pill good">+2.0 vs typical</span></div>
+</div>
+<div style="background: #F5F8FE; border-radius: 12px; padding: 14px 16px; font-size: 15px; line-height: 1.5">₹1,00,000 put in 5 years ago is now about <b>₹2,20,183</b> in this fund, against <b>₹1,97,662</b> in the index and <b>₹2,02,016</b> in a typical Flexi Cap fund.</div>
+<p class="foot">"Typical fund" is the middle fund of the 34 in its category: half did better, half did worse.</p>
+</section>
+
+<section class="card">
+<div>
+<h2 class="h2">When markets rise and fall</h2>
+<p class="sub">Over 5 years, month by month.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 18px">
+<div>
+<p style="margin: 0 0 8px; font-size: 15px; font-weight: 600">When the index <span style="color: #1E4FB3">gained ₹100</span>, this fund gained</p>
+<div style="display: flex; flex-direction: column; gap: 6px; font-size: 14px">
+<div style="display: flex; align-items: center; gap: 10px"><span style="width: 74px; color: #565D6B">Index</span><div style="flex: 1; background: #F0F1F4; border-radius: 6px"><div style="width: 83%; height: 22px; background: #B5BBC6; border-radius: 6px"></div></div><b style="width: 48px; text-align: right">₹100</b></div>
+<div style="display: flex; align-items: center; gap: 10px"><span style="width: 74px; color: #565D6B">This fund</span><div style="flex: 1; background: #F0F1F4; border-radius: 6px"><div style="width: 90%; height: 22px; background: #2F6FDE; border-radius: 6px"></div></div><b style="width: 48px; text-align: right">₹108</b></div>
+</div>
+</div>
+<div>
+<p style="margin: 0 0 8px; font-size: 15px; font-weight: 600">When the index <span style="color: #9E330A">lost ₹100</span>, this fund lost</p>
+<div style="display: flex; flex-direction: column; gap: 6px; font-size: 14px">
+<div style="display: flex; align-items: center; gap: 10px"><span style="width: 74px; color: #565D6B">Index</span><div style="flex: 1; background: #F0F1F4; border-radius: 6px"><div style="width: 83%; height: 22px; background: #B5BBC6; border-radius: 6px"></div></div><b style="width: 48px; text-align: right">₹100</b></div>
+<div style="display: flex; align-items: center; gap: 10px"><span style="width: 74px; color: #565D6B">This fund</span><div style="flex: 1; background: #F0F1F4; border-radius: 6px"><div style="width: 73%; height: 22px; background: #2F6FDE; border-radius: 6px"></div></div><b style="width: 48px; text-align: right">₹88</b></div>
+</div>
+</div>
+</div>
+<div style="display: flex; gap: 10px; align-items: center; background: #F5F8FE; border-radius: 12px; padding: 14px 16px; font-size: 15px; line-height: 1.5">
+<span class="pill good">Helpful mix</span><span>More of the gains, less of the losses.</span>
+</div>
+<p class="foot">Experts call these upside and downside capture: 108% and 88%.</p>
+</section>
+
+<section class="card" style="grid-column: 1 / -1">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: flex-end">
+<div>
+<h2 class="h2">Year by year</h2>
+<p class="sub">Each calendar year, and how far ahead of or behind the index and the typical Flexi Cap fund it finished. The gap over the index is often called alpha.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span class="pill good" style="font-size: 14px; padding: 7px 14px">Beat the index 5 of 5 years · +3.0 pts avg</span>
+<span class="pill good" style="font-size: 14px; padding: 7px 14px">Beat the typical fund 5 of 5 years · +2.3 pts avg</span>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px">
+<div style="border: 1px solid #E2E5EA; border-radius: 12px; padding: 14px; display: flex; flex-direction: column; gap: 8px"><p style="margin: 0; font-size: 18px; font-weight: 700; color: #3F4652; text-align: center">2021</p><p style="margin: 0; font-size: 26px; font-weight: 800; text-align: center">34.0%</p><div style="display: flex; justify-content: space-between; font-size: 13px; color: #565D6B"><span>Index 31.6%</span><b style="color: #1E4FB3">+2.4</b></div><div style="display: flex; justify-content: space-between; font-size: 13px; color: #565D6B"><span>Typical 30.5%</span><b style="color: #1E4FB3">+3.5</b></div></div>
+<div style="border: 1px solid #E2E5EA; border-radius: 12px; padding: 14px; display: flex; flex-direction: column; gap: 8px"><p style="margin: 0; font-size: 18px; font-weight: 700; color: #3F4652; text-align: center">2022</p><p style="margin: 0; font-size: 26px; font-weight: 800; text-align: center">6.5%</p><div style="display: flex; justify-content: space-between; font-size: 13px; color: #565D6B"><span>Index 4.3%</span><b style="color: #1E4FB3">+2.2</b></div><div style="display: flex; justify-content: space-between; font-size: 13px; color: #565D6B"><span>Typical 4.8%</span><b style="color: #1E4FB3">+1.7</b></div></div>
+<div style="border: 1px solid #E2E5EA; border-radius: 12px; padding: 14px; display: flex; flex-direction: column; gap: 8px"><p style="margin: 0; font-size: 18px; font-weight: 700; color: #3F4652; text-align: center">2023</p><p style="margin: 0; font-size: 26px; font-weight: 800; text-align: center">29.8%</p><div style="display: flex; justify-content: space-between; font-size: 13px; color: #565D6B"><span>Index 26.9%</span><b style="color: #1E4FB3">+2.9</b></div><div style="display: flex; justify-content: space-between; font-size: 13px; color: #565D6B"><span>Typical 27.4%</span><b style="color: #1E4FB3">+2.4</b></div></div>
+<div style="border: 2px solid #2F6FDE; border-radius: 12px; padding: 13px; display: flex; flex-direction: column; gap: 8px"><p style="margin: 0; font-size: 18px; font-weight: 700; color: #3F4652; text-align: center">2024 · best</p><p style="margin: 0; font-size: 26px; font-weight: 800; text-align: center">21.2%</p><div style="display: flex; justify-content: space-between; font-size: 13px; color: #565D6B"><span>Index 16.2%</span><b style="color: #1E4FB3">+5.0</b></div><div style="display: flex; justify-content: space-between; font-size: 13px; color: #565D6B"><span>Typical 18.9%</span><b style="color: #1E4FB3">+2.3</b></div></div>
+<div style="border: 1px solid #E2E5EA; border-radius: 12px; padding: 14px; display: flex; flex-direction: column; gap: 8px"><p style="margin: 0; font-size: 18px; font-weight: 700; color: #3F4652; text-align: center">2025</p><p style="margin: 0; font-size: 26px; font-weight: 800; text-align: center">12.4%</p><div style="display: flex; justify-content: space-between; font-size: 13px; color: #565D6B"><span>Index 9.9%</span><b style="color: #1E4FB3">+2.5</b></div><div style="display: flex; justify-content: space-between; font-size: 13px; color: #565D6B"><span>Typical 10.6%</span><b style="color: #1E4FB3">+1.8</b></div></div>
+</div>
+<p class="foot">Numbers next to each line are percentage points ahead (+) or behind (−) for that year.</p>
+</section>
+
+<section class="card">
+<div>
+<h2 class="h2">Every possible start date</h2>
+<p class="sub">If you had invested on any day and held for 3 years, how often did the fund beat the index? This rules out one lucky start date.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 6px" role="img" aria-label="8 out of 10 squares filled">
+<div style="aspect-ratio: 1; border-radius: 6px; background: #2F6FDE"></div>
+<div style="aspect-ratio: 1; border-radius: 6px; background: #2F6FDE"></div>
+<div style="aspect-ratio: 1; border-radius: 6px; background: #2F6FDE"></div>
+<div style="aspect-ratio: 1; border-radius: 6px; background: #2F6FDE"></div>
+<div style="aspect-ratio: 1; border-radius: 6px; background: #2F6FDE"></div>
+<div style="aspect-ratio: 1; border-radius: 6px; background: #2F6FDE"></div>
+<div style="aspect-ratio: 1; border-radius: 6px; background: #2F6FDE"></div>
+<div style="aspect-ratio: 1; border-radius: 6px; background: #2F6FDE"></div>
+<div style="aspect-ratio: 1; border-radius: 6px; background: #E3E6EB"></div>
+<div style="aspect-ratio: 1; border-radius: 6px; background: #E3E6EB"></div>
+</div>
+<p style="margin: 0; font-size: 26px; font-weight: 800; letter-spacing: -0.01em">Beat its index <span style="color: #1E4FB3">8 times in 10</span></p>
+<p class="foot">Above 7 in 10 is strong. 5 to 7 is mixed. Below 5 means the index usually won.</p>
+</section>
+
+<section class="card">
+<div>
+<h2 class="h2">Its worst fall</h2>
+<p class="sub">The March 2020 crash: what happened to ₹1,00,000.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px">
+<div style="display: flex; align-items: center; gap: 10px"><span style="width: 74px; color: #565D6B">This fund</span><div style="flex: 1; background: #F0F1F4; border-radius: 6px"><div style="width: 67%; height: 26px; background: #2F6FDE; border-radius: 6px"></div></div><b style="width: 72px; text-align: right">₹67,000</b></div>
+<div style="display: flex; align-items: center; gap: 10px"><span style="width: 74px; color: #565D6B">Index</span><div style="flex: 1; background: #F0F1F4; border-radius: 6px"><div style="width: 62%; height: 26px; background: #B5BBC6; border-radius: 6px"></div></div><b style="width: 72px; text-align: right">₹62,000</b></div>
+<div style="display: flex; align-items: center; gap: 10px"><span style="width: 74px; color: #565D6B">Typical fund</span><div style="flex: 1; background: #F0F1F4; border-radius: 6px"><div style="width: 64%; height: 26px; background: #4A5568; border-radius: 6px"></div></div><b style="width: 72px; text-align: right">₹64,000</b></div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+<div style="background: #F5F8FE; border-radius: 12px; padding: 12px 14px"><p style="margin: 0; font-size: 13px; color: #565D6B">Fell by</p><p style="margin: 2px 0 0; font-size: 22px; font-weight: 800">33%</p><p style="margin: 0; font-size: 13px; color: #565D6B">Index 38% · typical fund 36%</p></div>
+<div style="background: #F5F8FE; border-radius: 12px; padding: 12px 14px"><p style="margin: 0; font-size: 13px; color: #565D6B">Back to its old high in</p><p style="margin: 2px 0 0; font-size: 22px; font-weight: 800">7 months</p><p style="margin: 0; font-size: 13px; color: #565D6B">Index 9 · typical fund 8</p></div>
+</div>
+<p class="foot">Every equity fund falls sometimes. What matters is falling less than its index and recovering sooner.</p>
+</section>
+
+<section class="card">
+<div>
+<h2 class="h2">Rank among 34 Flexi Cap funds</h2>
+<p class="sub">Which quarter of the group it finished in.</p>
+</div>
+<div style="display: grid; grid-template-columns: 76px repeat(4, minmax(0, 1fr)); gap: 6px; font-size: 12px; color: #565D6B; text-align: center">
+<span></span><span>Top 25%</span><span>Upper middle</span><span>Lower middle</span><span>Bottom 25%</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="display: grid; grid-template-columns: 76px repeat(4, minmax(0, 1fr)); gap: 6px; align-items: center">
+<span style="font-size: 14px; font-weight: 600">1 year</span>
+<div style="height: 34px; border-radius: 8px; background: #EEF0F3"></div>
+<div style="height: 34px; border-radius: 8px; background: #8FB2EF; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; color: #102C66">Here</div>
+<div style="height: 34px; border-radius: 8px; background: #EEF0F3"></div>
+<div style="height: 34px; border-radius: 8px; background: #EEF0F3"></div>
+</div>
+<div style="display: grid; grid-template-columns: 76px repeat(4, minmax(0, 1fr)); gap: 6px; align-items: center">
+<span style="font-size: 14px; font-weight: 600">3 years</span>
+<div style="height: 34px; border-radius: 8px; background: #2F6FDE; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; color: #FFFFFF">Here</div>
+<div style="height: 34px; border-radius: 8px; background: #EEF0F3"></div>
+<div style="height: 34px; border-radius: 8px; background: #EEF0F3"></div>
+<div style="height: 34px; border-radius: 8px; background: #EEF0F3"></div>
+</div>
+<div style="display: grid; grid-template-columns: 76px repeat(4, minmax(0, 1fr)); gap: 6px; align-items: center">
+<span style="font-size: 14px; font-weight: 600">5 years</span>
+<div style="height: 34px; border-radius: 8px; background: #2F6FDE; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; color: #FFFFFF">Here</div>
+<div style="height: 34px; border-radius: 8px; background: #EEF0F3"></div>
+<div style="height: 34px; border-radius: 8px; background: #EEF0F3"></div>
+<div style="height: 34px; border-radius: 8px; background: #EEF0F3"></div>
+</div>
+</div>
+<p class="foot">Longer periods count more: 5 and 3 years carry twice the weight of 1 year.</p>
+</section>
+
+<section class="card">
+<div>
+<h2 class="h2">What you pay</h2>
+<p class="sub">The yearly charge (expense ratio), taken out of the fund's value.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px">
+<span style="font-size: 36px; font-weight: 800; color: #1E4FB3; letter-spacing: -0.02em">0.75%</span>
+<span style="font-size: 15px; color: #3F4652">a year · typical Flexi Cap direct plan: 0.82%</span>
+</div>
+<div style="position: relative; height: 12px; background: #EEF0F3; border-radius: 6px">
+<div style="width: 50%; height: 12px; background: #2F6FDE; border-radius: 6px"></div>
+<div style="position: absolute; left: 54.7%; top: -6px; width: 3px; height: 24px; background: #16181D; border-radius: 2px"></div>
+</div>
+<div style="display: flex; justify-content: space-between; font-size: 12px; color: #565D6B"><span>0%</span><span>Line = typical fund</span><span>1.5%</span></div>
+<div style="background: #F5F6F8; border-radius: 12px; padding: 14px 16px; font-size: 15px; line-height: 1.5">On your ₹4,20,000 that is about <b>₹3,150 a year</b>, roughly ₹290 less than a typical fund of this kind.</div>
+</section>
+
+<section class="card" style="grid-column: 1 / -1">
+<div>
+<h2 class="h2">Good to know</h2>
+<p class="sub">Facts about the fund. They don't change the verdict.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px">
+<div style="border: 1px solid #E2E5EA; border-radius: 12px; padding: 14px"><p style="margin: 0; font-size: 13px; color: #565D6B">Official risk level</p><p style="margin: 4px 0 0; font-size: 17px; font-weight: 700">Very High</p><p style="margin: 2px 0 0; font-size: 13px; color: #565D6B">Same as its index</p></div>
+<div style="border: 1px solid #E2E5EA; border-radius: 12px; padding: 14px"><p style="margin: 0; font-size: 13px; color: #565D6B">Fund size</p><p style="margin: 4px 0 0; font-size: 17px; font-weight: 700">₹48,250 crore</p><p style="margin: 2px 0 0; font-size: 13px; color: #565D6B">All plans together</p></div>
+<div style="border: 1px solid #E2E5EA; border-radius: 12px; padding: 14px"><p style="margin: 0; font-size: 13px; color: #565D6B">Track record</p><p style="margin: 4px 0 0; font-size: 17px; font-weight: 700">13.8 years</p><p style="margin: 2px 0 0; font-size: 13px; color: #565D6B">Launched Jan 2013</p></div>
+<div style="border: 1px solid #E2E5EA; border-radius: 12px; padding: 14px"><p style="margin: 0; font-size: 13px; color: #565D6B">Fund manager</p><p style="margin: 4px 0 0; font-size: 17px; font-weight: 700">A. Sample</p><p style="margin: 2px 0 0; font-size: 13px; color: #565D6B">Since Apr 2019 (7.5 years)</p></div>
+<div style="border: 1px solid #E2E5EA; border-radius: 12px; padding: 14px"><p style="margin: 0; font-size: 13px; color: #565D6B">Exit load</p><p style="margin: 4px 0 0; font-size: 17px; font-weight: 700">1% within 1 year</p><p style="margin: 2px 0 0; font-size: 13px; color: #565D6B">Nil after that</p></div>
+</div>
+</section>
+</div>
+
+<footer style="font-size: 13px; line-height: 1.6; color: #565D6B; border-top: 1px solid #DADDE3; padding-top: 16px">
+<p style="margin: 0">Data as of 9 Oct 2026. Growth option of the plan you hold, against the total-return version of its index. Past performance does not guarantee future results. General information to discuss with a registered adviser, not a recommendation to buy, sell or switch.</p>
+<p style="margin: 6px 0 0">Fund data: AMFI, compiled by TigZig MFPRO, released under CC0. Sample fund for illustration.</p>
+</footer>
+</div>
+</div>
+</body>
+</html>

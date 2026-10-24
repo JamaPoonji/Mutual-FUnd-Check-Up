@@ -1,0 +1,275 @@
+{
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "value": {
+      "type": "number"
+    },
+    "plan": {
+      "type": "string"
+    },
+    "ter": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "category_median_ter": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "benchmark_name": {
+      "type": "string"
+    },
+    "returns": {
+      "type": "object"
+    },
+    "bench_returns": {
+      "type": "object"
+    },
+    "calendar_returns": {
+      "type": "object"
+    },
+    "bench_calendar_returns": {
+      "type": "object"
+    },
+    "rolling_beat_pct": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "rolling_window_years": {
+      "type": "integer"
+    },
+    "upside_capture": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "downside_capture": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "capture_years": {
+      "type": "integer"
+    },
+    "max_drawdown": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "bench_max_drawdown": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "drawdown_event": {
+      "type": "string"
+    },
+    "recovery_months": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "bench_recovery_months": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "quartiles": {
+      "type": "object"
+    },
+    "peer_count": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "is_index": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "isin": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "category_group": {
+      "type": "string"
+    },
+    "benchmark_applies": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "history_years": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "capture_obs": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "category_median_n": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "still_underwater": {
+      "type": "boolean"
+    },
+    "data_quality_note": {
+      "type": "string"
+    },
+    "aum_cr": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "riskometer": {
+      "type": "string"
+    },
+    "benchmark_riskometer": {
+      "type": "string"
+    },
+    "manager_names": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "manager_since": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "allotment_date": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "exit_load": {
+      "type": "string"
+    },
+    "ter_date": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "category",
+    "value"
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Fund (engine input)"
+}

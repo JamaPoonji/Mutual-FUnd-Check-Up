@@ -1,0 +1,8 @@
+.git
+.pytest_cache
+.jetro
+**/__pycache__
+**/*.pyc
+docs
+tests
+data/raw/**/amfi_nav_master.parquet

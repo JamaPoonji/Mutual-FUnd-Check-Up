@@ -1,0 +1,294 @@
+{
+  "type": "object",
+  "properties": {
+    "as_of": {
+      "type": "string"
+    },
+    "data_source": {
+      "type": "string"
+    },
+    "headline": {
+      "type": "string"
+    },
+    "counts": {
+      "type": "object"
+    },
+    "cards": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Card"
+      }
+    },
+    "funds": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/FundSummary"
+      }
+    },
+    "flags": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Insight"
+      }
+    },
+    "data_gaps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "glossary": {
+      "type": "object"
+    },
+    "disclaimer": {
+      "type": "string"
+    },
+    "credits": {
+      "type": "string"
+    },
+    "schema_version": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "as_of",
+    "data_source",
+    "headline",
+    "counts",
+    "cards",
+    "funds",
+    "flags",
+    "data_gaps",
+    "glossary",
+    "disclaimer"
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Report",
+  "$defs": {
+    "Card": {
+      "type": "object",
+      "properties": {
+        "topic": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "one_liner": {
+          "type": "string"
+        },
+        "sections": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Section"
+          }
+        },
+        "insights": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Insight"
+          }
+        }
+      },
+      "required": [
+        "topic",
+        "title",
+        "status",
+        "one_liner",
+        "sections",
+        "insights"
+      ]
+    },
+    "Section": {
+      "type": "object",
+      "properties": {
+        "topic": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "what": {
+          "type": "string"
+        },
+        "insights": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Insight"
+          }
+        }
+      },
+      "required": [
+        "topic",
+        "title",
+        "what",
+        "insights"
+      ]
+    },
+    "Insight": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "topic": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "headline": {
+          "type": "string"
+        },
+        "sentence": {
+          "type": "string"
+        },
+        "fund": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "suggestion": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "jargon_term": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "numbers": {
+          "type": "object",
+          "description": "Figures behind the sentence. Optional display-only category medians, never used in a score: by_horizon[].typical, by_horizon[].typical_gap, by_horizon[].typical_value, typical_cagr, typical_value, calendar typical, typical_margin, typical_beats, typical_n, typical_avg, typical_drawdown, typical_after, typical_recovery_months. Omit a typical figure when fewer than five funds have it, and never include one for an index fund."
+        }
+      },
+      "required": [
+        "id",
+        "topic",
+        "status",
+        "headline",
+        "sentence"
+      ]
+    },
+    "FundSummary": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "value": {
+          "type": "number"
+        },
+        "share_pct": {
+          "type": "number"
+        },
+        "verdict": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "going_well": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "look_at": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "scorecard": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ScoreItem"
+          }
+        },
+        "sections": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Section"
+          }
+        },
+        "facts": {
+          "type": "object"
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "questions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "name",
+        "category",
+        "value",
+        "share_pct",
+        "verdict",
+        "status",
+        "going_well",
+        "look_at",
+        "scorecard",
+        "sections"
+      ]
+    },
+    "ScoreItem": {
+      "type": "object",
+      "properties": {
+        "topic": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "topic",
+        "title",
+        "status",
+        "label",
+        "note"
+      ]
+    }
+  }
+}

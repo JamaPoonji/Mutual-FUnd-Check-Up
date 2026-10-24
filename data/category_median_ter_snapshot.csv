@@ -1,0 +1,133 @@
+category_group,category,plan,median_ter_pct,fund_count,p25_ter_pct,p75_ter_pct,latest_ter_date
+Debt Scheme,10-year Constant Maturity Gilt Fund,Direct,0.3,4,0.28,0.31,2026-10-09
+Debt Scheme,10-year Constant Maturity Gilt Fund,Regular,0.49,4,0.47,0.53,2026-10-09
+Debt Scheme,Banking and PSU Debt Fund,Direct,0.37,15,0.28,0.4,2026-10-11
+Debt Scheme,Banking and PSU Debt Fund,Regular,0.7,15,0.64,0.76,2026-10-11
+Debt Scheme,Banking and PSU Fund,Direct,0.35,3,0.29,0.38,2026-10-09
+Debt Scheme,Banking and PSU Fund,Regular,0.72,3,0.61,0.74,2026-10-09
+Debt Scheme,Corporate Bond Fund,Direct,0.34,21,0.29,0.37,2026-10-11
+Debt Scheme,Corporate Bond Fund,Regular,0.68,21,0.6,0.76,2026-10-11
+Debt Scheme,Credit Risk Fund,Direct,0.8,13,0.61,0.82,2026-10-11
+Debt Scheme,Credit Risk Fund,Regular,1.51,13,1.43,1.61,2026-10-11
+Debt Scheme,Dynamic Bond,Direct,0.5,1,0.5,0.5,2026-10-09
+Debt Scheme,Dynamic Bond,Regular,1.01,1,1.01,1.01,2026-10-09
+Debt Scheme,Dynamic Term Fund,Direct,0.55,20,0.4,0.66,2026-10-11
+Debt Scheme,Dynamic Term Fund,Regular,1.33,20,1.12,1.55,2026-10-11
+Debt Scheme,Floating Interest Rates Fund,Direct,0.28,12,0.25,0.32,2026-10-11
+Debt Scheme,Floating Interest Rates Fund,Regular,0.64,12,0.52,0.79,2026-10-11
+Debt Scheme,Gilt Fund,Direct,0.5,23,0.47,0.57,2026-10-11
+Debt Scheme,Gilt Fund,Regular,1.2,23,1.09,1.34,2026-10-11
+Debt Scheme,Liquid Fund,Direct,0.13,41,0.1,0.16,2026-10-11
+Debt Scheme,Liquid Fund,Regular,0.25,41,0.21,0.3,2026-10-11
+Debt Scheme,Long Term Fund,Direct,0.32,11,0.28,0.35,2026-10-11
+Debt Scheme,Long Term Fund,Regular,0.78,11,0.67,0.88,2026-10-11
+Debt Scheme,Medium Duration Fund,Direct,0.67,1,0.67,0.67,2026-10-07
+Debt Scheme,Medium Duration Fund,Regular,1.63,1,1.63,1.63,2026-10-07
+Debt Scheme,Medium Term Fund,Direct,0.71,12,0.48,0.76,2026-10-11
+Debt Scheme,Medium Term Fund,Regular,1.31,12,1.14,1.41,2026-10-11
+Debt Scheme,Medium to Long Term Fund,Direct,0.69,13,0.6,0.78,2026-10-11
+Debt Scheme,Medium to Long Term Fund,Regular,1.36,13,1.03,1.64,2026-10-11
+Debt Scheme,Money Market Fund,Direct,0.17,27,0.16,0.19,2026-10-11
+Debt Scheme,Money Market Fund,Regular,0.4,27,0.36,0.44,2026-10-11
+Debt Scheme,Overnight Fund,Direct,0.1,35,0.09,0.13,2026-10-11
+Debt Scheme,Overnight Fund,Regular,0.18,34,0.14,0.21,2026-10-11
+Debt Scheme,Sectoral Fund,Direct,0.28,1,0.28,0.28,2026-10-09
+Debt Scheme,Sectoral Fund,Regular,0.45,1,0.45,0.45,2026-10-09
+Debt Scheme,Short Duration Fund,Direct,0.37,3,0.37,0.41,2026-10-09
+Debt Scheme,Short Duration Fund,Regular,0.96,3,0.96,1.0,2026-10-09
+Debt Scheme,Short Term Fund,Direct,0.38,22,0.33,0.4,2026-10-11
+Debt Scheme,Short Term Fund,Regular,0.99,22,0.87,1.09,2026-10-11
+Debt Scheme,Ultra Short Duration Fund,Direct,0.39,3,0.36,0.4,2026-10-11
+Debt Scheme,Ultra Short Duration Fund,Regular,0.8,3,0.76,0.96,2026-10-11
+Debt Scheme,Ultra Short Term Fund,Direct,0.31,22,0.27,0.35,2026-10-11
+Debt Scheme,Ultra Short Term Fund,Regular,0.81,22,0.63,1.01,2026-10-11
+Debt Scheme,Ultra Short to Short Term Fund,Direct,0.34,25,0.27,0.4,2026-10-11
+Debt Scheme,Ultra Short to Short Term Fund,Regular,0.86,25,0.65,1.02,2026-10-11
+Equity Scheme,Contra Fund,Direct,0.8,3,0.78,0.83,2026-10-11
+Equity Scheme,Contra Fund,Regular,1.85,3,1.74,1.94,2026-10-11
+Equity Scheme,Dividend Yield Fund,Direct,1.14,11,0.93,1.46,2026-10-11
+Equity Scheme,Dividend Yield Fund,Regular,2.31,11,2.02,2.56,2026-10-11
+Equity Scheme,ELSS,Direct,1.07,14,0.95,1.21,2026-10-11
+Equity Scheme,ELSS,Regular,2.13,14,1.94,2.54,2026-10-11
+Equity Scheme,ELSS- Tax Saver Fund,Direct,1.08,20,0.93,1.21,2026-10-11
+Equity Scheme,ELSS- Tax Saver Fund,Regular,2.15,20,1.84,2.55,2026-10-11
+Equity Scheme,Flexi Cap Fund,Direct,0.91,43,0.85,1.21,2026-10-11
+Equity Scheme,Flexi Cap Fund,Regular,2.15,43,1.94,2.41,2026-10-11
+Equity Scheme,Focused Fund,Direct,1.08,27,0.91,1.21,2026-10-11
+Equity Scheme,Focused Fund,Regular,2.18,27,2.02,2.34,2026-10-11
+Equity Scheme,Large & Mid Cap Fund,Direct,1.08,33,0.83,1.3,2026-10-11
+Equity Scheme,Large & Mid Cap Fund,Regular,2.29,33,1.87,2.57,2026-10-11
+Equity Scheme,Large Cap Fund,Direct,1.04,31,0.9,1.22,2026-10-11
+Equity Scheme,Large Cap Fund,Regular,2.18,31,1.76,2.53,2026-10-11
+Equity Scheme,Mid Cap Fund,Direct,0.93,32,0.8,1.11,2026-10-11
+Equity Scheme,Mid Cap Fund,Regular,2.02,32,1.86,2.27,2026-10-11
+Equity Scheme,Multi Cap Fund,Direct,0.95,31,0.84,1.1,2026-10-11
+Equity Scheme,Multi Cap Fund,Regular,2.18,31,2.01,2.3,2026-10-11
+Equity Scheme,Sectoral Fund,Direct,1.07,18,1.0,1.15,2026-10-11
+Equity Scheme,Sectoral Fund,Regular,2.49,18,2.14,2.73,2026-10-11
+Equity Scheme,Sectoral/Thematic,Direct,1.18,155,1.0,1.44,2026-10-11
+Equity Scheme,Sectoral/Thematic,Regular,2.35,155,2.13,2.62,2026-10-11
+Equity Scheme,Small Cap Fund,Direct,0.9,34,0.77,1.06,2026-10-11
+Equity Scheme,Small Cap Fund,Regular,2.02,34,1.74,2.37,2026-10-11
+Equity Scheme,Thematic Fund,Direct,1.08,57,0.96,1.27,2026-10-11
+Equity Scheme,Thematic Fund,Regular,2.38,57,2.19,2.58,2026-10-11
+Equity Scheme,Value Fund,Direct,1.22,23,1.05,1.53,2026-10-11
+Equity Scheme,Value Fund,Regular,2.28,23,2.0,2.64,2026-10-11
+Hybrid Scheme,Aggressive Hybrid Fund,Direct,1.08,30,0.8,1.18,2026-10-11
+Hybrid Scheme,Aggressive Hybrid Fund,Regular,2.2,30,1.91,2.53,2026-10-11
+Hybrid Scheme,Arbitrage Fund,Direct,1.46,38,1.21,1.63,2026-10-11
+Hybrid Scheme,Arbitrage Fund,Regular,2.07,37,1.94,2.25,2026-10-11
+Hybrid Scheme,Balanced Advantage Fund/ Dynamic Asset Allocation,Direct,0.99,14,0.9,1.11,2026-10-11
+Hybrid Scheme,Balanced Advantage Fund/ Dynamic Asset Allocation,Regular,2.38,14,2.17,2.46,2026-10-11
+Hybrid Scheme,Balanced Hybrid Fund,Direct,1.15,5,0.71,1.46,2026-10-11
+Hybrid Scheme,Balanced Hybrid Fund,Regular,2.33,5,2.25,2.61,2026-10-11
+Hybrid Scheme,Conservative Hybrid Fund,Direct,0.99,18,0.78,1.18,2026-10-11
+Hybrid Scheme,Conservative Hybrid Fund,Regular,1.83,18,1.71,2.05,2026-10-11
+Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,Direct,0.96,18,0.82,1.36,2026-10-11
+Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,Regular,2.29,18,1.9,2.66,2026-10-11
+Hybrid Scheme,Equity Savings,Direct,1.11,15,1.07,1.32,2026-10-11
+Hybrid Scheme,Equity Savings,Regular,2.0,15,1.72,2.22,2026-10-11
+Hybrid Scheme,Equity Savings Fund,Direct,1.46,8,1.22,1.52,2026-10-11
+Hybrid Scheme,Equity Savings Fund,Regular,2.77,8,2.32,2.87,2026-10-11
+Hybrid Scheme,Multi Asset Allocation,Direct,0.79,18,0.66,1.0,2026-10-11
+Hybrid Scheme,Multi Asset Allocation,Regular,2.08,18,1.82,2.35,2026-10-11
+Hybrid Scheme,Multi Asset Allocation Fund,Direct,0.91,16,0.64,1.02,2026-10-11
+Hybrid Scheme,Multi Asset Allocation Fund,Regular,2.15,16,1.78,2.41,2026-10-11
+Other Scheme,Children's Fund,Direct,1.37,10,1.09,1.76,2026-10-11
+Other Scheme,Children's Fund,Regular,2.38,10,1.86,2.64,2026-10-11
+Other Scheme,Debt ETF,Direct,0.38,3,0.27,0.41,2026-10-11
+Other Scheme,Debt ETF,Regular,0.23,7,0.22,0.32,2026-10-11
+Other Scheme,Debt Funds,Direct,0.17,21,0.15,0.21,2026-10-11
+Other Scheme,Debt Funds,Regular,0.4,21,0.31,0.44,2026-10-11
+Other Scheme,ETFs investing overseas,Regular,0.66,2,0.65,0.66,2026-10-11
+Other Scheme,Equity ETF,Direct,0.81,2,0.66,0.95,2026-10-09
+Other Scheme,Equity ETF,Regular,0.39,67,0.2,0.62,2026-10-11
+Other Scheme,Equity Funds,Direct,0.57,66,0.41,0.78,2026-10-11
+Other Scheme,Equity Funds,Regular,1.18,66,1.08,1.36,2026-10-11
+Other Scheme,FoF Domestic,Direct,0.2,83,0.11,0.32,2026-10-11
+Other Scheme,FoF Domestic,Regular,0.58,80,0.44,0.87,2026-10-11
+Other Scheme,FoF Overseas,Direct,0.61,32,0.31,0.78,2026-10-11
+Other Scheme,FoF Overseas,Regular,1.42,32,0.92,1.6,2026-10-11
+Other Scheme,Fund of Funds Scheme (Domestic),Direct,0.14,57,0.09,0.21,2026-10-11
+Other Scheme,Fund of Funds Scheme (Domestic),Regular,0.6,57,0.47,0.69,2026-10-11
+Other Scheme,Fund of Funds investing overseas,Direct,0.57,19,0.4,0.79,2026-10-11
+Other Scheme,Fund of Funds investing overseas,Regular,1.36,19,0.7,1.46,2026-10-11
+Other Scheme,Gold ETF,Direct,0.45,9,0.35,0.51,2026-10-11
+Other Scheme,Gold ETF,Regular,0.5,13,0.47,0.59,2026-10-11
+Other Scheme,Hybrid ETF,Regular,0.51,1,0.51,0.51,2026-10-11
+Other Scheme,Hybrid Fund,Direct,0.69,1,0.69,0.69,2026-10-11
+Other Scheme,Hybrid Fund,Regular,1.41,1,1.41,1.41,2026-10-11
+Other Scheme,Index Funds,Direct,0.36,264,0.2,0.52,2026-10-11
+Other Scheme,Index Funds,Regular,0.9,257,0.43,1.12,2026-10-11
+Other Scheme,Life Cycle Fund with Maturity of 10 Years,Direct,1.73,2,1.37,2.08,2026-10-09
+Other Scheme,Life Cycle Fund with Maturity of 10 Years,Regular,3.8,1,3.8,3.8,2026-10-08
+Other Scheme,Life Cycle Fund with Maturity of 15 Years,Direct,1.14,1,1.14,1.14,2026-10-09
+Other Scheme,Life Cycle Fund with Maturity of 5 Years,Direct,2.98,1,2.98,2.98,2026-10-09
+Other Scheme,Other ETF,Direct,0.53,19,0.47,0.62,2026-10-11
+Other Scheme,Other ETF,Regular,0.8,2,0.76,0.83,2026-10-11
+Other Scheme,Other ETFs,Direct,0.25,43,0.16,0.35,2026-10-11
+Other Scheme,Other ETFs,Regular,0.27,124,0.19,0.41,2026-10-11
+Other Scheme,Retirement Fund,Direct,1.15,28,0.98,1.26,2026-10-11
+Other Scheme,Retirement Fund,Regular,2.17,28,2.13,2.49,2026-10-11
+Other Scheme,Silver ETF,Direct,0.47,2,0.43,0.5,2026-10-11
+Other Scheme,Silver ETF,Regular,0.53,2,0.49,0.56,2026-10-11

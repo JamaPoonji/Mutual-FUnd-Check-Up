@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+data/raw/
+data/store/
+.jetro/
+.mcp.json
+.cursor/mcp.json

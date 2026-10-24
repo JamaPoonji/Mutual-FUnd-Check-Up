@@ -1,0 +1,3634 @@
+{
+  "as_of": "(sample data)",
+  "data_source": "illustrative sample",
+  "headline": "Of your 6 funds: 1 doing well, 2 on track, 1 worth a closer look, 1 needing attention, 1 with limited data.",
+  "counts": {
+    "Doing well": 1,
+    "On track": 2,
+    "Worth a closer look": 1,
+    "Needs attention": 1,
+    "Limited data": 1,
+    "Not enough data": 0
+  },
+  "cards": [
+    {
+      "topic": "returns",
+      "title": "Returns",
+      "status": "watch",
+      "one_liner": "4 of 5 funds look fine here; 1 worth a closer look. (1 not covered by this check.)",
+      "sections": [
+        {
+          "topic": "returns",
+          "title": "Growth over 1, 3 and 5 years",
+          "what": "How fast your money grew each year on average, compared with the market index.",
+          "insights": [
+            {
+              "id": "returns-sample-flexi-cap-fund-a",
+              "topic": "returns",
+              "status": "good",
+              "headline": "Ahead of its benchmark",
+              "sentence": "Over 5 years this fund grew 17.1% a year; the Sample 500 index grew 14.6%. That is 2.5% a year ahead.",
+              "fund": "Sample Flexi Cap Fund A",
+              "suggestion": null,
+              "jargon_term": "cagr",
+              "numbers": {
+                "horizon_years": 5,
+                "fund_cagr": 17.1,
+                "bench_cagr": 14.6,
+                "gap_pts": 2.5,
+                "fund_value": 220183,
+                "bench_value": 197662,
+                "by_horizon": [
+                  {
+                    "years": 1,
+                    "fund": 21.0,
+                    "bench": 17.5,
+                    "gap": 3.5
+                  },
+                  {
+                    "years": 3,
+                    "fund": 18.4,
+                    "bench": 15.2,
+                    "gap": 3.2
+                  },
+                  {
+                    "years": 5,
+                    "fund": 17.1,
+                    "bench": 14.6,
+                    "gap": 2.5
+                  }
+                ]
+              }
+            },
+            {
+              "id": "returns-sample-mid-cap-fund-b",
+              "topic": "returns",
+              "status": "ok",
+              "headline": "Roughly in line with its benchmark",
+              "sentence": "Over 5 years this fund grew 22.5% a year; the Sample Midcap index grew 23.1%. That is about the same.",
+              "fund": "Sample Mid Cap Fund B",
+              "suggestion": null,
+              "jargon_term": "cagr",
+              "numbers": {
+                "horizon_years": 5,
+                "fund_cagr": 22.5,
+                "bench_cagr": 23.1,
+                "gap_pts": -0.6,
+                "fund_value": 275855,
+                "bench_value": 282677,
+                "by_horizon": [
+                  {
+                    "years": 1,
+                    "fund": 24.0,
+                    "bench": 25.0,
+                    "gap": -1.0
+                  },
+                  {
+                    "years": 3,
+                    "fund": 22.9,
+                    "bench": 24.0,
+                    "gap": -1.1
+                  },
+                  {
+                    "years": 5,
+                    "fund": 22.5,
+                    "bench": 23.1,
+                    "gap": -0.6
+                  }
+                ]
+              }
+            },
+            {
+              "id": "returns-sample-large---mid-cap-fund-c",
+              "topic": "returns",
+              "status": "attention",
+              "headline": "Well behind its benchmark",
+              "sentence": "Over 5 years this fund grew 11.8% a year; the Sample LargeMidcap index grew 15.4%. That is 3.6% a year behind.",
+              "fund": "Sample Large & Mid Cap Fund C",
+              "suggestion": "Worth asking whether this is a rough patch for the fund's style or a lasting gap, and how its closest peers did over the same period.",
+              "jargon_term": "cagr",
+              "numbers": {
+                "horizon_years": 5,
+                "fund_cagr": 11.8,
+                "bench_cagr": 15.4,
+                "gap_pts": -3.6,
+                "fund_value": 174666,
+                "bench_value": 204658,
+                "by_horizon": [
+                  {
+                    "years": 1,
+                    "fund": 14.0,
+                    "bench": 18.0,
+                    "gap": -4.0
+                  },
+                  {
+                    "years": 3,
+                    "fund": 12.1,
+                    "bench": 16.0,
+                    "gap": -3.9
+                  },
+                  {
+                    "years": 5,
+                    "fund": 11.8,
+                    "bench": 15.4,
+                    "gap": -3.6
+                  }
+                ]
+              }
+            },
+            {
+              "id": "returns-sample-large-cap-index-fund-d",
+              "topic": "returns",
+              "status": "ok",
+              "headline": "Tracking its index closely",
+              "sentence": "This fund copies the Sample 50 index. Over 5 years it returned 13.4% a year against 13.6% for the index, a gap of 0.2%. That is normal for an index fund.",
+              "fund": "Sample Large Cap Index Fund D",
+              "suggestion": null,
+              "jargon_term": "tracking",
+              "numbers": {
+                "horizon_years": 5,
+                "fund_cagr": 13.4,
+                "bench_cagr": 13.6,
+                "gap_pts": -0.2,
+                "fund_value": 187528,
+                "bench_value": 189187,
+                "by_horizon": [
+                  {
+                    "years": 1,
+                    "fund": 12.9,
+                    "bench": 13.1,
+                    "gap": -0.2
+                  },
+                  {
+                    "years": 3,
+                    "fund": 13.6,
+                    "bench": 13.8,
+                    "gap": -0.2
+                  },
+                  {
+                    "years": 5,
+                    "fund": 13.4,
+                    "bench": 13.6,
+                    "gap": -0.2
+                  }
+                ]
+              }
+            },
+            {
+              "id": "returns-sample-thematic-fund-e",
+              "topic": "returns",
+              "status": "ok",
+              "headline": "Ahead of its benchmark",
+              "sentence": "Over the last year this fund returned 28.0%; the Sample 500 index returned 17.5%. That is 10.5 percentage points ahead. One year is a short time to judge a fund, so treat this lightly.",
+              "fund": "Sample Thematic Fund E",
+              "suggestion": null,
+              "jargon_term": "cagr",
+              "numbers": {
+                "horizon_years": 1,
+                "fund_cagr": 28.0,
+                "bench_cagr": 17.5,
+                "gap_pts": 10.5,
+                "fund_value": 128000,
+                "bench_value": 117500,
+                "by_horizon": [
+                  {
+                    "years": 1,
+                    "fund": 28.0,
+                    "bench": 17.5,
+                    "gap": 10.5
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "topic": "calendar",
+          "title": "Year by year",
+          "what": "How the fund did in each calendar year, and by how much it finished ahead of or behind the benchmark (its alpha).",
+          "insights": [
+            {
+              "id": "calendar-sample-flexi-cap-fund-a",
+              "topic": "calendar",
+              "status": "good",
+              "headline": "Beat its benchmark in most years, by a clear margin",
+              "sentence": "In every one of the last 5 calendar years this fund beat the Sample 500 index. On average it finished 3.0 percentage points ahead of the benchmark each year (its margin over the benchmark, often called alpha). The widest gap was +5.0 points in 2024; the narrowest was +2.2 points in 2022.",
+              "fund": "Sample Flexi Cap Fund A",
+              "suggestion": null,
+              "jargon_term": "calendar",
+              "numbers": {
+                "years": [
+                  2021,
+                  2022,
+                  2023,
+                  2024,
+                  2025
+                ],
+                "fund": [
+                  34.0,
+                  6.5,
+                  29.8,
+                  21.2,
+                  12.4
+                ],
+                "bench": [
+                  31.6,
+                  4.3,
+                  26.9,
+                  16.2,
+                  9.9
+                ],
+                "alpha": [
+                  2.4,
+                  2.2,
+                  2.9,
+                  5.0,
+                  2.5
+                ],
+                "avg_alpha": 3.0,
+                "beats": 5,
+                "n": 5,
+                "best_alpha_year": 2024,
+                "worst_alpha_year": 2022
+              }
+            },
+            {
+              "id": "calendar-sample-mid-cap-fund-b",
+              "topic": "calendar",
+              "status": "ok",
+              "headline": "Roughly level with its benchmark year by year",
+              "sentence": "In 3 of the last 5 calendar years this fund beat the Sample Midcap index. On average it finished 0.4 percentage points behind the benchmark each year (its margin over the benchmark, often called alpha). The widest gap was +0.9 points in 2025; the narrowest was −2.6 points in 2023.",
+              "fund": "Sample Mid Cap Fund B",
+              "suggestion": null,
+              "jargon_term": "calendar",
+              "numbers": {
+                "years": [
+                  2021,
+                  2022,
+                  2023,
+                  2024,
+                  2025
+                ],
+                "fund": [
+                  44.0,
+                  3.1,
+                  41.5,
+                  26.0,
+                  6.0
+                ],
+                "bench": [
+                  43.5,
+                  4.9,
+                  44.1,
+                  25.2,
+                  5.1
+                ],
+                "alpha": [
+                  0.5,
+                  -1.8,
+                  -2.6,
+                  0.8,
+                  0.9
+                ],
+                "avg_alpha": -0.44,
+                "beats": 3,
+                "n": 5,
+                "best_alpha_year": 2025,
+                "worst_alpha_year": 2023
+              }
+            },
+            {
+              "id": "calendar-sample-large---mid-cap-fund-c",
+              "topic": "calendar",
+              "status": "attention",
+              "headline": "Well behind its benchmark year by year",
+              "sentence": "This fund did not beat the Sample LargeMidcap index in any of the last 5 calendar years. On average it finished 6.2 percentage points behind the benchmark each year (its margin over the benchmark, often called alpha). It fell furthest behind in 2022 (−7.0 points) and came closest in 2021 (−6.0 points).",
+              "fund": "Sample Large & Mid Cap Fund C",
+              "suggestion": "Worth checking whether the weak years share a cause, such as one theme falling out of favour.",
+              "jargon_term": "calendar",
+              "numbers": {
+                "years": [
+                  2021,
+                  2022,
+                  2023,
+                  2024,
+                  2025
+                ],
+                "fund": [
+                  24.0,
+                  -2.0,
+                  21.0,
+                  12.0,
+                  3.0
+                ],
+                "bench": [
+                  30.0,
+                  5.0,
+                  27.0,
+                  18.0,
+                  9.0
+                ],
+                "alpha": [
+                  -6.0,
+                  -7.0,
+                  -6.0,
+                  -6.0,
+                  -6.0
+                ],
+                "avg_alpha": -6.2,
+                "beats": 0,
+                "n": 5,
+                "best_alpha_year": 2021,
+                "worst_alpha_year": 2022
+              }
+            }
+          ]
+        },
+        {
+          "topic": "consistency",
+          "title": "Across every start date",
+          "what": "How often it beat the index if you had started on any day, not just one lucky day.",
+          "insights": [
+            {
+              "id": "consistency-sample-flexi-cap-fund-a",
+              "topic": "consistency",
+              "status": "good",
+              "headline": "Beats its benchmark most of the time",
+              "sentence": "In 8 out of every 10 three-year periods, counting every possible start date, this fund did better than the Sample 500 index.",
+              "fund": "Sample Flexi Cap Fund A",
+              "suggestion": null,
+              "jargon_term": "rolling_returns",
+              "numbers": {
+                "beat_pct": 82,
+                "window_years": 3
+              }
+            },
+            {
+              "id": "consistency-sample-mid-cap-fund-b",
+              "topic": "consistency",
+              "status": "ok",
+              "headline": "Beats its benchmark about half the time",
+              "sentence": "In 5 out of every 10 three-year periods, counting every possible start date, this fund did better than the Sample Midcap index.",
+              "fund": "Sample Mid Cap Fund B",
+              "suggestion": null,
+              "jargon_term": "rolling_returns",
+              "numbers": {
+                "beat_pct": 46,
+                "window_years": 3
+              }
+            },
+            {
+              "id": "consistency-sample-large---mid-cap-fund-c",
+              "topic": "consistency",
+              "status": "attention",
+              "headline": "Rarely beats its benchmark",
+              "sentence": "In 2 out of every 10 three-year periods, counting every possible start date, this fund did better than the Sample LargeMidcap index.",
+              "fund": "Sample Large & Mid Cap Fund C",
+              "suggestion": "Worth checking whether the fund manager or strategy changed, and if the weak stretches are recent or spread across the years.",
+              "jargon_term": "rolling_returns",
+              "numbers": {
+                "beat_pct": 18,
+                "window_years": 3
+              }
+            }
+          ]
+        }
+      ],
+      "insights": [
+        {
+          "id": "returns-sample-flexi-cap-fund-a",
+          "topic": "returns",
+          "status": "good",
+          "headline": "Ahead of its benchmark",
+          "sentence": "Over 5 years this fund grew 17.1% a year; the Sample 500 index grew 14.6%. That is 2.5% a year ahead.",
+          "fund": "Sample Flexi Cap Fund A",
+          "suggestion": null,
+          "jargon_term": "cagr",
+          "numbers": {
+            "horizon_years": 5,
+            "fund_cagr": 17.1,
+            "bench_cagr": 14.6,
+            "gap_pts": 2.5,
+            "fund_value": 220183,
+            "bench_value": 197662,
+            "by_horizon": [
+              {
+                "years": 1,
+                "fund": 21.0,
+                "bench": 17.5,
+                "gap": 3.5
+              },
+              {
+                "years": 3,
+                "fund": 18.4,
+                "bench": 15.2,
+                "gap": 3.2
+              },
+              {
+                "years": 5,
+                "fund": 17.1,
+                "bench": 14.6,
+                "gap": 2.5
+              }
+            ]
+          }
+        },
+        {
+          "id": "calendar-sample-flexi-cap-fund-a",
+          "topic": "calendar",
+          "status": "good",
+          "headline": "Beat its benchmark in most years, by a clear margin",
+          "sentence": "In every one of the last 5 calendar years this fund beat the Sample 500 index. On average it finished 3.0 percentage points ahead of the benchmark each year (its margin over the benchmark, often called alpha). The widest gap was +5.0 points in 2024; the narrowest was +2.2 points in 2022.",
+          "fund": "Sample Flexi Cap Fund A",
+          "suggestion": null,
+          "jargon_term": "calendar",
+          "numbers": {
+            "years": [
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "fund": [
+              34.0,
+              6.5,
+              29.8,
+              21.2,
+              12.4
+            ],
+            "bench": [
+              31.6,
+              4.3,
+              26.9,
+              16.2,
+              9.9
+            ],
+            "alpha": [
+              2.4,
+              2.2,
+              2.9,
+              5.0,
+              2.5
+            ],
+            "avg_alpha": 3.0,
+            "beats": 5,
+            "n": 5,
+            "best_alpha_year": 2024,
+            "worst_alpha_year": 2022
+          }
+        },
+        {
+          "id": "consistency-sample-flexi-cap-fund-a",
+          "topic": "consistency",
+          "status": "good",
+          "headline": "Beats its benchmark most of the time",
+          "sentence": "In 8 out of every 10 three-year periods, counting every possible start date, this fund did better than the Sample 500 index.",
+          "fund": "Sample Flexi Cap Fund A",
+          "suggestion": null,
+          "jargon_term": "rolling_returns",
+          "numbers": {
+            "beat_pct": 82,
+            "window_years": 3
+          }
+        },
+        {
+          "id": "returns-sample-mid-cap-fund-b",
+          "topic": "returns",
+          "status": "ok",
+          "headline": "Roughly in line with its benchmark",
+          "sentence": "Over 5 years this fund grew 22.5% a year; the Sample Midcap index grew 23.1%. That is about the same.",
+          "fund": "Sample Mid Cap Fund B",
+          "suggestion": null,
+          "jargon_term": "cagr",
+          "numbers": {
+            "horizon_years": 5,
+            "fund_cagr": 22.5,
+            "bench_cagr": 23.1,
+            "gap_pts": -0.6,
+            "fund_value": 275855,
+            "bench_value": 282677,
+            "by_horizon": [
+              {
+                "years": 1,
+                "fund": 24.0,
+                "bench": 25.0,
+                "gap": -1.0
+              },
+              {
+                "years": 3,
+                "fund": 22.9,
+                "bench": 24.0,
+                "gap": -1.1
+              },
+              {
+                "years": 5,
+                "fund": 22.5,
+                "bench": 23.1,
+                "gap": -0.6
+              }
+            ]
+          }
+        },
+        {
+          "id": "calendar-sample-mid-cap-fund-b",
+          "topic": "calendar",
+          "status": "ok",
+          "headline": "Roughly level with its benchmark year by year",
+          "sentence": "In 3 of the last 5 calendar years this fund beat the Sample Midcap index. On average it finished 0.4 percentage points behind the benchmark each year (its margin over the benchmark, often called alpha). The widest gap was +0.9 points in 2025; the narrowest was −2.6 points in 2023.",
+          "fund": "Sample Mid Cap Fund B",
+          "suggestion": null,
+          "jargon_term": "calendar",
+          "numbers": {
+            "years": [
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "fund": [
+              44.0,
+              3.1,
+              41.5,
+              26.0,
+              6.0
+            ],
+            "bench": [
+              43.5,
+              4.9,
+              44.1,
+              25.2,
+              5.1
+            ],
+            "alpha": [
+              0.5,
+              -1.8,
+              -2.6,
+              0.8,
+              0.9
+            ],
+            "avg_alpha": -0.44,
+            "beats": 3,
+            "n": 5,
+            "best_alpha_year": 2025,
+            "worst_alpha_year": 2023
+          }
+        },
+        {
+          "id": "consistency-sample-mid-cap-fund-b",
+          "topic": "consistency",
+          "status": "ok",
+          "headline": "Beats its benchmark about half the time",
+          "sentence": "In 5 out of every 10 three-year periods, counting every possible start date, this fund did better than the Sample Midcap index.",
+          "fund": "Sample Mid Cap Fund B",
+          "suggestion": null,
+          "jargon_term": "rolling_returns",
+          "numbers": {
+            "beat_pct": 46,
+            "window_years": 3
+          }
+        },
+        {
+          "id": "returns-sample-large---mid-cap-fund-c",
+          "topic": "returns",
+          "status": "attention",
+          "headline": "Well behind its benchmark",
+          "sentence": "Over 5 years this fund grew 11.8% a year; the Sample LargeMidcap index grew 15.4%. That is 3.6% a year behind.",
+          "fund": "Sample Large & Mid Cap Fund C",
+          "suggestion": "Worth asking whether this is a rough patch for the fund's style or a lasting gap, and how its closest peers did over the same period.",
+          "jargon_term": "cagr",
+          "numbers": {
+            "horizon_years": 5,
+            "fund_cagr": 11.8,
+            "bench_cagr": 15.4,
+            "gap_pts": -3.6,
+            "fund_value": 174666,
+            "bench_value": 204658,
+            "by_horizon": [
+              {
+                "years": 1,
+                "fund": 14.0,
+                "bench": 18.0,
+                "gap": -4.0
+              },
+              {
+                "years": 3,
+                "fund": 12.1,
+                "bench": 16.0,
+                "gap": -3.9
+              },
+              {
+                "years": 5,
+                "fund": 11.8,
+                "bench": 15.4,
+                "gap": -3.6
+              }
+            ]
+          }
+        },
+        {
+          "id": "calendar-sample-large---mid-cap-fund-c",
+          "topic": "calendar",
+          "status": "attention",
+          "headline": "Well behind its benchmark year by year",
+          "sentence": "This fund did not beat the Sample LargeMidcap index in any of the last 5 calendar years. On average it finished 6.2 percentage points behind the benchmark each year (its margin over the benchmark, often called alpha). It fell furthest behind in 2022 (−7.0 points) and came closest in 2021 (−6.0 points).",
+          "fund": "Sample Large & Mid Cap Fund C",
+          "suggestion": "Worth checking whether the weak years share a cause, such as one theme falling out of favour.",
+          "jargon_term": "calendar",
+          "numbers": {
+            "years": [
+              2021,
+              2022,
+              2023,
+              2024,
+              2025
+            ],
+            "fund": [
+              24.0,
+              -2.0,
+              21.0,
+              12.0,
+              3.0
+            ],
+            "bench": [
+              30.0,
+              5.0,
+              27.0,
+              18.0,
+              9.0
+            ],
+            "alpha": [
+              -6.0,
+              -7.0,
+              -6.0,
+              -6.0,
+              -6.0
+            ],
+            "avg_alpha": -6.2,
+            "beats": 0,
+            "n": 5,
+            "best_alpha_year": 2021,
+            "worst_alpha_year": 2022
+          }
+        },
+        {
+          "id": "consistency-sample-large---mid-cap-fund-c",
+          "topic": "consistency",
+          "status": "attention",
+          "headline": "Rarely beats its benchmark",
+          "sentence": "In 2 out of every 10 three-year periods, counting every possible start date, this fund did better than the Sample LargeMidcap index.",
+          "fund": "Sample Large & Mid Cap Fund C",
+          "suggestion": "Worth checking whether the fund manager or strategy changed, and if the weak stretches are recent or spread across the years.",
+          "jargon_term": "rolling_returns",
+          "numbers": {
+            "beat_pct": 18,
+            "window_years": 3
+          }
+        },
+        {
+          "id": "returns-sample-large-cap-index-fund-d",
+          "topic": "returns",
+          "status": "ok",
+          "headline": "Tracking its index closely",
+          "sentence": "This fund copies the Sample 50 index. Over 5 years it returned 13.4% a year against 13.6% for the index, a gap of 0.2%. That is normal for an index fund.",
+          "fund": "Sample Large Cap Index Fund D",
+          "suggestion": null,
+          "jargon_term": "tracking",
+          "numbers": {
+            "horizon_years": 5,
+            "fund_cagr": 13.4,
+            "bench_cagr": 13.6,
+            "gap_pts": -0.2,
+            "fund_value": 187528,
+            "bench_value": 189187,
+            "by_horizon": [
+              {
+                "years": 1,
+                "fund": 12.9,
+                "bench": 13.1,
+                "gap": -0.2
+              },
+              {
+                "years": 3,
+                "fund": 13.6,
+                "bench": 13.8,
+                "gap": -0.2
+              },
+              {
+                "years": 5,
+                "fund": 13.4,
+                "bench": 13.6,
+                "gap": -0.2
+              }
+            ]
+          }
+        },
+        {
+          "id": "returns-sample-thematic-fund-e",
+          "topic": "returns",
+          "status": "ok",
+          "headline": "Ahead of its benchmark",
+          "sentence": "Over the last year this fund returned 28.0%; the Sample 500 index returned 17.5%. That is 10.5 percentage points ahead. One year is a short time to judge a fund, so treat this lightly.",
+          "fund": "Sample Thematic Fund E",
+          "suggestion": null,
+          "jargon_term": "cagr",
+          "numbers": {
+            "horizon_years": 1,
+            "fund_cagr": 28.0,
+            "bench_cagr": 17.5,
+            "gap_pts": 10.5,
+            "fund_value": 128000,
+            "bench_value": 117500,
+            "by_horizon": [
+              {
+                "years": 1,
+                "fund": 28.0,
+                "bench": 17.5,
+                "gap": 10.5
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "topic": "risk",
+      "title": "Risk",
+      "status": "watch",
+      "one_liner": "3 of 4 funds look fine here; 1 worth a closer look. (2 not covered by this check.)",
+      "sections": [
+        {
+          "topic": "capture",
+          "title": "In rising and falling markets",
+          "what": "How much of the market's gains and losses this fund took part in.",
+          "insights": [
+            {
+              "id": "capture-sample-flexi-cap-fund-a",
+              "topic": "capture",
+              "status": "good",
+              "headline": "Gains more, loses less",
+              "sentence": "Over 5 years, for every ₹100 the Sample 500 index gained in rising months, this fund gained ₹108. For every ₹100 it lost in falling months, this fund lost ₹88. That is the helpful mix: more of the gains and less of the losses.",
+              "fund": "Sample Flexi Cap Fund A",
+              "suggestion": null,
+              "jargon_term": "capture",
+              "numbers": {
+                "upside": 108,
+                "downside": 88,
+                "ratio": 1.23,
+                "years": 5
+              }
+            },
+            {
+              "id": "capture-sample-mid-cap-fund-b",
+              "topic": "capture",
+              "status": "ok",
+              "headline": "Moves much like its benchmark",
+              "sentence": "Over 5 years, for every ₹100 the Sample Midcap index gained in rising months, this fund gained ₹99. For every ₹100 it lost in falling months, this fund lost ₹103. That is close to what the benchmark itself did, so the fund adds little in either direction.",
+              "fund": "Sample Mid Cap Fund B",
+              "suggestion": null,
+              "jargon_term": "capture",
+              "numbers": {
+                "upside": 99,
+                "downside": 103,
+                "ratio": 0.96,
+                "years": 5
+              }
+            },
+            {
+              "id": "capture-sample-large---mid-cap-fund-c",
+              "topic": "capture",
+              "status": "attention",
+              "headline": "Smaller gains and bigger falls",
+              "sentence": "Over 5 years, for every ₹100 the Sample LargeMidcap index gained in rising months, this fund gained ₹82. For every ₹100 it lost in falling months, this fund lost ₹112. That is the least helpful mix.",
+              "fund": "Sample Large & Mid Cap Fund C",
+              "suggestion": "Worth asking whether this mix of gains and falls is what you want from this fund.",
+              "jargon_term": "capture",
+              "numbers": {
+                "upside": 82,
+                "downside": 112,
+                "ratio": 0.73,
+                "years": 5
+              }
+            },
+            {
+              "id": "capture-sample-large-cap-index-fund-d",
+              "topic": "capture",
+              "status": "ok",
+              "headline": "Moves almost exactly with its index",
+              "sentence": "Over 5 years, for every ₹100 the Sample 50 index gained in rising months, this fund gained ₹100. For every ₹100 it lost in falling months, this fund lost ₹100. That is what an index fund should do.",
+              "fund": "Sample Large Cap Index Fund D",
+              "suggestion": null,
+              "jargon_term": "capture",
+              "numbers": {
+                "upside": 99.6,
+                "downside": 100.1,
+                "ratio": 1.0,
+                "years": 5
+              }
+            }
+          ]
+        },
+        {
+          "topic": "risk",
+          "title": "The worst fall",
+          "what": "How far the fund dropped in its worst fall, and how long it took to come back.",
+          "insights": [
+            {
+              "id": "risk-sample-flexi-cap-fund-a",
+              "topic": "risk",
+              "status": "good",
+              "headline": "Fell less than its benchmark",
+              "sentence": "In the March 2020 crash, ₹1,00,000 in this fund fell to ₹67,000. In the Sample 500 index it fell to ₹62,000. Counting from the bottom, this fund took 7 months to get back to its earlier high; the benchmark took 9.",
+              "fund": "Sample Flexi Cap Fund A",
+              "suggestion": null,
+              "jargon_term": "drawdown",
+              "numbers": {
+                "fund_drawdown": -33.0,
+                "bench_drawdown": -38.0,
+                "fund_after": 67000,
+                "bench_after": 62000,
+                "recovery_months": 7,
+                "still_underwater": false,
+                "fall_size": "significant",
+                "bench_recovery_months": 9
+              }
+            },
+            {
+              "id": "risk-sample-mid-cap-fund-b",
+              "topic": "risk",
+              "status": "ok",
+              "headline": "Fell about as much as its benchmark",
+              "sentence": "In the March 2020 crash, ₹1,00,000 in this fund fell to ₹59,000. In the Sample Midcap index it fell to ₹61,000. Counting from the bottom, this fund took 11 months to get back to its earlier high; the benchmark took 10. Falls this big can happen again, so be sure you could stay invested through one.",
+              "fund": "Sample Mid Cap Fund B",
+              "suggestion": null,
+              "jargon_term": "drawdown",
+              "numbers": {
+                "fund_drawdown": -41.0,
+                "bench_drawdown": -39.0,
+                "fund_after": 59000,
+                "bench_after": 61000,
+                "recovery_months": 11,
+                "still_underwater": false,
+                "fall_size": "significant",
+                "bench_recovery_months": 10
+              }
+            },
+            {
+              "id": "risk-sample-large---mid-cap-fund-c",
+              "topic": "risk",
+              "status": "attention",
+              "headline": "Fell much more than its benchmark",
+              "sentence": "In the March 2020 crash, ₹1,00,000 in this fund fell to ₹55,000. In the Sample LargeMidcap index it fell to ₹63,000. Counting from the bottom, this fund took 15 months to get back to its earlier high; the benchmark took 8. Falls this big can happen again, so be sure you could stay invested through one.",
+              "fund": "Sample Large & Mid Cap Fund C",
+              "suggestion": "Worth asking whether you are comfortable with a fall this deep for the extra return you expect.",
+              "jargon_term": "drawdown",
+              "numbers": {
+                "fund_drawdown": -45.0,
+                "bench_drawdown": -37.0,
+                "fund_after": 55000,
+                "bench_after": 63000,
+                "recovery_months": 15,
+                "still_underwater": false,
+                "fall_size": "significant",
+                "bench_recovery_months": 8
+              }
+            },
+            {
+              "id": "risk-sample-large-cap-index-fund-d",
+              "topic": "risk",
+              "status": "ok",
+              "headline": "Fell about as much as its benchmark",
+              "sentence": "In the March 2020 crash, ₹1,00,000 in this fund fell to ₹62,000. In the Sample 50 index it fell to ₹61,800. Counting from the bottom, this fund took 8 months to get back to its earlier high; the benchmark took 8.",
+              "fund": "Sample Large Cap Index Fund D",
+              "suggestion": null,
+              "jargon_term": "drawdown",
+              "numbers": {
+                "fund_drawdown": -38.0,
+                "bench_drawdown": -38.2,
+                "fund_after": 62000,
+                "bench_after": 61800,
+                "recovery_months": 8,
+                "still_underwater": false,
+                "fall_size": "significant",
+                "bench_recovery_months": 8
+              }
+            }
+          ]
+        }
+      ],
+      "insights": [
+        {
+          "id": "capture-sample-flexi-cap-fund-a",
+          "topic": "capture",
+          "status": "good",
+          "headline": "Gains more, loses less",
+          "sentence": "Over 5 years, for every ₹100 the Sample 500 index gained in rising months, this fund gained ₹108. For every ₹100 it lost in falling months, this fund lost ₹88. That is the helpful mix: more of the gains and less of the losses.",
+          "fund": "Sample Flexi Cap Fund A",
+          "suggestion": null,
+          "jargon_term": "capture",
+          "numbers": {
+            "upside": 108,
+            "downside": 88,
+            "ratio": 1.23,
+            "years": 5
+          }
+        },
+        {
+          "id": "risk-sample-flexi-cap-fund-a",
+          "topic": "risk",
+          "status": "good",
+          "headline": "Fell less than its benchmark",
+          "sentence": "In the March 2020 crash, ₹1,00,000 in this fund fell to ₹67,000. In the Sample 500 index it fell to ₹62,000. Counting from the bottom, this fund took 7 months to get back to its earlier high; the benchmark took 9.",
+          "fund": "Sample Flexi Cap Fund A",
+          "suggestion": null,
+          "jargon_term": "drawdown",
+          "numbers": {
+            "fund_drawdown": -33.0,
+            "bench_drawdown": -38.0,
+            "fund_after": 67000,
+            "bench_after": 62000,
+            "recovery_months": 7,
+            "still_underwater": false,
+            "fall_size": "significant",
+            "bench_recovery_months": 9
+          }
+        },
+        {
+          "id": "capture-sample-mid-cap-fund-b",
+          "topic": "capture",
+          "status": "ok",
+          "headline": "Moves much like its benchmark",
+          "sentence": "Over 5 years, for every ₹100 the Sample Midcap index gained in rising months, this fund gained ₹99. For every ₹100 it lost in falling months, this fund lost ₹103. That is close to what the benchmark itself did, so the fund adds little in either direction.",
+          "fund": "Sample Mid Cap Fund B",
+          "suggestion": null,
+          "jargon_term": "capture",
+          "numbers": {
+            "upside": 99,
+            "downside": 103,
+            "ratio": 0.96,
+            "years": 5
+          }
+        },
+        {
+          "id": "risk-sample-mid-cap-fund-b",
+          "topic": "risk",
+          "status": "ok",
+          "headline": "Fell about as much as its benchmark",
+          "sentence": "In the March 2020 crash, ₹1,00,000 in this fund fell to ₹59,000. In the Sample Midcap index it fell to ₹61,000. Counting from the bottom, this fund took 11 months to get back to its earlier high; the benchmark took 10. Falls this big can happen again, so be sure you could stay invested through one.",
+          "fund": "Sample Mid Cap Fund B",
+          "suggestion": null,
+          "jargon_term": "drawdown",
+          "numbers": {
+            "fund_drawdown": -41.0,
+            "bench_drawdown": -39.0,
+            "fund_after": 59000,
+            "bench_after": 61000,
+            "recovery_months": 11,
+            "still_underwater": false,
+            "fall_size": "significant",
+            "bench_recovery_months": 10
+          }
+        },
+        {
+          "id": "capture-sample-large---mid-cap-fund-c",
+          "topic": "capture",
+          "status": "attention",
+          "headline": "Smaller gains and bigger falls",
+          "sentence": "Over 5 years, for every ₹100 the Sample LargeMidcap index gained in rising months, this fund gained ₹82. For every ₹100 it lost in falling months, this fund lost ₹112. That is the least helpful mix.",
+          "fund": "Sample Large & Mid Cap Fund C",
+          "suggestion": "Worth asking whether this mix of gains and falls is what you want from this fund.",
+          "jargon_term": "capture",
+          "numbers": {
+            "upside": 82,
+            "downside": 112,
+            "ratio": 0.73,
+            "years": 5
+          }
+        },
+        {
+          "id": "risk-sample-large---mid-cap-fund-c",
+          "topic": "risk",
+          "status": "attention",
+          "headline": "Fell much more than its benchmark",
+          "sentence": "In the March 2020 crash, ₹1,00,000 in this fund fell to ₹55,000. In the Sample LargeMidcap index it fell to ₹63,000. Counting from the bottom, this fund took 15 months to get back to its earlier high; the benchmark took 8. Falls this big can happen again, so be sure you could stay invested through one.",
+          "fund": "Sample Large & Mid Cap Fund C",
+          "suggestion": "Worth asking whether you are comfortable with a fall this deep for the extra return you expect.",
+          "jargon_term": "drawdown",
+          "numbers": {
+            "fund_drawdown": -45.0,
+            "bench_drawdown": -37.0,
+            "fund_after": 55000,
+            "bench_after": 63000,
+            "recovery_months": 15,
+            "still_underwater": false,
+            "fall_size": "significant",
+            "bench_recovery_months": 8
+          }
+        },
+        {
+          "id": "capture-sample-large-cap-index-fund-d",
+          "topic": "capture",
+          "status": "ok",
+          "headline": "Moves almost exactly with its index",
+          "sentence": "Over 5 years, for every ₹100 the Sample 50 index gained in rising months, this fund gained ₹100. For every ₹100 it lost in falling months, this fund lost ₹100. That is what an index fund should do.",
+          "fund": "Sample Large Cap Index Fund D",
+          "suggestion": null,
+          "jargon_term": "capture",
+          "numbers": {
+            "upside": 99.6,
+            "downside": 100.1,
+            "ratio": 1.0,
+            "years": 5
+          }
+        },
+        {
+          "id": "risk-sample-large-cap-index-fund-d",
+          "topic": "risk",
+          "status": "ok",
+          "headline": "Fell about as much as its benchmark",
+          "sentence": "In the March 2020 crash, ₹1,00,000 in this fund fell to ₹62,000. In the Sample 50 index it fell to ₹61,800. Counting from the bottom, this fund took 8 months to get back to its earlier high; the benchmark took 8.",
+          "fund": "Sample Large Cap Index Fund D",
+          "suggestion": null,
+          "jargon_term": "drawdown",
+          "numbers": {
+            "fund_drawdown": -38.0,
+            "bench_drawdown": -38.2,
+            "fund_after": 62000,
+            "bench_after": 61800,
+            "recovery_months": 8,
+            "still_underwater": false,
+            "fall_size": "significant",
+            "bench_recovery_months": 8
+          }
+        }
+      ]
+    },
+    {
+      "topic": "peers",
+      "title": "Ranking in category",
+      "status": "watch",
+      "one_liner": "3 of 4 funds look fine here; 1 worth a closer look. (2 not covered by this check.)",
+      "sections": [
+        {
+          "topic": "peers",
+          "title": "Ranking in its category",
+          "what": "How it ranks against funds of the same type. Q1 is the best quarter of the list, Q4 the worst.",
+          "insights": [
+            {
+              "id": "peers-sample-flexi-cap-fund-a",
+              "topic": "peers",
+              "status": "good",
+              "headline": "Top quarter of its category",
+              "sentence": "Over 5 years, this fund ranked in the top quarter (Q1) of 34 Flexi Cap funds: ahead of at least 3 in every 4 similar funds. By period: 1 year Q2, 3 years Q1, 5 years Q1.",
+              "fund": "Sample Flexi Cap Fund A",
+              "suggestion": null,
+              "jargon_term": "quartile",
+              "numbers": {
+                "quartiles": {
+                  "1": 2,
+                  "3": 1,
+                  "5": 1
+                },
+                "peer_count": 34,
+                "category": "Flexi Cap",
+                "average": 1.2
+              }
+            },
+            {
+              "id": "peers-sample-mid-cap-fund-b",
+              "topic": "peers",
+              "status": "ok",
+              "headline": "Above the middle of its category",
+              "sentence": "Over 5 years, this fund ranked in the second quarter (Q2) of 28 Mid Cap funds: ahead of at least half of similar funds. By period: 1 year Q3, 3 years Q2, 5 years Q2.",
+              "fund": "Sample Mid Cap Fund B",
+              "suggestion": null,
+              "jargon_term": "quartile",
+              "numbers": {
+                "quartiles": {
+                  "1": 3,
+                  "3": 2,
+                  "5": 2
+                },
+                "peer_count": 28,
+                "category": "Mid Cap",
+                "average": 2.2
+              }
+            },
+            {
+              "id": "peers-sample-large---mid-cap-fund-c",
+              "topic": "peers",
+              "status": "attention",
+              "headline": "Bottom quarter of its category",
+              "sentence": "Over 5 years, this fund ranked in the bottom quarter (Q4) of 26 Large & Mid Cap funds: behind at least 3 in every 4 similar funds. By period: 1 year Q4, 3 years Q4, 5 years Q4.",
+              "fund": "Sample Large & Mid Cap Fund C",
+              "suggestion": "Worth looking at what the top few funds in this category did differently.",
+              "jargon_term": "quartile",
+              "numbers": {
+                "quartiles": {
+                  "1": 4,
+                  "3": 4,
+                  "5": 4
+                },
+                "peer_count": 26,
+                "category": "Large & Mid Cap",
+                "average": 4.0
+              }
+            },
+            {
+              "id": "peers-sample-corporate-bond-fund-f",
+              "topic": "peers",
+              "status": "ok",
+              "headline": "Above the middle of its category",
+              "sentence": "Over 5 years, this fund ranked in the top quarter (Q1) of 22 Corporate Bond Fund funds: ahead of at least 3 in every 4 similar funds. By period: 1 year Q2, 3 years Q2, 5 years Q1.",
+              "fund": "Sample Corporate Bond Fund F",
+              "suggestion": null,
+              "jargon_term": "quartile",
+              "numbers": {
+                "quartiles": {
+                  "1": 2,
+                  "3": 2,
+                  "5": 1
+                },
+                "peer_count": 22,
+                "category": "Corporate Bond Fund",
+                "average": 1.6
+              }
+            }
+          ]
+        }
+      ],
+      "insights": [
+        {
+          "id": "peers-sample-flexi-cap-fund-a",
+          "topic": "peers",
+          "status": "good",
+          "headline": "Top quarter of its category",
+          "sentence": "Over 5 years, this fund ranked in the top quarter (Q1) of 34 Flexi Cap funds: ahead of at least 3 in every 4 similar funds. By period: 1 year Q2, 3 years Q1, 5 years Q1.",
+          "fund": "Sample Flexi Cap Fund A",
+          "suggestion": null,
+          "jargon_term": "quartile",
+          "numbers": {
+            "quartiles": {
+              "1": 2,
+              "3": 1,
+              "5": 1
+            },
+            "peer_count": 34,
+            "category": "Flexi Cap",
+            "average": 1.2
+          }
+        },
+        {
+          "id": "peers-sample-mid-cap-fund-b",
+          "topic": "peers",
+          "status": "ok",
+          "headline": "Above the middle of its category",
+          "sentence": "Over 5 years, this fund ranked in the second quarter (Q2) of 28 Mid Cap funds: ahead of at least half of similar funds. By period: 1 year Q3, 3 years Q2, 5 years Q2.",
+          "fund": "Sample Mid Cap Fund B",
+          "suggestion": null,
+          "jargon_term": "quartile",
+          "numbers": {
+            "quartiles": {
+              "1": 3,
+              "3": 2,
+              "5": 2
+            },
+            "peer_count": 28,
+            "category": "Mid Cap",
+            "average": 2.2
+          }
+        },
+        {
+          "id": "peers-sample-large---mid-cap-fund-c",
+          "topic": "peers",
+          "status": "attention",
+          "headline": "Bottom quarter of its category",
+          "sentence": "Over 5 years, this fund ranked in the bottom quarter (Q4) of 26 Large & Mid Cap funds: behind at least 3 in every 4 similar funds. By period: 1 year Q4, 3 years Q4, 5 years Q4.",
+          "fund": "Sample Large & Mid Cap Fund C",
+          "suggestion": "Worth looking at what the top few funds in this category did differently.",
+          "jargon_term": "quartile",
+          "numbers": {
+            "quartiles": {
+              "1": 4,
+              "3": 4,
+              "5": 4
+            },
+            "peer_count": 26,
+            "category": "Large & Mid Cap",
+            "average": 4.0
+          }
+        },
+        {
+          "id": "peers-sample-corporate-bond-fund-f",
+          "topic": "peers",
+          "status": "ok",
+          "headline": "Above the middle of its category",
+          "sentence": "Over 5 years, this fund ranked in the top quarter (Q1) of 22 Corporate Bond Fund funds: ahead of at least 3 in every 4 similar funds. By period: 1 year Q2, 3 years Q2, 5 years Q1.",
+          "fund": "Sample Corporate Bond Fund F",
+          "suggestion": null,
+          "jargon_term": "quartile",
+          "numbers": {
+            "quartiles": {
+              "1": 2,
+              "3": 2,
+              "5": 1
+            },
+            "peer_count": 22,
+            "category": "Corporate Bond Fund",
+            "average": 1.6
+          }
+        }
+      ]
+    },
+    {
+      "topic": "costs",
+      "title": "Costs",
+      "status": "watch",
+      "one_liner": "4 of 6 funds look fine here; 2 worth a closer look.",
+      "sections": [
+        {
+          "topic": "costs",
+          "title": "What you pay",
+          "what": "What the fund charges you every year, compared with the middle fund in its category.",
+          "insights": [
+            {
+              "id": "costs-sample-flexi-cap-fund-a",
+              "topic": "costs",
+              "status": "ok",
+              "headline": "In line with the category median",
+              "sentence": "This fund charges 0.75% a year. The middle Flexi Cap direct plan charges 0.82%, so this fund is about the same as the middle.",
+              "fund": "Sample Flexi Cap Fund A",
+              "suggestion": null,
+              "jargon_term": "ter",
+              "numbers": {
+                "ter": 0.75,
+                "plan": "direct",
+                "category": "Flexi Cap",
+                "category_median": 0.82,
+                "gap_pts": -0.07,
+                "annual_cost": 3150,
+                "annual_vs_median": -294
+              }
+            },
+            {
+              "id": "costs-sample-mid-cap-fund-b",
+              "topic": "costs",
+              "status": "watch",
+              "headline": "Above the category median",
+              "sentence": "This fund charges 2.05% a year. The middle Mid Cap regular plan charges 1.85%, so this fund is 0.20 percentage points more than the middle. On your ₹2,60,000 that is about ₹520 a year more.",
+              "fund": "Sample Mid Cap Fund B",
+              "suggestion": "Worth asking what the higher charge pays for, and whether similar funds in the category deliver the same for less.",
+              "jargon_term": "ter",
+              "numbers": {
+                "ter": 2.05,
+                "plan": "regular",
+                "category": "Mid Cap",
+                "category_median": 1.85,
+                "gap_pts": 0.2,
+                "annual_cost": 5330,
+                "annual_vs_median": 520
+              }
+            },
+            {
+              "id": "costs-sample-large---mid-cap-fund-c",
+              "topic": "costs",
+              "status": "watch",
+              "headline": "Above the category median",
+              "sentence": "This fund charges 2.15% a year. The middle Large & Mid Cap regular plan charges 1.80%, so this fund is 0.35 percentage points more than the middle. On your ₹1,80,000 that is about ₹630 a year more.",
+              "fund": "Sample Large & Mid Cap Fund C",
+              "suggestion": "Worth asking what the higher charge pays for, and whether similar funds in the category deliver the same for less.",
+              "jargon_term": "ter",
+              "numbers": {
+                "ter": 2.15,
+                "plan": "regular",
+                "category": "Large & Mid Cap",
+                "category_median": 1.8,
+                "gap_pts": 0.35,
+                "annual_cost": 3870,
+                "annual_vs_median": 630
+              }
+            },
+            {
+              "id": "costs-sample-large-cap-index-fund-d",
+              "topic": "costs",
+              "status": "ok",
+              "headline": "In line with the category median",
+              "sentence": "This fund charges 0.20% a year. The middle Large Cap Index direct plan charges 0.18%, so this fund is about the same as the middle.",
+              "fund": "Sample Large Cap Index Fund D",
+              "suggestion": null,
+              "jargon_term": "ter",
+              "numbers": {
+                "ter": 0.2,
+                "plan": "direct",
+                "category": "Large Cap Index",
+                "category_median": 0.18,
+                "gap_pts": 0.02,
+                "annual_cost": 280,
+                "annual_vs_median": 28
+              }
+            },
+            {
+              "id": "costs-sample-thematic-fund-e",
+              "topic": "costs",
+              "status": "ok",
+              "headline": "In line with the category median",
+              "sentence": "This fund charges 0.95% a year. The middle Thematic direct plan charges 0.85%, so this fund is about the same as the middle.",
+              "fund": "Sample Thematic Fund E",
+              "suggestion": null,
+              "jargon_term": "ter",
+              "numbers": {
+                "ter": 0.95,
+                "plan": "direct",
+                "category": "Thematic",
+                "category_median": 0.85,
+                "gap_pts": 0.1,
+                "annual_cost": 570,
+                "annual_vs_median": 60
+              }
+            },
+            {
+              "id": "costs-sample-corporate-bond-fund-f",
+              "topic": "costs",
+              "status": "ok",
+              "headline": "In line with the category median",
+              "sentence": "This fund charges 0.35% a year. The middle Corporate Bond Fund direct plan charges 0.40%, so this fund is about the same as the middle.",
+              "fund": "Sample Corporate Bond Fund F",
+              "suggestion": null,
+              "jargon_term": "ter",
+              "numbers": {
+                "ter": 0.35,
+                "plan": "direct",
+                "category": "Corporate Bond Fund",
+                "category_median": 0.4,
+                "gap_pts": -0.05,
+                "annual_cost": 315,
+                "annual_vs_median": -45
+              }
+            }
+          ]
+        }
+      ],
+      "insights": [
+        {
+          "id": "costs-sample-flexi-cap-fund-a",
+          "topic": "costs",
+          "status": "ok",
+          "headline": "In line with the category median",
+          "sentence": "This fund charges 0.75% a year. The middle Flexi Cap direct plan charges 0.82%, so this fund is about the same as the middle.",
+          "fund": "Sample Flexi Cap Fund A",
+          "suggestion": null,
+          "jargon_term": "ter",
+          "numbers": {
+            "ter": 0.75,
+            "plan": "direct",
+            "category": "Flexi Cap",
+            "category_median": 0.82,
+            "gap_pts": -0.07,
+            "annual_cost": 3150,
+            "annual_vs_median": -294
+          }
+        },
+        {
+          "id": "costs-sample-mid-cap-fund-b",
+          "topic": "costs",
+          "status": "watch",
+          "headline": "Above the category median",
+          "sentence": "This fund charges 2.05% a year. The middle Mid Cap regular plan charges 1.85%, so this fund is 0.20 percentage points more than the middle. On your ₹2,60,000 that is about ₹520 a year more.",
+          "fund": "Sample Mid Cap Fund B",
+          "suggestion": "Worth asking what the higher charge pays for, and whether similar funds in the category deliver the same for less.",
+          "jargon_term": "ter",
+          "numbers": {
+            "ter": 2.05,
+            "plan": "regular",
+            "category": "Mid Cap",
+            "category_median": 1.85,
+            "gap_pts": 0.2,
+            "annual_cost": 5330,
+            "annual_vs_median": 520
+          }
+        },
+        {
+          "id": "costs-sample-large---mid-cap-fund-c",
+          "topic": "costs",
+          "status": "watch",
+          "headline": "Above the category median",
+          "sentence": "This fund charges 2.15% a year. The middle Large & Mid Cap regular plan charges 1.80%, so this fund is 0.35 percentage points more than the middle. On your ₹1,80,000 that is about ₹630 a year more.",
+          "fund": "Sample Large & Mid Cap Fund C",
+          "suggestion": "Worth asking what the higher charge pays for, and whether similar funds in the category deliver the same for less.",
+          "jargon_term": "ter",
+          "numbers": {
+            "ter": 2.15,
+            "plan": "regular",
+            "category": "Large & Mid Cap",
+            "category_median": 1.8,
+            "gap_pts": 0.35,
+            "annual_cost": 3870,
+            "annual_vs_median": 630
+          }
+        },
+        {
+          "id": "costs-sample-large-cap-index-fund-d",
+          "topic": "costs",
+          "status": "ok",
+          "headline": "In line with the category median",
+          "sentence": "This fund charges 0.20% a year. The middle Large Cap Index direct plan charges 0.18%, so this fund is about the same as the middle.",
+          "fund": "Sample Large Cap Index Fund D",
+          "suggestion": null,
+          "jargon_term": "ter",
+          "numbers": {
+            "ter": 0.2,
+            "plan": "direct",
+            "category": "Large Cap Index",
+            "category_median": 0.18,
+            "gap_pts": 0.02,
+            "annual_cost": 280,
+            "annual_vs_median": 28
+          }
+        },
+        {
+          "id": "costs-sample-thematic-fund-e",
+          "topic": "costs",
+          "status": "ok",
+          "headline": "In line with the category median",
+          "sentence": "This fund charges 0.95% a year. The middle Thematic direct plan charges 0.85%, so this fund is about the same as the middle.",
+          "fund": "Sample Thematic Fund E",
+          "suggestion": null,
+          "jargon_term": "ter",
+          "numbers": {
+            "ter": 0.95,
+            "plan": "direct",
+            "category": "Thematic",
+            "category_median": 0.85,
+            "gap_pts": 0.1,
+            "annual_cost": 570,
+            "annual_vs_median": 60
+          }
+        },
+        {
+          "id": "costs-sample-corporate-bond-fund-f",
+          "topic": "costs",
+          "status": "ok",
+          "headline": "In line with the category median",
+          "sentence": "This fund charges 0.35% a year. The middle Corporate Bond Fund direct plan charges 0.40%, so this fund is about the same as the middle.",
+          "fund": "Sample Corporate Bond Fund F",
+          "suggestion": null,
+          "jargon_term": "ter",
+          "numbers": {
+            "ter": 0.35,
+            "plan": "direct",
+            "category": "Corporate Bond Fund",
+            "category_median": 0.4,
+            "gap_pts": -0.05,
+            "annual_cost": 315,
+            "annual_vs_median": -45
+          }
+        }
+      ]
+    },
+    {
+      "topic": "mix",
+      "title": "Portfolio mix",
+      "status": "watch",
+      "one_liner": "One fund carries a lot of weight.",
+      "sections": [
+        {
+          "topic": "mix",
+          "title": "How your money is spread",
+          "what": "Whether too much of your money rides on one fund or one type of fund.",
+          "insights": [
+            {
+              "id": "mix-fund",
+              "topic": "mix",
+              "status": "watch",
+              "headline": "One fund carries a lot of weight",
+              "sentence": "Sample Flexi Cap Fund A is 37% of your portfolio, so how it does matters more than any other fund.",
+              "fund": null,
+              "suggestion": "Worth confirming you are comfortable with one fund being this large.",
+              "jargon_term": "concentration",
+              "numbers": {
+                "fund": "Sample Flexi Cap Fund A",
+                "share_pct": 36.5
+              }
+            }
+          ]
+        }
+      ],
+      "insights": [
+        {
+          "id": "mix-fund",
+          "topic": "mix",
+          "status": "watch",
+          "headline": "One fund carries a lot of weight",
+          "sentence": "Sample Flexi Cap Fund A is 37% of your portfolio, so how it does matters more than any other fund.",
+          "fund": null,
+          "suggestion": "Worth confirming you are comfortable with one fund being this large.",
+          "jargon_term": "concentration",
+          "numbers": {
+            "fund": "Sample Flexi Cap Fund A",
+            "share_pct": 36.5
+          }
+        }
+      ]
+    }
+  ],
+  "funds": [
+    {
+      "name": "Sample Flexi Cap Fund A",
+      "category": "Flexi Cap",
+      "value": 420000,
+      "share_pct": 36.5,
+      "verdict": "Doing well",
+      "status": "good",
+      "going_well": [
+        "Ahead of its benchmark",
+        "Beat its benchmark in most years, by a clear margin",
+        "Beats its benchmark most of the time"
+      ],
+      "look_at": [],
+      "scorecard": [
+        {
+          "topic": "returns",
+          "title": "Returns",
+          "status": "good",
+          "label": "Strong",
+          "note": "Ahead of its benchmark"
+        },
+        {
+          "topic": "risk",
+          "title": "Risk",
+          "status": "good",
+          "label": "Strong",
+          "note": "Gains more, loses less"
+        },
+        {
+          "topic": "peers",
+          "title": "Ranking in category",
+          "status": "good",
+          "label": "Strong",
+          "note": "Top quarter of its category"
+        },
+        {
+          "topic": "costs",
+          "title": "Costs",
+          "status": "ok",
+          "label": "Fine",
+          "note": "In line with the category median"
+        }
+      ],
+      "sections": [
+        {
+          "topic": "returns",
+          "title": "Growth over 1, 3 and 5 years",
+          "what": "How fast your money grew each year on average, compared with the market index.",
+          "insights": [
+            {
+              "id": "returns-sample-flexi-cap-fund-a",
+              "topic": "returns",
+              "status": "good",
+              "headline": "Ahead of its benchmark",
+              "sentence": "Over 5 years this fund grew 17.1% a year; the Sample 500 index grew 14.6%. That is 2.5% a year ahead.",
+              "fund": "Sample Flexi Cap Fund A",
+              "suggestion": null,
+              "jargon_term": "cagr",
+              "numbers": {
+                "horizon_years": 5,
+                "fund_cagr": 17.1,
+                "bench_cagr": 14.6,
+                "gap_pts": 2.5,
+                "fund_value": 220183,
+                "bench_value": 197662,
+                "by_horizon": [
+                  {
+                    "years": 1,
+                    "fund": 21.0,
+                    "bench": 17.5,
+                    "gap": 3.5
+                  },
+                  {
+                    "years": 3,
+                    "fund": 18.4,
+                    "bench": 15.2,
+                    "gap": 3.2
+                  },
+                  {
+                    "years": 5,
+                    "fund": 17.1,
+                    "bench": 14.6,
+                    "gap": 2.5
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "topic": "calendar",
+          "title": "Year by year",
+          "what": "How the fund did in each calendar year, and by how much it finished ahead of or behind the benchmark (its alpha).",
+          "insights": [
+            {
+              "id": "calendar-sample-flexi-cap-fund-a",
+              "topic": "calendar",
+              "status": "good",
+              "headline": "Beat its benchmark in most years, by a clear margin",
+              "sentence": "In every one of the last 5 calendar years this fund beat the Sample 500 index. On average it finished 3.0 percentage points ahead of the benchmark each year (its margin over the benchmark, often called alpha). The widest gap was +5.0 points in 2024; the narrowest was +2.2 points in 2022.",
+              "fund": "Sample Flexi Cap Fund A",
+              "suggestion": null,
+              "jargon_term": "calendar",
+              "numbers": {
+                "years": [
+                  2021,
+                  2022,
+                  2023,
+                  2024,
+                  2025
+                ],
+                "fund": [
+                  34.0,
+                  6.5,
+                  29.8,
+                  21.2,
+                  12.4
+                ],
+                "bench": [
+                  31.6,
+                  4.3,
+                  26.9,
+                  16.2,
+                  9.9
+                ],
+                "alpha": [
+                  2.4,
+                  2.2,
+                  2.9,
+                  5.0,
+                  2.5
+                ],
+                "avg_alpha": 3.0,
+                "beats": 5,
+                "n": 5,
+                "best_alpha_year": 2024,
+                "worst_alpha_year": 2022
+              }
+            }
+          ]
+        },
+        {
+          "topic": "consistency",
+          "title": "Across every start date",
+          "what": "How often it beat the index if you had started on any day, not just one lucky day.",
+          "insights": [
+            {
+              "id": "consistency-sample-flexi-cap-fund-a",
+              "topic": "consistency",
+              "status": "good",
+              "headline": "Beats its benchmark most of the time",
+              "sentence": "In 8 out of every 10 three-year periods, counting every possible start date, this fund did better than the Sample 500 index.",
+              "fund": "Sample Flexi Cap Fund A",
+              "suggestion": null,
+              "jargon_term": "rolling_returns",
+              "numbers": {
+                "beat_pct": 82,
+                "window_years": 3
+              }
+            }
+          ]
+        },
+        {
+          "topic": "capture",
+          "title": "In rising and falling markets",
+          "what": "How much of the market's gains and losses this fund took part in.",
+          "insights": [
+            {
+              "id": "capture-sample-flexi-cap-fund-a",
+              "topic": "capture",
+              "status": "good",
+              "headline": "Gains more, loses less",
+              "sentence": "Over 5 years, for every ₹100 the Sample 500 index gained in rising months, this fund gained ₹108. For every ₹100 it lost in falling months, this fund lost ₹88. That is the helpful mix: more of the gains and less of the losses.",
+              "fund": "Sample Flexi Cap Fund A",
+              "suggestion": null,
+              "jargon_term": "capture",
+              "numbers": {
+                "upside": 108,
+                "downside": 88,
+                "ratio": 1.23,
+                "years": 5
+              }
+            }
+          ]
+        },
+        {
+          "topic": "risk",
+          "title": "The worst fall",
+          "what": "How far the fund dropped in its worst fall, and how long it took to come back.",
+          "insights": [
+            {
+              "id": "risk-sample-flexi-cap-fund-a",
+              "topic": "risk",
+              "status": "good",
+              "headline": "Fell less than its benchmark",
+              "sentence": "In the March 2020 crash, ₹1,00,000 in this fund fell to ₹67,000. In the Sample 500 index it fell to ₹62,000. Counting from the bottom, this fund took 7 months to get back to its earlier high; the benchmark took 9.",
+              "fund": "Sample Flexi Cap Fund A",
+              "suggestion": null,
+              "jargon_term": "drawdown",
+              "numbers": {
+                "fund_drawdown": -33.0,
+                "bench_drawdown": -38.0,
+                "fund_after": 67000,
+                "bench_after": 62000,
+                "recovery_months": 7,
+                "still_underwater": false,
+                "fall_size": "significant",
+                "bench_recovery_months": 9
+              }
+            }
+          ]
+        },
+        {
+          "topic": "peers",
+          "title": "Ranking in its category",
+          "what": "How it ranks against funds of the same type. Q1 is the best quarter of the list, Q4 the worst.",
+          "insights": [
+            {
+              "id": "peers-sample-flexi-cap-fund-a",
+              "topic": "peers",
+              "status": "good",
+              "headline": "Top quarter of its category",
+              "sentence": "Over 5 years, this fund ranked in the top quarter (Q1) of 34 Flexi Cap funds: ahead of at least 3 in every 4 similar funds. By period: 1 year Q2, 3 years Q1, 5 years Q1.",
+              "fund": "Sample Flexi Cap Fund A",
+              "suggestion": null,
+              "jargon_term": "quartile",
+              "numbers": {
+                "quartiles": {
+                  "1": 2,
+                  "3": 1,
+                  "5": 1
+                },
+                "peer_count": 34,
+                "category": "Flexi Cap",
+                "average": 1.2
+              }
+            }
+          ]
+        },
+        {
+          "topic": "costs",
+          "title": "What you pay",
+          "what": "What the fund charges you every year, compared with the middle fund in its category.",
+          "insights": [
+            {
+              "id": "costs-sample-flexi-cap-fund-a",
+              "topic": "costs",
+              "status": "ok",
+              "headline": "In line with the category median",
+              "sentence": "This fund charges 0.75% a year. The middle Flexi Cap direct plan charges 0.82%, so this fund is about the same as the middle.",
+              "fund": "Sample Flexi Cap Fund A",
+              "suggestion": null,
+              "jargon_term": "ter",
+              "numbers": {
+                "ter": 0.75,
+                "plan": "direct",
+                "category": "Flexi Cap",
+                "category_median": 0.82,
+                "gap_pts": -0.07,
+                "annual_cost": 3150,
+                "annual_vs_median": -294
+              }
+            }
+          ]
+        },
+        {
+          "topic": "riskometer",
+          "title": "Official risk level",
+          "what": "The risk label the fund house must publish, on a six-step scale from Low to Very High.",
+          "insights": [
+            {
+              "id": "facts-risk-sample-flexi-cap-fund-a",
+              "topic": "riskometer",
+              "status": "ok",
+              "headline": "Official risk level: Very High",
+              "sentence": "The fund house rates this fund 'Very High' on the official six-step risk scale. Its benchmark is rated 'Very High'.",
+              "fund": "Sample Flexi Cap Fund A",
+              "suggestion": null,
+              "jargon_term": "riskometer",
+              "numbers": {
+                "level": 6,
+                "label": "Very High",
+                "bench_level": 6,
+                "bench_label": "Very High"
+              }
+            }
+          ]
+        },
+        {
+          "topic": "size",
+          "title": "Fund size",
+          "what": "How much money the fund manages in total.",
+          "insights": [
+            {
+              "id": "facts-size-sample-flexi-cap-fund-a",
+              "topic": "size",
+              "status": "ok",
+              "headline": "Fund size: ₹48,250 crore",
+              "sentence": "The fund manages about ₹48,250 crore in total, across all its plans.",
+              "fund": "Sample Flexi Cap Fund A",
+              "suggestion": null,
+              "jargon_term": "aum",
+              "numbers": {
+                "aum_cr": 48250
+              }
+            }
+          ]
+        },
+        {
+          "topic": "age",
+          "title": "Track record",
+          "what": "How long the fund has existed.",
+          "insights": [
+            {
+              "id": "facts-age-sample-flexi-cap-fund-a",
+              "topic": "age",
+              "status": "ok",
+              "headline": "About 13.8 years of history",
+              "sentence": "This fund is about 13.8 years old. Launched in Jan 2013.",
+              "fund": "Sample Flexi Cap Fund A",
+              "suggestion": null,
+              "jargon_term": null,
+              "numbers": {
+                "years": 13.8,
+                "allotment_date": "2013-01-02"
+              }
+            }
+          ]
+        },
+        {
+          "topic": "manager",
+          "title": "Fund manager",
+          "what": "Who runs the fund, and since when.",
+          "insights": [
+            {
+              "id": "facts-manager-sample-flexi-cap-fund-a",
+              "topic": "manager",
+              "status": "ok",
+              "headline": "Same manager for about 7.5 years",
+              "sentence": "A. Sample has run this fund since Apr 2019, which is about 7.5 years.",
+              "fund": "Sample Flexi Cap Fund A",
+              "suggestion": null,
+              "jargon_term": "manager",
+              "numbers": {
+                "months": 90,
+                "since": "2019-04-01",
+                "names": [
+                  "A. Sample"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "topic": "exit",
+          "title": "Exit load",
+          "what": "A charge some funds take if you sell within a set time.",
+          "insights": [
+            {
+              "id": "facts-exit-sample-flexi-cap-fund-a",
+              "topic": "exit",
+              "status": "ok",
+              "headline": "Exit load",
+              "sentence": "As filed by the fund house: 1% if redeemed within 1 year; nil after.",
+              "fund": "Sample Flexi Cap Fund A",
+              "suggestion": null,
+              "jargon_term": null,
+              "numbers": {
+                "text": "1% if redeemed within 1 year; nil after."
+              }
+            }
+          ]
+        }
+      ],
+      "facts": {
+        "plan": "direct",
+        "benchmark": "the Sample 500 index",
+        "ter": 0.75,
+        "aum_cr": 48250,
+        "riskometer": "Very High",
+        "benchmark_applies": true,
+        "age_years": 13.8,
+        "manager_months": 90
+      },
+      "notes": []
+    },
+    {
+      "name": "Sample Mid Cap Fund B",
+      "category": "Mid Cap",
+      "value": 260000,
+      "share_pct": 22.6,
+      "verdict": "Worth a closer look",
+      "status": "watch",
+      "going_well": [],
+      "look_at": [
+        "Above the category median",
+        "The fund manager changed recently"
+      ],
+      "scorecard": [
+        {
+          "topic": "returns",
+          "title": "Returns",
+          "status": "ok",
+          "label": "Fine",
+          "note": "Roughly in line with its benchmark"
+        },
+        {
+          "topic": "risk",
+          "title": "Risk",
+          "status": "ok",
+          "label": "Fine",
+          "note": "Moves much like its benchmark"
+        },
+        {
+          "topic": "peers",
+          "title": "Ranking in category",
+          "status": "ok",
+          "label": "Fine",
+          "note": "Above the middle of its category"
+        },
+        {
+          "topic": "costs",
+          "title": "Costs",
+          "status": "watch",
+          "label": "Look closer",
+          "note": "Above the category median"
+        }
+      ],
+      "sections": [
+        {
+          "topic": "returns",
+          "title": "Growth over 1, 3 and 5 years",
+          "what": "How fast your money grew each year on average, compared with the market index.",
+          "insights": [
+            {
+              "id": "returns-sample-mid-cap-fund-b",
+              "topic": "returns",
+              "status": "ok",
+              "headline": "Roughly in line with its benchmark",
+              "sentence": "Over 5 years this fund grew 22.5% a year; the Sample Midcap index grew 23.1%. That is about the same.",
+              "fund": "Sample Mid Cap Fund B",
+              "suggestion": null,
+              "jargon_term": "cagr",
+              "numbers": {
+                "horizon_years": 5,
+                "fund_cagr": 22.5,
+                "bench_cagr": 23.1,
+                "gap_pts": -0.6,
+                "fund_value": 275855,
+                "bench_value": 282677,
+                "by_horizon": [
+                  {
+                    "years": 1,
+                    "fund": 24.0,
+                    "bench": 25.0,
+                    "gap": -1.0
+                  },
+                  {
+                    "years": 3,
+                    "fund": 22.9,
+                    "bench": 24.0,
+                    "gap": -1.1
+                  },
+                  {
+                    "years": 5,
+                    "fund": 22.5,
+                    "bench": 23.1,
+                    "gap": -0.6
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "topic": "calendar",
+          "title": "Year by year",
+          "what": "How the fund did in each calendar year, and by how much it finished ahead of or behind the benchmark (its alpha).",
+          "insights": [
+            {
+              "id": "calendar-sample-mid-cap-fund-b",
+              "topic": "calendar",
+              "status": "ok",
+              "headline": "Roughly level with its benchmark year by year",
+              "sentence": "In 3 of the last 5 calendar years this fund beat the Sample Midcap index. On average it finished 0.4 percentage points behind the benchmark each year (its margin over the benchmark, often called alpha). The widest gap was +0.9 points in 2025; the narrowest was −2.6 points in 2023.",
+              "fund": "Sample Mid Cap Fund B",
+              "suggestion": null,
+              "jargon_term": "calendar",
+              "numbers": {
+                "years": [
+                  2021,
+                  2022,
+                  2023,
+                  2024,
+                  2025
+                ],
+                "fund": [
+                  44.0,
+                  3.1,
+                  41.5,
+                  26.0,
+                  6.0
+                ],
+                "bench": [
+                  43.5,
+                  4.9,
+                  44.1,
+                  25.2,
+                  5.1
+                ],
+                "alpha": [
+                  0.5,
+                  -1.8,
+                  -2.6,
+                  0.8,
+                  0.9
+                ],
+                "avg_alpha": -0.44,
+                "beats": 3,
+                "n": 5,
+                "best_alpha_year": 2025,
+                "worst_alpha_year": 2023
+              }
+            }
+          ]
+        },
+        {
+          "topic": "consistency",
+          "title": "Across every start date",
+          "what": "How often it beat the index if you had started on any day, not just one lucky day.",
+          "insights": [
+            {
+              "id": "consistency-sample-mid-cap-fund-b",
+              "topic": "consistency",
+              "status": "ok",
+              "headline": "Beats its benchmark about half the time",
+              "sentence": "In 5 out of every 10 three-year periods, counting every possible start date, this fund did better than the Sample Midcap index.",
+              "fund": "Sample Mid Cap Fund B",
+              "suggestion": null,
+              "jargon_term": "rolling_returns",
+              "numbers": {
+                "beat_pct": 46,
+                "window_years": 3
+              }
+            }
+          ]
+        },
+        {
+          "topic": "capture",
+          "title": "In rising and falling markets",
+          "what": "How much of the market's gains and losses this fund took part in.",
+          "insights": [
+            {
+              "id": "capture-sample-mid-cap-fund-b",
+              "topic": "capture",
+              "status": "ok",
+              "headline": "Moves much like its benchmark",
+              "sentence": "Over 5 years, for every ₹100 the Sample Midcap index gained in rising months, this fund gained ₹99. For every ₹100 it lost in falling months, this fund lost ₹103. That is close to what the benchmark itself did, so the fund adds little in either direction.",
+              "fund": "Sample Mid Cap Fund B",
+              "suggestion": null,
+              "jargon_term": "capture",
+              "numbers": {
+                "upside": 99,
+                "downside": 103,
+                "ratio": 0.96,
+                "years": 5
+              }
+            }
+          ]
+        },
+        {
+          "topic": "risk",
+          "title": "The worst fall",
+          "what": "How far the fund dropped in its worst fall, and how long it took to come back.",
+          "insights": [
+            {
+              "id": "risk-sample-mid-cap-fund-b",
+              "topic": "risk",
+              "status": "ok",
+              "headline": "Fell about as much as its benchmark",
+              "sentence": "In the March 2020 crash, ₹1,00,000 in this fund fell to ₹59,000. In the Sample Midcap index it fell to ₹61,000. Counting from the bottom, this fund took 11 months to get back to its earlier high; the benchmark took 10. Falls this big can happen again, so be sure you could stay invested through one.",
+              "fund": "Sample Mid Cap Fund B",
+              "suggestion": null,
+              "jargon_term": "drawdown",
+              "numbers": {
+                "fund_drawdown": -41.0,
+                "bench_drawdown": -39.0,
+                "fund_after": 59000,
+                "bench_after": 61000,
+                "recovery_months": 11,
+                "still_underwater": false,
+                "fall_size": "significant",
+                "bench_recovery_months": 10
+              }
+            }
+          ]
+        },
+        {
+          "topic": "peers",
+          "title": "Ranking in its category",
+          "what": "How it ranks against funds of the same type. Q1 is the best quarter of the list, Q4 the worst.",
+          "insights": [
+            {
+              "id": "peers-sample-mid-cap-fund-b",
+              "topic": "peers",
+              "status": "ok",
+              "headline": "Above the middle of its category",
+              "sentence": "Over 5 years, this fund ranked in the second quarter (Q2) of 28 Mid Cap funds: ahead of at least half of similar funds. By period: 1 year Q3, 3 years Q2, 5 years Q2.",
+              "fund": "Sample Mid Cap Fund B",
+              "suggestion": null,
+              "jargon_term": "quartile",
+              "numbers": {
+                "quartiles": {
+                  "1": 3,
+                  "3": 2,
+                  "5": 2
+                },
+                "peer_count": 28,
+                "category": "Mid Cap",
+                "average": 2.2
+              }
+            }
+          ]
+        },
+        {
+          "topic": "costs",
+          "title": "What you pay",
+          "what": "What the fund charges you every year, compared with the middle fund in its category.",
+          "insights": [
+            {
+              "id": "costs-sample-mid-cap-fund-b",
+              "topic": "costs",
+              "status": "watch",
+              "headline": "Above the category median",
+              "sentence": "This fund charges 2.05% a year. The middle Mid Cap regular plan charges 1.85%, so this fund is 0.20 percentage points more than the middle. On your ₹2,60,000 that is about ₹520 a year more.",
+              "fund": "Sample Mid Cap Fund B",
+              "suggestion": "Worth asking what the higher charge pays for, and whether similar funds in the category deliver the same for less.",
+              "jargon_term": "ter",
+              "numbers": {
+                "ter": 2.05,
+                "plan": "regular",
+                "category": "Mid Cap",
+                "category_median": 1.85,
+                "gap_pts": 0.2,
+                "annual_cost": 5330,
+                "annual_vs_median": 520
+              }
+            }
+          ]
+        },
+        {
+          "topic": "riskometer",
+          "title": "Official risk level",
+          "what": "The risk label the fund house must publish, on a six-step scale from Low to Very High.",
+          "insights": [
+            {
+              "id": "facts-risk-sample-mid-cap-fund-b",
+              "topic": "riskometer",
+              "status": "ok",
+              "headline": "Official risk level: Very High",
+              "sentence": "The fund house rates this fund 'Very High' on the official six-step risk scale. Its benchmark is rated 'Very High'.",
+              "fund": "Sample Mid Cap Fund B",
+              "suggestion": null,
+              "jargon_term": "riskometer",
+              "numbers": {
+                "level": 6,
+                "label": "Very High",
+                "bench_level": 6,
+                "bench_label": "Very High"
+              }
+            }
+          ]
+        },
+        {
+          "topic": "size",
+          "title": "Fund size",
+          "what": "How much money the fund manages in total.",
+          "insights": [
+            {
+              "id": "facts-size-sample-mid-cap-fund-b",
+              "topic": "size",
+              "status": "ok",
+              "headline": "Fund size: ₹21,400 crore",
+              "sentence": "The fund manages about ₹21,400 crore in total, across all its plans.",
+              "fund": "Sample Mid Cap Fund B",
+              "suggestion": null,
+              "jargon_term": "aum",
+              "numbers": {
+                "aum_cr": 21400
+              }
+            }
+          ]
+        },
+        {
+          "topic": "age",
+          "title": "Track record",
+          "what": "How long the fund has existed.",
+          "insights": [
+            {
+              "id": "facts-age-sample-mid-cap-fund-b",
+              "topic": "age",
+              "status": "ok",
+              "headline": "About 16.3 years of history",
+              "sentence": "This fund is about 16.3 years old. Launched in Jun 2010.",
+              "fund": "Sample Mid Cap Fund B",
+              "suggestion": null,
+              "jargon_term": null,
+              "numbers": {
+                "years": 16.3,
+                "allotment_date": "2010-06-14"
+              }
+            }
+          ]
+        },
+        {
+          "topic": "manager",
+          "title": "Fund manager",
+          "what": "Who runs the fund, and since when.",
+          "insights": [
+            {
+              "id": "facts-manager-sample-mid-cap-fund-b",
+              "topic": "manager",
+              "status": "watch",
+              "headline": "The fund manager changed recently",
+              "sentence": "B. Sample has run this fund since Mar 2026, which is 7 months. Part of the track record above may belong to a previous manager.",
+              "fund": "Sample Mid Cap Fund B",
+              "suggestion": "Worth asking what changed with the new manager and whether the approach is the same.",
+              "jargon_term": "manager",
+              "numbers": {
+                "months": 7,
+                "since": "2026-03-01",
+                "names": [
+                  "B. Sample"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "topic": "exit",
+          "title": "Exit load",
+          "what": "A charge some funds take if you sell within a set time.",
+          "insights": [
+            {
+              "id": "facts-exit-sample-mid-cap-fund-b",
+              "topic": "exit",
+              "status": "ok",
+              "headline": "Exit load",
+              "sentence": "As filed by the fund house: 1% if redeemed within 1 year; nil after.",
+              "fund": "Sample Mid Cap Fund B",
+              "suggestion": null,
+              "jargon_term": null,
+              "numbers": {
+                "text": "1% if redeemed within 1 year; nil after."
+              }
+            }
+          ]
+        }
+      ],
+      "facts": {
+        "plan": "regular",
+        "benchmark": "the Sample Midcap index",
+        "ter": 2.05,
+        "aum_cr": 21400,
+        "riskometer": "Very High",
+        "benchmark_applies": true,
+        "age_years": 16.3,
+        "manager_months": 7
+      },
+      "notes": []
+    },
+    {
+      "name": "Sample Large & Mid Cap Fund C",
+      "category": "Large & Mid Cap",
+      "value": 180000,
+      "share_pct": 15.7,
+      "verdict": "Needs attention",
+      "status": "attention",
+      "going_well": [],
+      "look_at": [
+        "Well behind its benchmark",
+        "Well behind its benchmark year by year",
+        "Rarely beats its benchmark"
+      ],
+      "scorecard": [
+        {
+          "topic": "returns",
+          "title": "Returns",
+          "status": "attention",
+          "label": "Needs attention",
+          "note": "Well behind its benchmark"
+        },
+        {
+          "topic": "risk",
+          "title": "Risk",
+          "status": "attention",
+          "label": "Needs attention",
+          "note": "Smaller gains and bigger falls"
+        },
+        {
+          "topic": "peers",
+          "title": "Ranking in category",
+          "status": "attention",
+          "label": "Needs attention",
+          "note": "Bottom quarter of its category"
+        },
+        {
+          "topic": "costs",
+          "title": "Costs",
+          "status": "watch",
+          "label": "Look closer",
+          "note": "Above the category median"
+        }
+      ],
+      "sections": [
+        {
+          "topic": "returns",
+          "title": "Growth over 1, 3 and 5 years",
+          "what": "How fast your money grew each year on average, compared with the market index.",
+          "insights": [
+            {
+              "id": "returns-sample-large---mid-cap-fund-c",
+              "topic": "returns",
+              "status": "attention",
+              "headline": "Well behind its benchmark",
+              "sentence": "Over 5 years this fund grew 11.8% a year; the Sample LargeMidcap index grew 15.4%. That is 3.6% a year behind.",
+              "fund": "Sample Large & Mid Cap Fund C",
+              "suggestion": "Worth asking whether this is a rough patch for the fund's style or a lasting gap, and how its closest peers did over the same period.",
+              "jargon_term": "cagr",
+              "numbers": {
+                "horizon_years": 5,
+                "fund_cagr": 11.8,
+                "bench_cagr": 15.4,
+                "gap_pts": -3.6,
+                "fund_value": 174666,
+                "bench_value": 204658,
+                "by_horizon": [
+                  {
+                    "years": 1,
+                    "fund": 14.0,
+                    "bench": 18.0,
+                    "gap": -4.0
+                  },
+                  {
+                    "years": 3,
+                    "fund": 12.1,
+                    "bench": 16.0,
+                    "gap": -3.9
+                  },
+                  {
+                    "years": 5,
+                    "fund": 11.8,
+                    "bench": 15.4,
+                    "gap": -3.6
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "topic": "calendar",
+          "title": "Year by year",
+          "what": "How the fund did in each calendar year, and by how much it finished ahead of or behind the benchmark (its alpha).",
+          "insights": [
+            {
+              "id": "calendar-sample-large---mid-cap-fund-c",
+              "topic": "calendar",
+              "status": "attention",
+              "headline": "Well behind its benchmark year by year",
+              "sentence": "This fund did not beat the Sample LargeMidcap index in any of the last 5 calendar years. On average it finished 6.2 percentage points behind the benchmark each year (its margin over the benchmark, often called alpha). It fell furthest behind in 2022 (−7.0 points) and came closest in 2021 (−6.0 points).",
+              "fund": "Sample Large & Mid Cap Fund C",
+              "suggestion": "Worth checking whether the weak years share a cause, such as one theme falling out of favour.",
+              "jargon_term": "calendar",
+              "numbers": {
+                "years": [
+                  2021,
+                  2022,
+                  2023,
+                  2024,
+                  2025
+                ],
+                "fund": [
+                  24.0,
+                  -2.0,
+                  21.0,
+                  12.0,
+                  3.0
+                ],
+                "bench": [
+                  30.0,
+                  5.0,
+                  27.0,
+                  18.0,
+                  9.0
+                ],
+                "alpha": [
+                  -6.0,
+                  -7.0,
+                  -6.0,
+                  -6.0,
+                  -6.0
+                ],
+                "avg_alpha": -6.2,
+                "beats": 0,
+                "n": 5,
+                "best_alpha_year": 2021,
+                "worst_alpha_year": 2022
+              }
+            }
+          ]
+        },
+        {
+          "topic": "consistency",
+          "title": "Across every start date",
+          "what": "How often it beat the index if you had started on any day, not just one lucky day.",
+          "insights": [
+            {
+              "id": "consistency-sample-large---mid-cap-fund-c",
+              "topic": "consistency",
+              "status": "attention",
+              "headline": "Rarely beats its benchmark",
+              "sentence": "In 2 out of every 10 three-year periods, counting every possible start date, this fund did better than the Sample LargeMidcap index.",
+              "fund": "Sample Large & Mid Cap Fund C",
+              "suggestion": "Worth checking whether the fund manager or strategy changed, and if the weak stretches are recent or spread across the years.",
+              "jargon_term": "rolling_returns",
+              "numbers": {
+                "beat_pct": 18,
+                "window_years": 3
+              }
+            }
+          ]
+        },
+        {
+          "topic": "capture",
+          "title": "In rising and falling markets",
+          "what": "How much of the market's gains and losses this fund took part in.",
+          "insights": [
+            {
+              "id": "capture-sample-large---mid-cap-fund-c",
+              "topic": "capture",
+              "status": "attention",
+              "headline": "Smaller gains and bigger falls",
+              "sentence": "Over 5 years, for every ₹100 the Sample LargeMidcap index gained in rising months, this fund gained ₹82. For every ₹100 it lost in falling months, this fund lost ₹112. That is the least helpful mix.",
+              "fund": "Sample Large & Mid Cap Fund C",
+              "suggestion": "Worth asking whether this mix of gains and falls is what you want from this fund.",
+              "jargon_term": "capture",
+              "numbers": {
+                "upside": 82,
+                "downside": 112,
+                "ratio": 0.73,
+                "years": 5
+              }
+            }
+          ]
+        },
+        {
+          "topic": "risk",
+          "title": "The worst fall",
+          "what": "How far the fund dropped in its worst fall, and how long it took to come back.",
+          "insights": [
+            {
+              "id": "risk-sample-large---mid-cap-fund-c",
+              "topic": "risk",
+              "status": "attention",
+              "headline": "Fell much more than its benchmark",
+              "sentence": "In the March 2020 crash, ₹1,00,000 in this fund fell to ₹55,000. In the Sample LargeMidcap index it fell to ₹63,000. Counting from the bottom, this fund took 15 months to get back to its earlier high; the benchmark took 8. Falls this big can happen again, so be sure you could stay invested through one.",
+              "fund": "Sample Large & Mid Cap Fund C",
+              "suggestion": "Worth asking whether you are comfortable with a fall this deep for the extra return you expect.",
+              "jargon_term": "drawdown",
+              "numbers": {
+                "fund_drawdown": -45.0,
+                "bench_drawdown": -37.0,
+                "fund_after": 55000,
+                "bench_after": 63000,
+                "recovery_months": 15,
+                "still_underwater": false,
+                "fall_size": "significant",
+                "bench_recovery_months": 8
+              }
+            }
+          ]
+        },
+        {
+          "topic": "peers",
+          "title": "Ranking in its category",
+          "what": "How it ranks against funds of the same type. Q1 is the best quarter of the list, Q4 the worst.",
+          "insights": [
+            {
+              "id": "peers-sample-large---mid-cap-fund-c",
+              "topic": "peers",
+              "status": "attention",
+              "headline": "Bottom quarter of its category",
+              "sentence": "Over 5 years, this fund ranked in the bottom quarter (Q4) of 26 Large & Mid Cap funds: behind at least 3 in every 4 similar funds. By period: 1 year Q4, 3 years Q4, 5 years Q4.",
+              "fund": "Sample Large & Mid Cap Fund C",
+              "suggestion": "Worth looking at what the top few funds in this category did differently.",
+              "jargon_term": "quartile",
+              "numbers": {
+                "quartiles": {
+                  "1": 4,
+                  "3": 4,
+                  "5": 4
+                },
+                "peer_count": 26,
+                "category": "Large & Mid Cap",
+                "average": 4.0
+              }
+            }
+          ]
+        },
+        {
+          "topic": "costs",
+          "title": "What you pay",
+          "what": "What the fund charges you every year, compared with the middle fund in its category.",
+          "insights": [
+            {
+              "id": "costs-sample-large---mid-cap-fund-c",
+              "topic": "costs",
+              "status": "watch",
+              "headline": "Above the category median",
+              "sentence": "This fund charges 2.15% a year. The middle Large & Mid Cap regular plan charges 1.80%, so this fund is 0.35 percentage points more than the middle. On your ₹1,80,000 that is about ₹630 a year more.",
+              "fund": "Sample Large & Mid Cap Fund C",
+              "suggestion": "Worth asking what the higher charge pays for, and whether similar funds in the category deliver the same for less.",
+              "jargon_term": "ter",
+              "numbers": {
+                "ter": 2.15,
+                "plan": "regular",
+                "category": "Large & Mid Cap",
+                "category_median": 1.8,
+                "gap_pts": 0.35,
+                "annual_cost": 3870,
+                "annual_vs_median": 630
+              }
+            }
+          ]
+        },
+        {
+          "topic": "riskometer",
+          "title": "Official risk level",
+          "what": "The risk label the fund house must publish, on a six-step scale from Low to Very High.",
+          "insights": [
+            {
+              "id": "facts-risk-sample-large---mid-cap-fund-c",
+              "topic": "riskometer",
+              "status": "ok",
+              "headline": "Official risk level: Very High",
+              "sentence": "The fund house rates this fund 'Very High' on the official six-step risk scale. Its benchmark is rated 'Very High'.",
+              "fund": "Sample Large & Mid Cap Fund C",
+              "suggestion": null,
+              "jargon_term": "riskometer",
+              "numbers": {
+                "level": 6,
+                "label": "Very High",
+                "bench_level": 6,
+                "bench_label": "Very High"
+              }
+            }
+          ]
+        },
+        {
+          "topic": "size",
+          "title": "Fund size",
+          "what": "How much money the fund manages in total.",
+          "insights": [
+            {
+              "id": "facts-size-sample-large---mid-cap-fund-c",
+              "topic": "size",
+              "status": "ok",
+              "headline": "Fund size: ₹3,120 crore",
+              "sentence": "The fund manages about ₹3,120 crore in total, across all its plans.",
+              "fund": "Sample Large & Mid Cap Fund C",
+              "suggestion": null,
+              "jargon_term": "aum",
+              "numbers": {
+                "aum_cr": 3120
+              }
+            }
+          ]
+        },
+        {
+          "topic": "age",
+          "title": "Track record",
+          "what": "How long the fund has existed.",
+          "insights": [
+            {
+              "id": "facts-age-sample-large---mid-cap-fund-c",
+              "topic": "age",
+              "status": "ok",
+              "headline": "About 9.6 years of history",
+              "sentence": "This fund is about 9.6 years old. Launched in Feb 2017.",
+              "fund": "Sample Large & Mid Cap Fund C",
+              "suggestion": null,
+              "jargon_term": null,
+              "numbers": {
+                "years": 9.6,
+                "allotment_date": "2017-02-20"
+              }
+            }
+          ]
+        },
+        {
+          "topic": "manager",
+          "title": "Fund manager",
+          "what": "Who runs the fund, and since when.",
+          "insights": [
+            {
+              "id": "facts-manager-sample-large---mid-cap-fund-c",
+              "topic": "manager",
+              "status": "ok",
+              "headline": "Same manager for about 5 years",
+              "sentence": "C. Sample has run this fund since Aug 2021, which is about 5 years.",
+              "fund": "Sample Large & Mid Cap Fund C",
+              "suggestion": null,
+              "jargon_term": "manager",
+              "numbers": {
+                "months": 62,
+                "since": "2021-08-01",
+                "names": [
+                  "C. Sample"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "facts": {
+        "plan": "regular",
+        "benchmark": "the Sample LargeMidcap index",
+        "ter": 2.15,
+        "aum_cr": 3120,
+        "riskometer": "Very High",
+        "benchmark_applies": true,
+        "age_years": 9.6,
+        "manager_months": 62
+      },
+      "notes": []
+    },
+    {
+      "name": "Sample Large Cap Index Fund D",
+      "category": "Large Cap Index",
+      "value": 140000,
+      "share_pct": 12.2,
+      "verdict": "On track",
+      "status": "ok",
+      "going_well": [],
+      "look_at": [],
+      "scorecard": [
+        {
+          "topic": "returns",
+          "title": "Returns",
+          "status": "ok",
+          "label": "Fine",
+          "note": "Tracking its index closely"
+        },
+        {
+          "topic": "risk",
+          "title": "Risk",
+          "status": "ok",
+          "label": "Fine",
+          "note": "Moves almost exactly with its index"
+        },
+        {
+          "topic": "peers",
+          "title": "Ranking in category",
+          "status": "na",
+          "label": "Not ranked",
+          "note": ""
+        },
+        {
+          "topic": "costs",
+          "title": "Costs",
+          "status": "ok",
+          "label": "Fine",
+          "note": "In line with the category median"
+        }
+      ],
+      "sections": [
+        {
+          "topic": "returns",
+          "title": "Growth over 1, 3 and 5 years",
+          "what": "How fast your money grew each year on average, compared with the market index.",
+          "insights": [
+            {
+              "id": "returns-sample-large-cap-index-fund-d",
+              "topic": "returns",
+              "status": "ok",
+              "headline": "Tracking its index closely",
+              "sentence": "This fund copies the Sample 50 index. Over 5 years it returned 13.4% a year against 13.6% for the index, a gap of 0.2%. That is normal for an index fund.",
+              "fund": "Sample Large Cap Index Fund D",
+              "suggestion": null,
+              "jargon_term": "tracking",
+              "numbers": {
+                "horizon_years": 5,
+                "fund_cagr": 13.4,
+                "bench_cagr": 13.6,
+                "gap_pts": -0.2,
+                "fund_value": 187528,
+                "bench_value": 189187,
+                "by_horizon": [
+                  {
+                    "years": 1,
+                    "fund": 12.9,
+                    "bench": 13.1,
+                    "gap": -0.2
+                  },
+                  {
+                    "years": 3,
+                    "fund": 13.6,
+                    "bench": 13.8,
+                    "gap": -0.2
+                  },
+                  {
+                    "years": 5,
+                    "fund": 13.4,
+                    "bench": 13.6,
+                    "gap": -0.2
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "topic": "capture",
+          "title": "In rising and falling markets",
+          "what": "How much of the market's gains and losses this fund took part in.",
+          "insights": [
+            {
+              "id": "capture-sample-large-cap-index-fund-d",
+              "topic": "capture",
+              "status": "ok",
+              "headline": "Moves almost exactly with its index",
+              "sentence": "Over 5 years, for every ₹100 the Sample 50 index gained in rising months, this fund gained ₹100. For every ₹100 it lost in falling months, this fund lost ₹100. That is what an index fund should do.",
+              "fund": "Sample Large Cap Index Fund D",
+              "suggestion": null,
+              "jargon_term": "capture",
+              "numbers": {
+                "upside": 99.6,
+                "downside": 100.1,
+                "ratio": 1.0,
+                "years": 5
+              }
+            }
+          ]
+        },
+        {
+          "topic": "risk",
+          "title": "The worst fall",
+          "what": "How far the fund dropped in its worst fall, and how long it took to come back.",
+          "insights": [
+            {
+              "id": "risk-sample-large-cap-index-fund-d",
+              "topic": "risk",
+              "status": "ok",
+              "headline": "Fell about as much as its benchmark",
+              "sentence": "In the March 2020 crash, ₹1,00,000 in this fund fell to ₹62,000. In the Sample 50 index it fell to ₹61,800. Counting from the bottom, this fund took 8 months to get back to its earlier high; the benchmark took 8.",
+              "fund": "Sample Large Cap Index Fund D",
+              "suggestion": null,
+              "jargon_term": "drawdown",
+              "numbers": {
+                "fund_drawdown": -38.0,
+                "bench_drawdown": -38.2,
+                "fund_after": 62000,
+                "bench_after": 61800,
+                "recovery_months": 8,
+                "still_underwater": false,
+                "fall_size": "significant",
+                "bench_recovery_months": 8
+              }
+            }
+          ]
+        },
+        {
+          "topic": "costs",
+          "title": "What you pay",
+          "what": "What the fund charges you every year, compared with the middle fund in its category.",
+          "insights": [
+            {
+              "id": "costs-sample-large-cap-index-fund-d",
+              "topic": "costs",
+              "status": "ok",
+              "headline": "In line with the category median",
+              "sentence": "This fund charges 0.20% a year. The middle Large Cap Index direct plan charges 0.18%, so this fund is about the same as the middle.",
+              "fund": "Sample Large Cap Index Fund D",
+              "suggestion": null,
+              "jargon_term": "ter",
+              "numbers": {
+                "ter": 0.2,
+                "plan": "direct",
+                "category": "Large Cap Index",
+                "category_median": 0.18,
+                "gap_pts": 0.02,
+                "annual_cost": 280,
+                "annual_vs_median": 28
+              }
+            }
+          ]
+        },
+        {
+          "topic": "riskometer",
+          "title": "Official risk level",
+          "what": "The risk label the fund house must publish, on a six-step scale from Low to Very High.",
+          "insights": [
+            {
+              "id": "facts-risk-sample-large-cap-index-fund-d",
+              "topic": "riskometer",
+              "status": "ok",
+              "headline": "Official risk level: Very High",
+              "sentence": "The fund house rates this fund 'Very High' on the official six-step risk scale. Its benchmark is rated 'Very High'.",
+              "fund": "Sample Large Cap Index Fund D",
+              "suggestion": null,
+              "jargon_term": "riskometer",
+              "numbers": {
+                "level": 6,
+                "label": "Very High",
+                "bench_level": 6,
+                "bench_label": "Very High"
+              }
+            }
+          ]
+        },
+        {
+          "topic": "size",
+          "title": "Fund size",
+          "what": "How much money the fund manages in total.",
+          "insights": [
+            {
+              "id": "facts-size-sample-large-cap-index-fund-d",
+              "topic": "size",
+              "status": "ok",
+              "headline": "Fund size: ₹6,800 crore",
+              "sentence": "The fund manages about ₹6,800 crore in total, across all its plans.",
+              "fund": "Sample Large Cap Index Fund D",
+              "suggestion": null,
+              "jargon_term": "aum",
+              "numbers": {
+                "aum_cr": 6800
+              }
+            }
+          ]
+        },
+        {
+          "topic": "age",
+          "title": "Track record",
+          "what": "How long the fund has existed.",
+          "insights": [
+            {
+              "id": "facts-age-sample-large-cap-index-fund-d",
+              "topic": "age",
+              "status": "ok",
+              "headline": "About 8.6 years of history",
+              "sentence": "This fund is about 8.6 years old. Launched in Mar 2018.",
+              "fund": "Sample Large Cap Index Fund D",
+              "suggestion": null,
+              "jargon_term": null,
+              "numbers": {
+                "years": 8.6,
+                "allotment_date": "2018-03-12"
+              }
+            }
+          ]
+        },
+        {
+          "topic": "exit",
+          "title": "Exit load",
+          "what": "A charge some funds take if you sell within a set time.",
+          "insights": [
+            {
+              "id": "facts-exit-sample-large-cap-index-fund-d",
+              "topic": "exit",
+              "status": "ok",
+              "headline": "Exit load",
+              "sentence": "As filed by the fund house: Nil.",
+              "fund": "Sample Large Cap Index Fund D",
+              "suggestion": null,
+              "jargon_term": null,
+              "numbers": {
+                "text": "Nil."
+              }
+            }
+          ]
+        }
+      ],
+      "facts": {
+        "plan": "direct",
+        "benchmark": "the Sample 50 index",
+        "ter": 0.2,
+        "aum_cr": 6800,
+        "riskometer": "Very High",
+        "benchmark_applies": true,
+        "age_years": 8.6
+      },
+      "notes": [
+        "Not ranked against other index funds, because that group mixes different indices."
+      ]
+    },
+    {
+      "name": "Sample Thematic Fund E",
+      "category": "Thematic",
+      "value": 60000,
+      "share_pct": 5.2,
+      "verdict": "Limited data",
+      "status": "ok",
+      "going_well": [],
+      "look_at": [
+        "A small fund",
+        "A short track record"
+      ],
+      "scorecard": [
+        {
+          "topic": "returns",
+          "title": "Returns",
+          "status": "ok",
+          "label": "Fine",
+          "note": "Ahead of its benchmark"
+        },
+        {
+          "topic": "risk",
+          "title": "Risk",
+          "status": "na",
+          "label": "No data",
+          "note": ""
+        },
+        {
+          "topic": "peers",
+          "title": "Ranking in category",
+          "status": "na",
+          "label": "No data",
+          "note": ""
+        },
+        {
+          "topic": "costs",
+          "title": "Costs",
+          "status": "ok",
+          "label": "Fine",
+          "note": "In line with the category median"
+        }
+      ],
+      "sections": [
+        {
+          "topic": "returns",
+          "title": "Growth over 1, 3 and 5 years",
+          "what": "How fast your money grew each year on average, compared with the market index.",
+          "insights": [
+            {
+              "id": "returns-sample-thematic-fund-e",
+              "topic": "returns",
+              "status": "ok",
+              "headline": "Ahead of its benchmark",
+              "sentence": "Over the last year this fund returned 28.0%; the Sample 500 index returned 17.5%. That is 10.5 percentage points ahead. One year is a short time to judge a fund, so treat this lightly.",
+              "fund": "Sample Thematic Fund E",
+              "suggestion": null,
+              "jargon_term": "cagr",
+              "numbers": {
+                "horizon_years": 1,
+                "fund_cagr": 28.0,
+                "bench_cagr": 17.5,
+                "gap_pts": 10.5,
+                "fund_value": 128000,
+                "bench_value": 117500,
+                "by_horizon": [
+                  {
+                    "years": 1,
+                    "fund": 28.0,
+                    "bench": 17.5,
+                    "gap": 10.5
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "topic": "costs",
+          "title": "What you pay",
+          "what": "What the fund charges you every year, compared with the middle fund in its category.",
+          "insights": [
+            {
+              "id": "costs-sample-thematic-fund-e",
+              "topic": "costs",
+              "status": "ok",
+              "headline": "In line with the category median",
+              "sentence": "This fund charges 0.95% a year. The middle Thematic direct plan charges 0.85%, so this fund is about the same as the middle.",
+              "fund": "Sample Thematic Fund E",
+              "suggestion": null,
+              "jargon_term": "ter",
+              "numbers": {
+                "ter": 0.95,
+                "plan": "direct",
+                "category": "Thematic",
+                "category_median": 0.85,
+                "gap_pts": 0.1,
+                "annual_cost": 570,
+                "annual_vs_median": 60
+              }
+            }
+          ]
+        },
+        {
+          "topic": "riskometer",
+          "title": "Official risk level",
+          "what": "The risk label the fund house must publish, on a six-step scale from Low to Very High.",
+          "insights": [
+            {
+              "id": "facts-risk-sample-thematic-fund-e",
+              "topic": "riskometer",
+              "status": "ok",
+              "headline": "Official risk level: Very High",
+              "sentence": "The fund house rates this fund 'Very High' on the official six-step risk scale. Its benchmark is rated 'Very High'.",
+              "fund": "Sample Thematic Fund E",
+              "suggestion": null,
+              "jargon_term": "riskometer",
+              "numbers": {
+                "level": 6,
+                "label": "Very High",
+                "bench_level": 6,
+                "bench_label": "Very High"
+              }
+            }
+          ]
+        },
+        {
+          "topic": "size",
+          "title": "Fund size",
+          "what": "How much money the fund manages in total.",
+          "insights": [
+            {
+              "id": "facts-size-sample-thematic-fund-e",
+              "topic": "size",
+              "status": "watch",
+              "headline": "A small fund",
+              "sentence": "The fund manages about ₹62 crore in total, across all its plans. That is small for a mutual fund.",
+              "fund": "Sample Thematic Fund E",
+              "suggestion": "Worth asking whether a fund this small is likely to stay open and keep its costs low.",
+              "jargon_term": "aum",
+              "numbers": {
+                "aum_cr": 62
+              }
+            }
+          ]
+        },
+        {
+          "topic": "age",
+          "title": "Track record",
+          "what": "How long the fund has existed.",
+          "insights": [
+            {
+              "id": "facts-age-sample-thematic-fund-e",
+              "topic": "age",
+              "status": "watch",
+              "headline": "A short track record",
+              "sentence": "This fund is about 1.7 years old. Launched in Jan 2025. That is too short to have been through a long market fall.",
+              "fund": "Sample Thematic Fund E",
+              "suggestion": "Worth remembering that a short record says little about how it behaves in a long market fall.",
+              "jargon_term": null,
+              "numbers": {
+                "years": 1.7,
+                "allotment_date": "2025-01-20"
+              }
+            }
+          ]
+        }
+      ],
+      "facts": {
+        "plan": "direct",
+        "benchmark": "the Sample 500 index",
+        "ter": 0.95,
+        "aum_cr": 62,
+        "riskometer": "Very High",
+        "benchmark_applies": true,
+        "age_years": 1.7
+      },
+      "notes": []
+    },
+    {
+      "name": "Sample Corporate Bond Fund F",
+      "category": "Corporate Bond Fund",
+      "value": 90000,
+      "share_pct": 7.8,
+      "verdict": "On track",
+      "status": "ok",
+      "going_well": [],
+      "look_at": [],
+      "scorecard": [
+        {
+          "topic": "returns",
+          "title": "Returns",
+          "status": "na",
+          "label": "Not compared",
+          "note": ""
+        },
+        {
+          "topic": "risk",
+          "title": "Risk",
+          "status": "na",
+          "label": "Not compared",
+          "note": ""
+        },
+        {
+          "topic": "peers",
+          "title": "Ranking in category",
+          "status": "ok",
+          "label": "Fine",
+          "note": "Above the middle of its category"
+        },
+        {
+          "topic": "costs",
+          "title": "Costs",
+          "status": "ok",
+          "label": "Fine",
+          "note": "In line with the category median"
+        }
+      ],
+      "sections": [
+        {
+          "topic": "peers",
+          "title": "Ranking in its category",
+          "what": "How it ranks against funds of the same type. Q1 is the best quarter of the list, Q4 the worst.",
+          "insights": [
+            {
+              "id": "peers-sample-corporate-bond-fund-f",
+              "topic": "peers",
+              "status": "ok",
+              "headline": "Above the middle of its category",
+              "sentence": "Over 5 years, this fund ranked in the top quarter (Q1) of 22 Corporate Bond Fund funds: ahead of at least 3 in every 4 similar funds. By period: 1 year Q2, 3 years Q2, 5 years Q1.",
+              "fund": "Sample Corporate Bond Fund F",
+              "suggestion": null,
+              "jargon_term": "quartile",
+              "numbers": {
+                "quartiles": {
+                  "1": 2,
+                  "3": 2,
+                  "5": 1
+                },
+                "peer_count": 22,
+                "category": "Corporate Bond Fund",
+                "average": 1.6
+              }
+            }
+          ]
+        },
+        {
+          "topic": "costs",
+          "title": "What you pay",
+          "what": "What the fund charges you every year, compared with the middle fund in its category.",
+          "insights": [
+            {
+              "id": "costs-sample-corporate-bond-fund-f",
+              "topic": "costs",
+              "status": "ok",
+              "headline": "In line with the category median",
+              "sentence": "This fund charges 0.35% a year. The middle Corporate Bond Fund direct plan charges 0.40%, so this fund is about the same as the middle.",
+              "fund": "Sample Corporate Bond Fund F",
+              "suggestion": null,
+              "jargon_term": "ter",
+              "numbers": {
+                "ter": 0.35,
+                "plan": "direct",
+                "category": "Corporate Bond Fund",
+                "category_median": 0.4,
+                "gap_pts": -0.05,
+                "annual_cost": 315,
+                "annual_vs_median": -45
+              }
+            }
+          ]
+        },
+        {
+          "topic": "riskometer",
+          "title": "Official risk level",
+          "what": "The risk label the fund house must publish, on a six-step scale from Low to Very High.",
+          "insights": [
+            {
+              "id": "facts-risk-sample-corporate-bond-fund-f",
+              "topic": "riskometer",
+              "status": "ok",
+              "headline": "Official risk level: Moderate",
+              "sentence": "The fund house rates this fund 'Moderate' on the official six-step risk scale. Its benchmark is rated 'Moderate'.",
+              "fund": "Sample Corporate Bond Fund F",
+              "suggestion": null,
+              "jargon_term": "riskometer",
+              "numbers": {
+                "level": 3,
+                "label": "Moderate",
+                "bench_level": 3,
+                "bench_label": "Moderate"
+              }
+            }
+          ]
+        },
+        {
+          "topic": "size",
+          "title": "Fund size",
+          "what": "How much money the fund manages in total.",
+          "insights": [
+            {
+              "id": "facts-size-sample-corporate-bond-fund-f",
+              "topic": "size",
+              "status": "ok",
+              "headline": "Fund size: ₹18,700 crore",
+              "sentence": "The fund manages about ₹18,700 crore in total, across all its plans.",
+              "fund": "Sample Corporate Bond Fund F",
+              "suggestion": null,
+              "jargon_term": "aum",
+              "numbers": {
+                "aum_cr": 18700
+              }
+            }
+          ]
+        },
+        {
+          "topic": "age",
+          "title": "Track record",
+          "what": "How long the fund has existed.",
+          "insights": [
+            {
+              "id": "facts-age-sample-corporate-bond-fund-f",
+              "topic": "age",
+              "status": "ok",
+              "headline": "About 14.2 years of history",
+              "sentence": "This fund is about 14.2 years old. Launched in Aug 2012.",
+              "fund": "Sample Corporate Bond Fund F",
+              "suggestion": null,
+              "jargon_term": null,
+              "numbers": {
+                "years": 14.2,
+                "allotment_date": "2012-08-03"
+              }
+            }
+          ]
+        },
+        {
+          "topic": "manager",
+          "title": "Fund manager",
+          "what": "Who runs the fund, and since when.",
+          "insights": [
+            {
+              "id": "facts-manager-sample-corporate-bond-fund-f",
+              "topic": "manager",
+              "status": "ok",
+              "headline": "Same manager for about 4 years",
+              "sentence": "F. Sample has run this fund since May 2022, which is about 4 years.",
+              "fund": "Sample Corporate Bond Fund F",
+              "suggestion": null,
+              "jargon_term": "manager",
+              "numbers": {
+                "months": 53,
+                "since": "2022-05-01",
+                "names": [
+                  "F. Sample"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "topic": "exit",
+          "title": "Exit load",
+          "what": "A charge some funds take if you sell within a set time.",
+          "insights": [
+            {
+              "id": "facts-exit-sample-corporate-bond-fund-f",
+              "topic": "exit",
+              "status": "ok",
+              "headline": "Exit load",
+              "sentence": "As filed by the fund house: Nil.",
+              "fund": "Sample Corporate Bond Fund F",
+              "suggestion": null,
+              "jargon_term": null,
+              "numbers": {
+                "text": "Nil."
+              }
+            }
+          ]
+        }
+      ],
+      "facts": {
+        "plan": "direct",
+        "benchmark": "its benchmark",
+        "ter": 0.35,
+        "aum_cr": 18700,
+        "riskometer": "Moderate",
+        "benchmark_applies": false,
+        "age_years": 14.2,
+        "manager_months": 53
+      },
+      "notes": [
+        "This kind of fund is not compared with an index, because the index would not be a fair yardstick for it. It is judged on its ranking among similar funds and on its costs."
+      ]
+    }
+  ],
+  "flags": [
+    {
+      "id": "returns-sample-large---mid-cap-fund-c",
+      "topic": "returns",
+      "status": "attention",
+      "headline": "Well behind its benchmark",
+      "sentence": "Over 5 years this fund grew 11.8% a year; the Sample LargeMidcap index grew 15.4%. That is 3.6% a year behind.",
+      "fund": "Sample Large & Mid Cap Fund C",
+      "suggestion": "Worth asking whether this is a rough patch for the fund's style or a lasting gap, and how its closest peers did over the same period.",
+      "jargon_term": "cagr",
+      "numbers": {
+        "horizon_years": 5,
+        "fund_cagr": 11.8,
+        "bench_cagr": 15.4,
+        "gap_pts": -3.6,
+        "fund_value": 174666,
+        "bench_value": 204658,
+        "by_horizon": [
+          {
+            "years": 1,
+            "fund": 14.0,
+            "bench": 18.0,
+            "gap": -4.0
+          },
+          {
+            "years": 3,
+            "fund": 12.1,
+            "bench": 16.0,
+            "gap": -3.9
+          },
+          {
+            "years": 5,
+            "fund": 11.8,
+            "bench": 15.4,
+            "gap": -3.6
+          }
+        ]
+      }
+    },
+    {
+      "id": "calendar-sample-large---mid-cap-fund-c",
+      "topic": "calendar",
+      "status": "attention",
+      "headline": "Well behind its benchmark year by year",
+      "sentence": "This fund did not beat the Sample LargeMidcap index in any of the last 5 calendar years. On average it finished 6.2 percentage points behind the benchmark each year (its margin over the benchmark, often called alpha). It fell furthest behind in 2022 (−7.0 points) and came closest in 2021 (−6.0 points).",
+      "fund": "Sample Large & Mid Cap Fund C",
+      "suggestion": "Worth checking whether the weak years share a cause, such as one theme falling out of favour.",
+      "jargon_term": "calendar",
+      "numbers": {
+        "years": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "fund": [
+          24.0,
+          -2.0,
+          21.0,
+          12.0,
+          3.0
+        ],
+        "bench": [
+          30.0,
+          5.0,
+          27.0,
+          18.0,
+          9.0
+        ],
+        "alpha": [
+          -6.0,
+          -7.0,
+          -6.0,
+          -6.0,
+          -6.0
+        ],
+        "avg_alpha": -6.2,
+        "beats": 0,
+        "n": 5,
+        "best_alpha_year": 2021,
+        "worst_alpha_year": 2022
+      }
+    },
+    {
+      "id": "consistency-sample-large---mid-cap-fund-c",
+      "topic": "consistency",
+      "status": "attention",
+      "headline": "Rarely beats its benchmark",
+      "sentence": "In 2 out of every 10 three-year periods, counting every possible start date, this fund did better than the Sample LargeMidcap index.",
+      "fund": "Sample Large & Mid Cap Fund C",
+      "suggestion": "Worth checking whether the fund manager or strategy changed, and if the weak stretches are recent or spread across the years.",
+      "jargon_term": "rolling_returns",
+      "numbers": {
+        "beat_pct": 18,
+        "window_years": 3
+      }
+    },
+    {
+      "id": "capture-sample-large---mid-cap-fund-c",
+      "topic": "capture",
+      "status": "attention",
+      "headline": "Smaller gains and bigger falls",
+      "sentence": "Over 5 years, for every ₹100 the Sample LargeMidcap index gained in rising months, this fund gained ₹82. For every ₹100 it lost in falling months, this fund lost ₹112. That is the least helpful mix.",
+      "fund": "Sample Large & Mid Cap Fund C",
+      "suggestion": "Worth asking whether this mix of gains and falls is what you want from this fund.",
+      "jargon_term": "capture",
+      "numbers": {
+        "upside": 82,
+        "downside": 112,
+        "ratio": 0.73,
+        "years": 5
+      }
+    },
+    {
+      "id": "risk-sample-large---mid-cap-fund-c",
+      "topic": "risk",
+      "status": "attention",
+      "headline": "Fell much more than its benchmark",
+      "sentence": "In the March 2020 crash, ₹1,00,000 in this fund fell to ₹55,000. In the Sample LargeMidcap index it fell to ₹63,000. Counting from the bottom, this fund took 15 months to get back to its earlier high; the benchmark took 8. Falls this big can happen again, so be sure you could stay invested through one.",
+      "fund": "Sample Large & Mid Cap Fund C",
+      "suggestion": "Worth asking whether you are comfortable with a fall this deep for the extra return you expect.",
+      "jargon_term": "drawdown",
+      "numbers": {
+        "fund_drawdown": -45.0,
+        "bench_drawdown": -37.0,
+        "fund_after": 55000,
+        "bench_after": 63000,
+        "recovery_months": 15,
+        "still_underwater": false,
+        "fall_size": "significant",
+        "bench_recovery_months": 8
+      }
+    },
+    {
+      "id": "peers-sample-large---mid-cap-fund-c",
+      "topic": "peers",
+      "status": "attention",
+      "headline": "Bottom quarter of its category",
+      "sentence": "Over 5 years, this fund ranked in the bottom quarter (Q4) of 26 Large & Mid Cap funds: behind at least 3 in every 4 similar funds. By period: 1 year Q4, 3 years Q4, 5 years Q4.",
+      "fund": "Sample Large & Mid Cap Fund C",
+      "suggestion": "Worth looking at what the top few funds in this category did differently.",
+      "jargon_term": "quartile",
+      "numbers": {
+        "quartiles": {
+          "1": 4,
+          "3": 4,
+          "5": 4
+        },
+        "peer_count": 26,
+        "category": "Large & Mid Cap",
+        "average": 4.0
+      }
+    },
+    {
+      "id": "costs-sample-mid-cap-fund-b",
+      "topic": "costs",
+      "status": "watch",
+      "headline": "Above the category median",
+      "sentence": "This fund charges 2.05% a year. The middle Mid Cap regular plan charges 1.85%, so this fund is 0.20 percentage points more than the middle. On your ₹2,60,000 that is about ₹520 a year more.",
+      "fund": "Sample Mid Cap Fund B",
+      "suggestion": "Worth asking what the higher charge pays for, and whether similar funds in the category deliver the same for less.",
+      "jargon_term": "ter",
+      "numbers": {
+        "ter": 2.05,
+        "plan": "regular",
+        "category": "Mid Cap",
+        "category_median": 1.85,
+        "gap_pts": 0.2,
+        "annual_cost": 5330,
+        "annual_vs_median": 520
+      }
+    },
+    {
+      "id": "costs-sample-large---mid-cap-fund-c",
+      "topic": "costs",
+      "status": "watch",
+      "headline": "Above the category median",
+      "sentence": "This fund charges 2.15% a year. The middle Large & Mid Cap regular plan charges 1.80%, so this fund is 0.35 percentage points more than the middle. On your ₹1,80,000 that is about ₹630 a year more.",
+      "fund": "Sample Large & Mid Cap Fund C",
+      "suggestion": "Worth asking what the higher charge pays for, and whether similar funds in the category deliver the same for less.",
+      "jargon_term": "ter",
+      "numbers": {
+        "ter": 2.15,
+        "plan": "regular",
+        "category": "Large & Mid Cap",
+        "category_median": 1.8,
+        "gap_pts": 0.35,
+        "annual_cost": 3870,
+        "annual_vs_median": 630
+      }
+    },
+    {
+      "id": "mix-fund",
+      "topic": "mix",
+      "status": "watch",
+      "headline": "One fund carries a lot of weight",
+      "sentence": "Sample Flexi Cap Fund A is 37% of your portfolio, so how it does matters more than any other fund.",
+      "fund": null,
+      "suggestion": "Worth confirming you are comfortable with one fund being this large.",
+      "jargon_term": "concentration",
+      "numbers": {
+        "fund": "Sample Flexi Cap Fund A",
+        "share_pct": 36.5
+      }
+    },
+    {
+      "id": "facts-manager-sample-mid-cap-fund-b",
+      "topic": "manager",
+      "status": "watch",
+      "headline": "The fund manager changed recently",
+      "sentence": "B. Sample has run this fund since Mar 2026, which is 7 months. Part of the track record above may belong to a previous manager.",
+      "fund": "Sample Mid Cap Fund B",
+      "suggestion": "Worth asking what changed with the new manager and whether the approach is the same.",
+      "jargon_term": "manager",
+      "numbers": {
+        "months": 7,
+        "since": "2026-03-01",
+        "names": [
+          "B. Sample"
+        ]
+      }
+    },
+    {
+      "id": "facts-size-sample-thematic-fund-e",
+      "topic": "size",
+      "status": "watch",
+      "headline": "A small fund",
+      "sentence": "The fund manages about ₹62 crore in total, across all its plans. That is small for a mutual fund.",
+      "fund": "Sample Thematic Fund E",
+      "suggestion": "Worth asking whether a fund this small is likely to stay open and keep its costs low.",
+      "jargon_term": "aum",
+      "numbers": {
+        "aum_cr": 62
+      }
+    },
+    {
+      "id": "facts-age-sample-thematic-fund-e",
+      "topic": "age",
+      "status": "watch",
+      "headline": "A short track record",
+      "sentence": "This fund is about 1.7 years old. Launched in Jan 2025. That is too short to have been through a long market fall.",
+      "fund": "Sample Thematic Fund E",
+      "suggestion": "Worth remembering that a short record says little about how it behaves in a long market fall.",
+      "jargon_term": null,
+      "numbers": {
+        "years": 1.7,
+        "allotment_date": "2025-01-20"
+      }
+    }
+  ],
+  "data_gaps": [
+    "Sample Thematic Fund E: year-by-year returns is not shown because the data is not available.",
+    "Sample Thematic Fund E: rolling-return consistency is not shown because the data is not available.",
+    "Sample Thematic Fund E: upside and downside capture is not shown because the data is not available.",
+    "Sample Thematic Fund E: worst-fall comparison is not shown because the data is not available.",
+    "Sample Thematic Fund E: quartile ranking in its category is not shown because the data is not available."
+  ],
+  "glossary": {
+    "cagr": {
+      "title": "Returns, a year at a time (CAGR)",
+      "text": "CAGR is the steady yearly growth rate that would turn your starting amount into the final amount. It smooths out the ups and downs so you can compare funds fairly. The benchmark is the market index the fund is measured against."
+    },
+    "calendar": {
+      "title": "Calendar-year returns and margin (alpha)",
+      "text": "How the fund did from 1 January to 31 December of each year. It shows whether the results came every year or from one or two big years. The margin (often called alpha) is simply the fund's return minus the benchmark's for that year: +3 means 3 percentage points ahead, -2 means 2 behind. It is not the regression-based alpha some websites show."
+    },
+    "capture": {
+      "title": "Upside and downside capture",
+      "text": "Take all the months the market (the benchmark) went up. Upside capture is how much of that rise the fund delivered. Do the same for the falling months and you get downside capture. Above 100 means more than the market, below 100 means less. You want upside high and downside low."
+    },
+    "quartile": {
+      "title": "Quartile ranking",
+      "text": "Line up every fund in the same category from best to worst, then cut the line into four equal groups. Q1 is the best quarter and Q4 is the worst."
+    },
+    "rolling_returns": {
+      "title": "Rolling returns",
+      "text": "Instead of checking one start date, we check every possible start date and look at the returns over each 3-year (or 5-year) stretch. It shows how consistent a fund is, not whether it got lucky with one date."
+    },
+    "drawdown": {
+      "title": "Worst fall (drawdown)",
+      "text": "How far the value dropped from its highest point to its lowest before recovering. It answers: how bad did it get, and could I have lived with that?"
+    },
+    "ter": {
+      "title": "Fund charges (TER)",
+      "text": "The yearly fee the fund house takes out of your money, shown as a percentage. It is already deducted from the returns you see. We compare it with the median (middle) fee of funds in the same category and the same type of plan, direct with direct and regular with regular, so the comparison is like for like."
+    },
+    "aum": {
+      "title": "Fund size (AUM)",
+      "text": "AUM is the total money all investors have put into the fund. Very small funds can be costlier to run and are sometimes merged or closed; very large ones can find it harder to trade freely."
+    },
+    "manager": {
+      "title": "Fund manager",
+      "text": "The person or team that picks the fund's investments. A track record belongs to whoever managed the fund at the time, so a recent change means the past may say less about the future."
+    },
+    "tracking": {
+      "title": "Tracking an index",
+      "text": "An index fund simply copies an index. A small gap against the index is normal (mostly the fund's charges); a big gap deserves a look."
+    },
+    "concentration": {
+      "title": "Concentration",
+      "text": "How much of your money sits in one fund or one type of fund. The more concentrated, the more one bad patch affects the whole portfolio."
+    }
+  },
+  "disclaimer": "This report describes how your funds have behaved in the past using the data shown. Past performance does not guarantee future results. It is general information and observations to discuss, not personal investment advice or a recommendation to buy, sell or switch any fund. Please speak to a registered adviser before acting on it.",
+  "credits": "Fund data: AMFI, compiled by TigZig MFPRO (Amar Harolikar), released under CC0. This report is not affiliated with or endorsed by AMFI or TigZig.",
+  "schema_version": 1
+}
