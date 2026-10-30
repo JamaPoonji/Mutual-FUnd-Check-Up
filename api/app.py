@@ -6,6 +6,8 @@ once and not stored. Logs are status, timing and error type only.
 """
 from __future__ import annotations
 
+from contextlib import asynccontextmanager
+
 import logging
 import os
 import tempfile
@@ -14,13 +16,14 @@ from pathlib import Path
 
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse, JSONResponse
+from starlette.concurrency import run_in_threadpool
 
 from mf_plain.engine import to_dict
 from mf_plain.sample import sample_portfolio
 from mf_plain import analyze
 from mf_plain.htmlview import render_html
 from pipeline.assemble import report_for
-from api.data import FundData, load_fund_data
+from api.data import FundData, StoreNotReady, load_fund_data
 from api.parse import (
     EMPTY_HOLDINGS, UNREADABLE_FILE, UNREADABLE_REQUEST, Unreadable,
     holdings_from_file, holdings_from_json, scheme_codes_from_json,
@@ -35,6 +38,7 @@ if not log.handlers:
     log.setLevel(logging.INFO)
 TEMP_DIR = Path(tempfile.gettempdir()) / "mf-advisor-uploads"
 NOT_READY = "The fund figures are not ready yet. Try again later."
+TOO_LARGE = "That file is too large. Upload a statement under 8 MB."
 FAILED = "Something went wrong while building the report."
 EQUAL_WEIGHT_NOTE = (
     "These funds are weighted equally, because no amounts were given. "
@@ -63,7 +67,25 @@ window.MFAdvisor.onUpload=async function(file){
 </script>
 """
 
-app = FastAPI(title="MF check-up", docs_url=None, redoc_url=None, openapi_url=None)
+MAX_UPLOAD_BYTES = 8_000_000
+MAX_REQUEST_BYTES = 10_000_000  # multipart framing sits on top of the file
+
+
+@asynccontextmanager
+async def lifespan(_app: FastAPI):
+    # Load once at startup so the first visitor does not pay for it, and so a
+    # store that cannot be read shows up in /healthz rather than in the first
+    # report request.
+    try:
+        get_fund_data()
+        start_page()
+    except Exception:
+        log.exception("startup preload failed; /healthz will report unavailable")
+    yield
+
+
+app = FastAPI(title="MF check-up", docs_url=None, redoc_url=None, openapi_url=None,
+              lifespan=lifespan)
 _funds: FundData | None = None
 _page: str | None = None
 
@@ -80,6 +102,7 @@ def get_fund_data() -> FundData:
         try:
             _funds = load_fund_data()
         except Exception as exc:
+            log.exception("fund data could not be loaded")
             raise AnalyzeError(NOT_READY) from exc
     return _funds
 
@@ -101,6 +124,21 @@ def report_payload(holdings: list[dict], funds: FundData, *, equal_weight: bool 
 
 def _reject(message: str, status: int = 422) -> JSONResponse:
     return JSONResponse({"error": message, "unmatched": []}, status_code=status)
+
+
+async def _read_capped(upload, limit: int) -> bytes:
+    """Read an upload in chunks so a huge body is refused, not buffered."""
+    chunks: list[bytes] = []
+    total = 0
+    while True:
+        chunk = await upload.read(1 << 20)
+        if not chunk:
+            break
+        total += len(chunk)
+        if total > limit:
+            raise AnalyzeError(TOO_LARGE, 413)
+        chunks.append(chunk)
+    return b"".join(chunks)
 
 
 def _scratch(data: bytes, suffix: str) -> Path:
@@ -149,6 +187,15 @@ def home():
     return start_page()
 
 
+@app.get("/healthz")
+def healthz():
+    try:
+        funds = get_fund_data()
+    except AnalyzeError:
+        return JSONResponse({"status": "unavailable"}, status_code=503)
+    return {"status": "ok", "as_of": funds.as_of, "schemes": len(funds.metrics)}
+
+
 @app.post("/api/schemes")
 async def find_schemes(request: Request):
     started = time.perf_counter()
@@ -161,12 +208,15 @@ async def find_schemes(request: Request):
             raise AnalyzeError(UNREADABLE_REQUEST) from exc
         if not isinstance(body, dict) or not isinstance(body.get("q", ""), str):
             raise AnalyzeError(UNREADABLE_REQUEST)
-        return {"schemes": search_schemes(get_fund_data(), body.get("q") or "")}
+        funds = get_fund_data()
+        hits = await run_in_threadpool(search_schemes, funds, body.get("q") or "")
+        return {"schemes": hits}
     except AnalyzeError as exc:
         status = exc.status
         error_type = type(exc).__name__
         return _reject(exc.message, exc.status)
     except Exception as exc:
+        log.exception("request failed")
         status = 500
         error_type = type(exc).__name__
         return _reject(FAILED, 500)
@@ -185,6 +235,9 @@ async def analyze_holdings(request: Request):
     try:
         content_type = request.headers.get("content-type", "")
         if "multipart/form-data" in content_type:
+            declared = request.headers.get("content-length", "")
+            if declared.isdigit() and int(declared) > MAX_REQUEST_BYTES:
+                raise AnalyzeError(TOO_LARGE, 413)
             form = await request.form()
             upload = None
             password = ""
@@ -197,7 +250,8 @@ async def analyze_holdings(request: Request):
                     upload = next((value for value in form.values() if hasattr(value, "read")), None)
                 if upload is None:
                     raise AnalyzeError(UNREADABLE_FILE)
-                holdings = _upload_holdings(await upload.read(), password)
+                data = await _read_capped(upload, MAX_UPLOAD_BYTES)
+                holdings = await run_in_threadpool(_upload_holdings, data, password)
             finally:
                 if upload is not None:
                     await upload.close()
@@ -210,16 +264,20 @@ async def analyze_holdings(request: Request):
                 if isinstance(body, dict) and "schemes" in body:
                     codes = scheme_codes_from_json(body)
                     fund_data = get_fund_data()
-                    return report_payload(scheme_holdings(codes, fund_data), fund_data, equal_weight=True)
+                    holdings = scheme_holdings(codes, fund_data)
+                    return await run_in_threadpool(
+                        report_payload, holdings, fund_data, equal_weight=True
+                    )
                 holdings = holdings_from_json(body)
             except Unreadable as exc:
                 raise AnalyzeError(str(exc)) from exc
-        return report_payload(holdings, get_fund_data())
+        return await run_in_threadpool(report_payload, holdings, get_fund_data())
     except AnalyzeError as exc:
         status = exc.status
         error_type = type(exc).__name__
         return _reject(exc.message, exc.status)
     except Exception as exc:
+        log.exception("request failed")
         status = 500
         error_type = type(exc).__name__
         return _reject(FAILED, 500)

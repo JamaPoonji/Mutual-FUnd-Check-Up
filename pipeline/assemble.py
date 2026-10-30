@@ -15,8 +15,8 @@ from datetime import date
 from pathlib import Path
 from typing import Optional
 
-import duckdb
-
+# duckdb is imported inside the build helpers below, so serving reports does
+# not require it in the runtime image.
 from mf_plain.benchmarks import benchmark_tests_apply
 from mf_plain.engine import analyze
 from mf_plain.models import Fund, Portfolio, Thresholds
@@ -306,6 +306,8 @@ def report_for(holdings, catalog, details, metrics, medians, quality, as_of, pre
 
 
 def load_catalog(details_path: Path) -> list[dict]:
+    import duckdb
+
     con = duckdb.connect()
     try:
         cursor = con.execute(
@@ -324,6 +326,8 @@ def load_catalog(details_path: Path) -> list[dict]:
 def load_details(details_path: Path, codes: list[int]) -> dict[int, dict]:
     if not codes:
         return {}
+    import duckdb
+
     con = duckdb.connect()
     try:
         cursor = con.execute(
@@ -345,9 +349,38 @@ def load_details(details_path: Path, codes: list[int]) -> dict[int, dict]:
         con.close()
 
 
+def load_details_all(details_path: Path) -> list[dict]:
+    """Every scheme's detail row, in the shape the runtime store stores them."""
+    import duckdb
+
+    con = duckdb.connect()
+    try:
+        cursor = con.execute(
+            """
+            SELECT scheme_code, scheme_name, fund_name_latest, isin, isin2, scheme_plan,
+                   category_sub, category_group_clean AS category_group,
+                   ter_direct, ter_regular, ter_date,
+                   amfi_daily_fund_aum_cr_all_plans AS aum_cr,
+                   amfi_daily_riskometer AS riskometer,
+                   amfi_daily_riskometer_benchmark AS riskometer_benchmark,
+                   ssd_fund_managers AS fund_managers,
+                   ssd_allotment_date AS allotment_date,
+                   ssd_exit_load AS exit_load
+            FROM read_parquet($details)
+            """,
+            {"details": str(details_path)},
+        )
+        cols = [d[0] for d in cursor.description]
+        return [dict(zip(cols, row)) for row in cursor.fetchall()]
+    finally:
+        con.close()
+
+
 def load_nav(nav_path: Path, codes: list[int], as_of: str) -> dict[int, list[tuple]]:
     if not codes:
         return {}
+    import duckdb
+
     con = duckdb.connect()
     try:
         rows = con.execute(

@@ -85,9 +85,38 @@ CREATE TABLE job_run (
   scheme_rows INTEGER,
   nonpositive_nav_rows INTEGER
 );
+CREATE TABLE scheme_details (
+  scheme_code INTEGER PRIMARY KEY,
+  scheme_name TEXT,
+  fund_name_latest TEXT,
+  isin TEXT,
+  isin2 TEXT,
+  scheme_plan TEXT,
+  category_sub TEXT,
+  category_group TEXT,
+  ter_direct REAL,
+  ter_regular REAL,
+  ter_date TEXT,
+  aum_cr REAL,
+  riskometer TEXT,
+  riskometer_benchmark TEXT,
+  fund_managers TEXT,
+  allotment_date TEXT,
+  exit_load TEXT
+);
+CREATE TABLE scheme_quality (
+  scheme_code INTEGER PRIMARY KEY,
+  note TEXT NOT NULL
+);
 """
 
 
+
+DETAIL_COLUMNS = (
+    "scheme_code", "scheme_name", "fund_name_latest", "isin", "isin2", "scheme_plan",
+    "category_sub", "category_group", "ter_direct", "ter_regular", "ter_date", "aum_cr",
+    "riskometer", "riskometer_benchmark", "fund_managers", "allotment_date", "exit_load",
+)
 def _num(value):
     if value is None or value == "":
         return None
@@ -287,3 +316,52 @@ def quartile_insert_row(raw: Mapping, as_of: str) -> dict:
         "quartile": whole("quartile"),
         "as_of": as_of,
     }
+
+
+def has_index_rows(db_path: Path) -> bool:
+    """True when the store already carries benchmark index levels.
+
+    `pipeline.nightly` needs them before it can fill benchmark-relative columns,
+    and downloading the 178 MB NAV master first only to fail is wasteful, so the
+    job checks this up front.
+    """
+    if not db_path.exists():
+        return False
+    con = sqlite3.connect(db_path)
+    try:
+        row = con.execute("SELECT count(*) FROM index_series").fetchone()
+        return bool(row and row[0])
+    except sqlite3.OperationalError:
+        return False
+    finally:
+        con.close()
+
+
+def write_details(db_path: Path, details: Iterable[Mapping], quality: Mapping[int, str] | None = None) -> int:
+    """Store per-scheme detail rows and data-quality notes in the runtime store.
+
+    Keeping them here is what lets the runtime image carry one file instead of a
+    parquet plus the `data/raw/<as-of>/` directory.
+    """
+    detail_rows = list(details)
+    con = sqlite3.connect(db_path)
+    try:
+        con.execute("DELETE FROM scheme_details")
+        con.executemany(
+            f"INSERT INTO scheme_details ({', '.join(DETAIL_COLUMNS)}) "
+            f"VALUES ({', '.join('?' for _ in DETAIL_COLUMNS)})",
+            [
+                tuple(row.get(column) for column in DETAIL_COLUMNS)
+                for row in detail_rows
+            ],
+        )
+        if quality is not None:
+            con.execute("DELETE FROM scheme_quality")
+            con.executemany(
+                "INSERT INTO scheme_quality (scheme_code, note) VALUES (?, ?)",
+                sorted((int(code), str(note)) for code, note in quality.items()),
+            )
+        con.commit()
+        return len(detail_rows)
+    finally:
+        con.close()

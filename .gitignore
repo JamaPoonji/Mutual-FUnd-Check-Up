@@ -6,3 +6,4 @@ data/store/
 .jetro/
 .mcp.json
 .cursor/mcp.json
+.venv/

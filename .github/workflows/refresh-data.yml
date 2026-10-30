@@ -1,0 +1,64 @@
+name: refresh-data
+
+# Builds the derived store the runtime ships. Two steps, in this order:
+#   1. pipeline.indices   -> NSE total-return series (index_series)
+#   2. pipeline.nightly   -> scheme_metrics, medians, quartiles, details, quality
+# nightly refuses to start without step 1 rather than downloading 178 MB first.
+
+on:
+  schedule:
+    - cron: '30 2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - run: pip install -r requirements-build.txt
+
+      - name: Fetch benchmark total-return series
+        run: python -m pipeline.indices
+
+      - name: Build the store
+        run: python -m pipeline.nightly
+
+      - name: Verify the store is complete
+        run: |
+          python - <<'PY'
+          import sqlite3, sys
+          con = sqlite3.connect("data/store/mf.sqlite")
+          checks = {
+              "scheme_metrics": 1000,
+              "scheme_details": 1000,
+              "category_median_ter": 50,
+              "index_series": 1000,
+          }
+          failed = False
+          for table, minimum in checks.items():
+              n = con.execute(f"SELECT count(*) FROM {table}").fetchone()[0]
+              print(f"{table}: {n}")
+              if n < minimum:
+                  print(f"::error::{table} has {n} rows, expected at least {minimum}")
+                  failed = True
+          sys.exit(1 if failed else 0)
+          PY
+
+      - name: Upload the store
+        uses: actions/upload-artifact@v4
+        with:
+          name: mf-store
+          path: data/store/mf.sqlite
+          retention-days: 14
+
+      - run: |
+          echo "::notice::To deploy, copy this artifact to data/store/mf.sqlite and rebuild the image."

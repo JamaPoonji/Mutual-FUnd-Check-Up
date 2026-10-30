@@ -127,3 +127,48 @@ exit load as filed. Inputs: `riskometer`, `benchmark_riskometer`, `aum_cr`, `all
 Debt, gold, overseas, arbitrage, equity savings and conservative hybrid funds (`mf_plain/benchmarks.py`) are judged on ranking
 and costs only, with a note. Rolling needs about 4 years of history, capture needs 60 daily observations, a category median
 needs 5 funds. Anything less becomes a line under "What we could not check".
+
+## Building the fund store
+
+The server reads one SQLite file. It is built from TigZig MFPRO, free and
+unkeyed, and it is a **two-step job — the order matters**:
+
+```bash
+pip install -r requirements-build.txt
+
+python -m pipeline.indices    # NSE total-return series -> index_series
+python -m pipeline.nightly    # scheme_metrics, medians, quartiles, details, quality
+```
+
+`nightly` fills benchmark-relative columns from the stored TRI series, so it
+checks for that series first and stops with a message if `pipeline.indices` has
+not run. It downloads the 178 MB NAV master once per day and keeps a dated copy
+in `data/raw/<as-of>/`.
+
+`data/store/mf.sqlite` ends up around 5 MB and holds everything the runtime
+needs: `scheme_metrics`, `category_median_ter`, `scheme_details`,
+`scheme_quality`, `job_run`, and `index_series` (which only the build reads).
+
+## Running it
+
+```bash
+pip install -r requirements.txt          # runtime only: no duckdb
+uvicorn api.app:app --port 8080
+```
+
+`GET /healthz` returns `200 {"status":"ok","as_of":…,"schemes":…}` once the store
+loads, and `503` when it cannot. The image's HEALTHCHECK uses it.
+
+## Deploying
+
+The image carries the built store, not the raw data:
+
+- `requirements.txt` (runtime) has no duckdb; `requirements-build.txt` adds it
+  for the pipeline.
+- The Dockerfile copies `data/store/mf.sqlite`, the benchmark map and the app
+  code. `data/raw/` never enters the image.
+- `.github/workflows/refresh-data.yml` rebuilds the store nightly and uploads it
+  as an artifact; copy that file into `data/store/mf.sqlite` and rebuild to ship
+  new numbers.
+
+Scaling to zero is safe: a cold start loads the store in well under a second.

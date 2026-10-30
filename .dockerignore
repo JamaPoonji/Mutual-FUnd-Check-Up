@@ -1,8 +1,12 @@
 .git
-.pytest_cache
-.jetro
+.github
+.venv
+__pycache__
 **/__pycache__
-**/*.pyc
-docs
+*.pyc
+.pytest_cache
+data/raw
+data/store/*.building
 tests
-data/raw/**/amfi_nav_master.parquet
+docs
+.pytest_cache

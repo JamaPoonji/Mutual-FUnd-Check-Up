@@ -47,5 +47,5 @@ ORDER BY 1, 2, 3
 
 if __name__ == "__main__":
     duckdb.sql(SQL).write_csv(OUT)
-    n = duckdb.sql(f"select count(*) from read_csv_auto('{OUT}')").fetchone()[0]
+    n = duckdb.sql(f"select count(*) from read_csv_auto('{OUT}')").fetchall()[0][0]
     print(f"wrote {n} rows to {OUT}")
