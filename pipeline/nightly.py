@@ -8,6 +8,10 @@ Dated copies of the downloads sit in data/raw/<as-of>/.
     python -m pipeline.nightly
     python -m pipeline.nightly --as-of 2026-10-14
 
+Run `python -m pipeline.indices` first. This job fills benchmark-relative
+columns from the stored TRI series, so it checks for that series before
+downloading and stops with a clear message when it is missing.
+
 Fund data only. This job never sees a holdings file.
 """
 from __future__ import annotations
@@ -20,11 +24,12 @@ import urllib.request
 from datetime import date, datetime, timezone
 from pathlib import Path
 
-from pipeline.assemble import fill_all_benchmark_metrics
+from pipeline.assemble import fill_all_benchmark_metrics, load_details_all, load_quality
 from pipeline.metrics import index_by_horizon, scheme_metrics_row
 from pipeline.quartiles import (connect, load_first_dates, load_schemes, nonpositive_nav_count,
                                 run_all_quartiles, run_reference)
-from pipeline.store import load_median_rows, quartile_insert_row, write_store
+from pipeline.store import (has_index_rows, load_median_rows, quartile_insert_row,
+                            write_details, write_store)
 
 ROOT = Path(__file__).resolve().parent.parent
 DETAILS_URL = "https://api.tigzig.com/mf/v1/download/scheme_details_latest.parquet"
@@ -270,8 +275,20 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
     as_of = date.fromisoformat(args.as_of).isoformat()
 
+    if not has_index_rows(args.db):
+        print(
+            "no benchmark index series in the store; run `python -m pipeline.indices` first. "
+            "Without the TRI levels this job would download the NAV master and then fail.",
+            file=sys.stderr,
+        )
+        return 2
+
     if args.details and args.nav:
-        paths = {"details": args.details, "nav": args.nav}
+        paths = {
+            "details": args.details,
+            "nav": args.nav,
+            "quality": args.details.with_name("data_quality.csv"),
+        }
     else:
         paths = fetch_inputs(as_of, args.raw_dir)
         if args.details:
@@ -283,6 +300,10 @@ def main(argv: list[str] | None = None) -> int:
     print(f"building store as of {as_of}", flush=True)
     job = build_store(paths["details"], paths["nav"], args.db, as_of, medians_csv)
     print(f"wrote {args.db} ({job['scheme_rows']} schemes)", flush=True)
+    quality_path = paths.get("quality")
+    quality = load_quality(quality_path) if quality_path and quality_path.exists() else {}
+    stored = write_details(args.db, load_details_all(paths["details"]), quality)
+    print(f"stored {stored} scheme detail rows in the store", flush=True)
     if not args.no_spot_check:
         print("checking Flexi Cap Direct against quartiles_and_cagr.sql", flush=True)
         ref_n, mismatches = spot_check(args.db, paths["details"], paths["nav"], as_of)

@@ -1,0 +1,4 @@
+# Data pipeline only: downloads the TigZig parquet files and computes metrics.
+# Not installed in the runtime image.
+-r requirements.txt
+duckdb==2.0.0
