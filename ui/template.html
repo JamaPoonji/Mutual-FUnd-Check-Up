@@ -6,31 +6,34 @@
 <title>Your mutual fund check-up</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;display=swap" rel="stylesheet">
 <style>
 :root{
-  --ground:#F3F4F6; --surface:#FFFFFF; --line:#E2E5EA; --ink:#16181D; --muted:#565D6B;
-  --accent:#1E4FB3; --fund:#2F6FDE; --index:#B5BBC6; --typical:#4A5568;
-  --good-bg:#E4EDFD; --good:#1E4FB3; --ok-bg:#ECEEF2; --ok:#3F4652;
-  --watch-bg:#FFEFD1; --watch:#7F4C00; --watch-bar:#E3A23B;
-  --attn-bg:#FCE2D5; --attn:#9E330A; --attn-bar:#D4561B;
-  --na:#565D6B; --na-line:#B9BFC9; --soft:#3F4652;
-  --font:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+  /* JamaPoonji brand tokens */
+  --ground:#f5ead6; --surface:#efe2cc; --surface-2:#ebdcc1; --line:#e0cfae; --ink:#211d18; --muted:#6B6357;
+  --accent:#d47636; --accent-deep:#8f4e2c; --cream:#f5ead6; --pale:#e7f0df; --sand:#efe2cc;
+  --fund:#d47636; --index:#d8cbb5; --typical:#8f4e2c;
+  --good-bg:#e7f0df; --good:#3f6b45; --ok-bg:#f2f0eb; --ok:#4a463f;
+  --watch-bg:#f7ead2; --watch:#7f5a12; --watch-bar:#d9a13b;
+  --attn-bg:#f6e0d3; --attn:#9a3f12; --attn-bar:#d4561b;
+  --na:#6b6357; --na-line:#c9bfa9; --soft:#4a463f;
+  --font:'Source Sans 3',system-ui,-apple-system,"Segoe UI",sans-serif;
+  --display:'Source Serif 4',Georgia,serif;
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.45}
 button,input{font:inherit}
-a{color:var(--accent)}
-.page{max-width:1160px;margin:0 auto;padding:32px 20px 56px;display:flex;flex-direction:column;gap:22px}
+a{color:var(--accent-deep)}
+.page{max-width:1140px;margin:0 auto;padding:40px 32px 72px;display:flex;flex-direction:column;gap:22px}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px}
-.h2{margin:0;font-size:20px;font-weight:700;color:var(--accent);letter-spacing:-0.01em}
+.h2{margin:0;font-family:var(--display);font-size:21px;font-weight:600;color:var(--ink);letter-spacing:-0.005em}
 .sub{margin:4px 0 0;font-size:14px;color:var(--muted);line-height:1.45}
-.eyebrow{margin:0;font-size:13px;font-weight:600;letter-spacing:.14em;color:var(--muted)}
-h1{margin:6px 0 0;font-size:44px;line-height:1.1;font-weight:800;letter-spacing:-0.02em}
+.eyebrow{margin:0;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+h1{margin:8px 0 0;font-family:var(--display);font-size:clamp(38px,4.6vw,56px);line-height:1.1;font-weight:600;letter-spacing:-0.01em}
 .meta{margin:10px 0 0;font-size:16px;color:var(--soft)}
-.head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px;padding-bottom:20px;border-bottom:1px solid #DADDE3}
+.head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px;padding-bottom:20px;border-bottom:1px solid #d8cbb5}
 .pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:20px}
-.answer{margin:0;font-size:26px;line-height:1.3;font-weight:700;letter-spacing:-0.01em}
+.answer{margin:0;font-family:var(--display);font-size:26px;line-height:1.3;font-weight:600;letter-spacing:-0.005em}
 .hot{color:var(--attn)}
 .bar{display:flex;height:28px;border-radius:8px;overflow:hidden;gap:2px}
 .legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px 16px;font-size:14px;margin:0;padding:0;list-style:none}
@@ -47,9 +50,9 @@ h1{margin:6px 0 0;font-size:44px;line-height:1.1;font-weight:800;letter-spacing:
 .scroll{overflow-x:auto}
 .table{min-width:980px}
 .cols{display:grid;grid-template-columns:2.1fr 1.35fr 1.5fr 1.4fr 1.3fr 1.2fr .6fr;gap:16px;align-items:center}
-.th{padding:10px 24px;background:#F7F8FA;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.th{padding:10px 24px;background:#efe2cc;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .th span{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
-.row{padding:16px 24px;border-bottom:1px solid #ECEEF2}
+.row{padding:16px 24px;border-bottom:1px solid #ebdcc1}
 .fname{margin:0;font-size:15px;font-weight:700}
 .fmeta{margin:2px 0 0;font-size:13px;color:var(--muted)}
 .pill{display:inline-flex;align-items:center;gap:6px;padding:5px 11px;border-radius:999px;font-size:13px;font-weight:600;white-space:nowrap;text-decoration:none}
@@ -67,8 +70,8 @@ h1{margin:6px 0 0;font-size:44px;line-height:1.1;font-weight:800;letter-spacing:
 .ic.watch{background:var(--watch-bg);color:var(--watch)}
 .ic.attn{background:var(--attn-bg);color:var(--attn)}
 .ic.na{background:#fff;color:var(--na)}
-.open{background:none;border:0;padding:12px 0;color:var(--accent);font-weight:600;cursor:pointer;white-space:nowrap}
-.back{align-self:flex-start;background:none;border:0;padding:10px 0;color:var(--accent);font-weight:600;cursor:pointer}
+.open{background:none;border:0;padding:12px 0;color:var(--accent-deep);font-weight:600;cursor:pointer;white-space:nowrap}
+.back{align-self:flex-start;background:none;border:0;padding:10px 0;color:var(--accent-deep);font-weight:600;cursor:pointer}
 .look{display:flex;flex-direction:column;gap:14px}
 .look article{border:1px solid var(--line);border-radius:12px;padding:16px 18px}
 .look h3{margin:0 0 8px;font-size:16px}
@@ -76,19 +79,22 @@ h1{margin:6px 0 0;font-size:44px;line-height:1.1;font-weight:800;letter-spacing:
 .look li{margin:4px 0}
 .ask{color:var(--soft)}
 .mixrow{display:grid;grid-template-columns:140px 1fr auto;gap:12px;align-items:center;margin-top:10px;font-size:14px}
-.mixbar{height:10px;background:#ECEEF2;border-radius:6px;overflow:hidden}
+.mixbar{height:10px;background:#ebdcc1;border-radius:6px;overflow:hidden}
 .mixbar i{display:block;height:100%;background:var(--fund)}
 .gaps{margin:0;padding-left:18px}
 .gaps li{margin:6px 0}
 .foot{font-size:13px;color:var(--muted);line-height:1.5}
+.brand{display:inline-flex;align-items:center;gap:9px;text-decoration:none;color:var(--ink);font-weight:600;font-size:14px}
+.brand .mark{width:24px;height:24px;border-radius:7px;flex:none}
+.mark{display:block}
 .foot p{margin:0 0 8px}
 .again{margin-top:8px}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{display:inline-flex;align-items:center;padding:5px 12px;border-radius:999px;background:#fff;border:1px solid #DADDE3;font-size:14px;color:#2A2F38}
-.chip.cat{background:var(--good-bg);border-color:#C9DBFB;color:var(--accent);font-weight:600}
+.chip{display:inline-flex;align-items:center;padding:5px 12px;border-radius:999px;background:#fff;border:1px solid #d8cbb5;font-size:14px;color:#211d18}
+.chip.cat{background:var(--good-bg);border-color:#d8cbb5;color:var(--accent);font-weight:600}
 .verdict{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
 .verdict .pill{font-size:18px;padding:9px 16px}
-.summary{background:#fff;border:1px solid #C9DBFB;border-radius:16px;padding:22px 24px;display:flex;flex-direction:column;gap:16px}
+.summary{background:var(--surface-2);border:1px solid var(--line);border-radius:16px;padding:22px 24px;display:flex;flex-direction:column;gap:16px}
 .summary p{margin:0;font-size:20px;line-height:1.45;font-weight:600}
 .score4{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
 .score4 div{border-radius:12px;padding:12px 14px}
@@ -100,7 +106,7 @@ h1{margin:6px 0 0;font-size:44px;line-height:1.1;font-weight:800;letter-spacing:
 .panel{display:flex;flex-direction:column;gap:14px;min-width:0}
 .lg{display:flex;flex-wrap:wrap;gap:8px 16px;margin:0;padding:0;list-style:none;font-size:13px;color:var(--soft)}
 .lg li{display:inline-flex;align-items:center;gap:6px}
-.years{display:grid;grid-template-columns:repeat(auto-fit,minmax(90px,1fr));gap:12px;align-items:end;border-bottom:1px solid #DADDE3;min-height:180px}
+.years{display:grid;grid-template-columns:repeat(auto-fit,minmax(90px,1fr));gap:12px;align-items:end;border-bottom:1px solid #d8cbb5;min-height:180px}
 .yr{text-align:center}
 .yr p{margin:8px 0 0;font-size:13px;color:var(--muted);font-weight:600}
 .bars{display:flex;justify-content:center;align-items:flex-end;gap:4px;height:160px}
@@ -115,35 +121,36 @@ h1{margin:6px 0 0;font-size:44px;line-height:1.1;font-weight:800;letter-spacing:
 .ytile small{display:block;color:var(--muted)}
 .yeargrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
 .dots{display:flex;gap:6px}
-.dots i{width:22px;height:22px;border-radius:4px;background:#E6E9EE}
+.dots i{width:22px;height:22px;border-radius:4px;background:#ebdcc1}
 .dots i.on{background:var(--fund)}
 .fall{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
-.fall div{background:#F7F8FA;border-radius:12px;padding:12px}
+.fall div{background:var(--surface-2);border-radius:12px;padding:12px}
 .qline{display:grid;grid-template-columns:72px 1fr;gap:10px;align-items:center;margin-top:8px}
 .qbox{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
-.qbox i{text-align:center;font-size:12px;font-style:normal;padding:6px 2px;border-radius:6px;background:#F3F4F6;color:var(--muted)}
+.qbox i{text-align:center;font-size:12px;font-style:normal;padding:6px 2px;border-radius:6px;background:#FAFAF7;color:var(--muted)}
 .qbox i.on{background:var(--good-bg);color:var(--good);font-weight:700}
-.meter{position:relative;height:10px;background:#ECEEF2;border-radius:6px}
+.meter{position:relative;height:10px;background:#ebdcc1;border-radius:6px}
 .meter i{position:absolute;top:-4px;width:4px;height:18px;background:var(--ink);border-radius:2px}
 .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
-.facts div{background:#F7F8FA;border-radius:12px;padding:12px 14px}
+.facts div{background:var(--surface-2);border-radius:12px;padding:12px 14px}
 .facts b{display:block;font-size:13px;color:var(--muted);font-weight:600}
-.mean{background:none;border:0;padding:0;color:var(--accent);font-size:13px;font-weight:600;cursor:pointer;text-align:left}
+.mean{background:none;border:0;padding:0;color:var(--accent-deep);font-size:13px;font-weight:600;cursor:pointer;text-align:left}
 .mean-body{margin:6px 0 0;font-size:13px;color:var(--muted)}
 .panel .sent{margin:0;font-size:14px;color:var(--soft)}
 .start{display:flex;flex-direction:column;gap:16px}
-.start h2{margin:0;font-size:32px;line-height:1.15;font-weight:800;letter-spacing:-0.02em}
-.drop{display:flex;flex-direction:column;gap:4px;border:1.5px dashed var(--na-line);border-radius:16px;padding:22px;background:#fff;cursor:pointer}
+.start h2{margin:0;font-family:var(--display);font-size:clamp(26px,3.2vw,38px);line-height:1.15;font-weight:600;letter-spacing:-0.005em}
+.drop{display:flex;flex-direction:column;gap:6px;border:1.5px dashed #c9b28a;border-radius:16px;padding:24px;background:var(--surface);cursor:pointer}
 .drop.over{border-color:var(--accent);background:var(--good-bg)}
-.drop input{margin-top:8px}
-.privacy{background:var(--good-bg);color:var(--good);border-radius:12px;padding:12px 14px;margin:0}
+.drop input[type=file]{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+.drop::after{content:'Browse files';align-self:flex-start;margin-top:10px;border-radius:999px;background:var(--accent);color:#fff;font-weight:600;font-size:14px;padding:8px 16px}
+.privacy{background:var(--surface-2);color:var(--soft);border-radius:12px;padding:12px 14px;margin:0}
 .pass{display:flex;flex-direction:column;gap:4px;font-weight:600}
 .pass span{font-weight:400;color:var(--muted);font-size:14px}
 .pass input{margin-top:4px;padding:10px 12px;border:1px solid var(--line);border-radius:10px}
 .pick h3{margin:0 0 6px;font-size:18px}
 .pick-box{position:relative}
 .pick-box input{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:12px}
-.pick-list{position:absolute;z-index:2;left:0;right:0;margin:4px 0 0;padding:6px;list-style:none;background:#fff;border:1px solid var(--line);border-radius:12px;max-height:280px;overflow:auto}
+.pick-list{position:absolute;z-index:2;left:0;right:0;margin:4px 0 0;padding:6px;list-style:none;background:#fbf3e4;border:1px solid var(--line);border-radius:12px;max-height:280px;overflow:auto}
 .pick-list button,.picks button{width:100%;text-align:left;background:none;border:0;padding:8px 10px;cursor:pointer}
 .pick-list small{display:block;color:var(--muted)}
 .picks{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0;padding:0;list-style:none}
@@ -151,14 +158,15 @@ h1{margin:6px 0 0;font-size:44px;line-height:1.1;font-weight:800;letter-spacing:
 .pick-actions{display:flex;gap:8px}
 .btn{border:1px solid var(--line);background:#fff;border-radius:999px;padding:10px 16px;cursor:pointer;font-weight:600}
 .btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
-.btn:disabled{opacity:.45;cursor:default}
+.btn.primary:hover{background:#c2682c}
+.btn:disabled{background:var(--line);border-color:var(--line);color:#8a7a5f;opacity:1;cursor:default}
 .alt{display:flex;align-items:center;gap:10px}
 .steps{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
-.steps li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px}
+.steps li{background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:14px}
 .steps span,.checks small{display:block;color:var(--muted);font-weight:400;font-size:14px}
 .start .checks{display:block}
 .start .checks ul{margin:8px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px}
-.start .checks li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-weight:600}
+.start .checks li{background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-weight:600}
 .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 .err{color:var(--attn);font-weight:600}
 .state{padding:48px 0;text-align:center}
@@ -206,7 +214,7 @@ function find(f,topic){
 function score(f,topic){return (f.scorecard||[]).find(s=>s.topic===topic)}
 function cell(status,html){const k=kind(status);return '<div class="cell"><span class="ic '+k+'">'+icon(k)+'</span><span>'+html+'</span></div>'}
 const QLAB={1:"Top 25%",2:"Upper middle",3:"Lower middle",4:"Bottom 25%"};
-const VCOL={"Doing well":"#2F6FDE","On track":"#9AA3B2","Worth a closer look":"#E3A23B","Needs attention":"#D4561B","Limited data":"#DADDE2","Not enough data":"#DADDE2"};
+const VCOL={"Doing well":"#d47636","On track":"#c9bfa9","Worth a closer look":"#d9a13b","Needs attention":"#D4561B","Limited data":"#d8cbb5","Not enough data":"#d8cbb5"};
 const CHECKS=[["returns","Beat its index?"],["risk","Falls less in crashes?"],["peers","Rank among similar funds"],["costs","What you pay"]];
 function samplePill(R){return (R.data_source&&/illustrative/i.test(R.data_source))||(R.as_of&&/sample/i.test(R.as_of))}
 function meta(R){
@@ -288,8 +296,8 @@ function growthPanel(f,R){
   const anyT=rows.some(r=>r.typical!=null);
   const bench=esc((f.facts&&f.facts.benchmark)||"its index");
   const cols=rows.map(r=>{
-    const bits=[[r.fund,"#2F6FDE",true],[r.bench,"#B5BBC6",false]];
-    if(r.typical!=null)bits.push([r.typical,"#4A5568",false]);
+    const bits=[[r.fund,"#d47636",true],[r.bench,"#d8cbb5",false]];
+    if(r.typical!=null)bits.push([r.typical,"#4a463f",false]);
     return '<div class="yr"><div class="bars">'+bits.map(b=>'<div class="barcol"><span>'+(b[2]?"<b>":"")+pct(b[0])+(b[2]?"</b>":"")+'</span><i style="height:'+h(b[0]).toFixed(0)+'px;background:'+b[1]+'"></i></div>').join("")+'</div><p>'+r.years+(r.years===1?" year":" years")+'</p></div>';
   }).join("");
   const head=rows.slice().sort((a,b)=>b.years-a.years)[0];
@@ -304,7 +312,7 @@ function growthPanel(f,R){
   if(n.fund_value!=null&&n.horizon_years>1){
     money='<p class="money">₹1,00,000 invested '+n.horizon_years+' years ago would now be <b>'+inr(n.fund_value)+'</b> in this fund, <b>'+inr(n.bench_value)+'</b> in the index'+(n.typical_value!=null?", <b>"+inr(n.typical_value)+"</b> in the typical fund":"")+".</p>";
   }
-  const legend='<ul class="lg"><li><i class="sw" style="background:#2F6FDE"></i>This fund</li><li><i class="sw" style="background:#B5BBC6"></i>'+bench+'</li>'+(anyT?'<li><i class="sw" style="background:#4A5568"></i>Typical '+esc(f.category)+' fund</li>':"")+'</ul>';
+  const legend='<ul class="lg"><li><i class="sw" style="background:#d47636"></i>This fund</li><li><i class="sw" style="background:#d8cbb5"></i>'+bench+'</li>'+(anyT?'<li><i class="sw" style="background:#4a463f"></i>Typical '+esc(f.category)+' fund</li>':"")+'</ul>';
   return panel("Growth vs its index","Average growth per year.",legend+'<div class="years">'+cols+'</div>'+chips+money,ins.sentence,R,"cagr");
 }
 function capturePanel(f,R){
@@ -426,20 +434,20 @@ function gapBlock(R){
 }
 function portfolio(R){
   const parts=splits(R);
-  const bar=parts.map(p=>'<div style="width:'+p.pct.toFixed(2)+'%;background:'+(VCOL[p.name]||"#DADDE2")+'"></div>').join("");
-  const legend=parts.map(p=>'<li><i class="sw" style="background:'+(VCOL[p.name]||"#DADDE2")+'"></i><span><b>'+esc(p.name)+'</b> · '+p.n+" fund"+(p.n===1?"":"s")+"<br><span style=\"color:var(--muted)\">"+(R.equal_weight?p.pct.toFixed(1)+"%":inr(p.v)+" ("+p.pct.toFixed(1)+"%)")+"</span></span></li>").join("");
+  const bar=parts.map(p=>'<div style="width:'+p.pct.toFixed(2)+'%;background:'+(VCOL[p.name]||"#d8cbb5")+'"></div>').join("");
+  const legend=parts.map(p=>'<li><i class="sw" style="background:'+(VCOL[p.name]||"#d8cbb5")+'"></i><span><b>'+esc(p.name)+'</b> · '+p.n+" fund"+(p.n===1?"":"s")+"<br><span style=\"color:var(--muted)\">"+(R.equal_weight?p.pct.toFixed(1)+"%":inr(p.v)+" ("+p.pct.toFixed(1)+"%)")+"</span></span></li>").join("");
   const tiles=CHECKS.map(([t,title])=>{
     const items=[];
     R.funds.forEach(f=>{const s=score(f,t);if(s&&s.status!=="na")items.push(s.status)});
     if(!items.length)return "";
     const fine=items.filter(s=>s==="good"||s==="ok").length;
-    const segs=items.map(s=>'<span style="flex:1;height:6px;border-radius:3px;background:'+(s==="attention"?"#D4561B":s==="watch"?"#E3A23B":"#2F6FDE")+'"></span>').join("");
+    const segs=items.map(s=>'<span style="flex:1;height:6px;border-radius:3px;background:'+(s==="attention"?"#D4561B":s==="watch"?"#d9a13b":"#d47636")+'"></span>').join("");
     return '<div class="tile"><p class="tile-t">'+esc(title)+'</p><p class="tile-n">'+fine+'<span> of '+items.length+' fine</span></p><div class="segs">'+segs+'</div></div>';
   }).join("");
   const rows=R.funds.map((f,i)=>'<div class="cols row"><div><p class="fname">'+esc(f.name)+'</p><p class="fmeta">'+holdLine(R,f)+'</p></div><div><span class="pill '+pillKind(f)+'">'+icon(pillKind(f))+esc(f.verdict)+'</span></div>'+growthCell(f)+crashCell(f)+rankCell(f)+costCell(f)+'<button class="open" type="button" data-open="'+i+'">Open →</button></div>').join("");
   const closer=R.funds.filter(f=>f.verdict==="Worth a closer look"||f.verdict==="Needs attention");
   const look=closer.length?'<section class="card look"><h2 class="h2">Worth a closer look</h2>'+closer.map(f=>'<article><h3>'+esc(f.name)+'</h3><ul>'+(f.look_at||[]).slice(0,3).map(x=>'<li>'+show(x)+'</li>').join("")+(f.questions||[]).slice(0,2).map(q=>'<li class="ask">Ask: '+esc(q)+'</li>').join("")+'</ul></article>').join("")+'</section>':"";
-  app().innerHTML='<div class="page"><header class="head"><div><p class="eyebrow">YOUR MUTUAL FUND CHECK-UP</p><h1>Portfolio report card</h1><p class="meta">'+esc(meta(R))+'</p></div><div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center">'+(samplePill(R)?'<span class="pill na">Sample data, not a real portfolio</span>':"")+'<a class="pill na" href="https://jamapoonji.com/">JamaPoonji</a></div></header>'
+  app().innerHTML='<div class="page"><header class="head"><div><p class="eyebrow">YOUR MUTUAL FUND CHECK-UP</p><h1>Portfolio report card</h1><p class="meta">'+esc(meta(R))+'</p></div><div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center">'+(samplePill(R)?'<span class="pill na">Sample data, not a real portfolio</span>':"")+brand()+'</div></header>'
     +(R.equal_weight?'<p class="sub">'+esc(R.equal_weight_note||"These funds are weighted equally, because no amounts were given.")+'</p>':"")
     +'<div class="pair"><section class="card" style="display:flex;flex-direction:column;gap:18px"><div><h2 class="h2">The short answer</h2><p class="sub">Each fund gets one verdict. The bar shows how much of '+(R.equal_weight?"this comparison":"your money")+' sits in each.</p></div><p class="answer">'+shortAnswer(R)+'</p><div class="bar" role="img">'+bar+'</div><ul class="legend">'+legend+'</ul></section>'
     +'<section class="card" style="display:flex;flex-direction:column;gap:16px"><div><h2 class="h2">Four checks, across all your funds</h2><p class="sub">How many funds passed each check. Funds the check does not apply to are left out.</p></div><div class="checks">'+tiles+'</div><p class="keyline">Blue = fine. Amber = worth a look. Orange = needs attention.</p></section></div>'
@@ -457,7 +465,9 @@ function bind(R){
 }
 function mount(R){portfolio(R)}
 const app=()=>document.getElementById("app");
-function top(){return '<header class="head"><div><p class="eyebrow">YOUR MUTUAL FUND CHECK-UP</p><h1>Your mutual fund check-up</h1></div><a class="pill na" href="https://jamapoonji.com/">JamaPoonji</a></header>'}
+const MARK='<svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#d47636"/> <path fill="#f5ead6" d="M5.08 26.94Q3.96 26.94 3.21 26.58Q2.46 26.23 2.27 25.38Q2.44 24.54 2.9 24.23Q3.36 23.91 4.04 23.91Q4.67 23.91 5.13 24.12Q5.6 24.32 6.19 24.81L7.2 25.63L7.04 25.85L6.77 25.85L6.71 25.77Q6.88 25.19 6.96 24.59Q7.04 23.99 7.08 23.23Q7.12 22.47 7.13 21.52Q7.15 20.56 7.15 19.34Q7.15 18.68 7.15 18.11Q7.15 17.54 7.13 16.83Q7.12 16.12 7.12 15.17Q7.12 14.22 7.12 12.85Q7.12 11.49 7.09 9.57Q7.07 7.65 7.04 5.06L10.63 5.06Q10.58 7.11 10.57 9.18Q10.55 11.25 10.55 13.37L10.55 17.73Q10.55 19.34 10.49 20.47Q10.42 21.6 10.2 22.43Q9.98 23.26 9.67 23.89Q9.35 24.51 8.89 25.08Q8.07 26.09 7.12 26.51Q6.17 26.94 5.08 26.94ZM4.32 6.45L4.32 5.06L12.95 5.06L12.95 6.45L9.22 6.78L8.21 6.78ZM14.72 23.15L14.72 21.76L18.42 21.43L19.49 21.43L23.27 21.76L23.27 23.15ZM17.01 23.15Q17.06 21.76 17.07 20.39Q17.09 19.01 17.09 17.58Q17.09 16.15 17.09 14.76L17.09 13.51Q17.09 12.09 17.09 10.67Q17.09 9.26 17.07 7.86Q17.06 6.45 17.01 5.06L20.74 5.06Q20.71 6.43 20.7 7.83Q20.68 9.23 20.68 10.65Q20.68 12.06 20.68 13.51L20.68 15.22Q20.68 16.45 20.68 17.74Q20.68 19.04 20.7 20.39Q20.71 21.73 20.74 23.15ZM18.97 16.15L18.97 14.71L21.99 14.71Q23.46 14.71 24.4 14.19Q25.34 13.67 25.78 12.7Q26.21 11.74 26.21 10.48Q26.21 8.52 25.16 7.53Q24.12 6.53 21.94 6.53L19.02 6.53L19.02 5.06L22.18 5.06Q24.8 5.06 26.46 5.73Q28.12 6.4 28.92 7.62Q29.73 8.85 29.73 10.48Q29.73 12.04 28.95 13.33Q28.17 14.62 26.43 15.39Q24.69 16.15 21.83 16.15ZM14.72 6.45L14.72 5.06L18.7 5.06L18.7 6.78L18.34 6.78Z"/></svg>';
+function brand(){return '<a class="brand" href="https://jamapoonji.com/">'+MARK+'<span>JamaPoonji</span></a>'}
+function top(){return '<header class="head"><div><p class="eyebrow">YOUR MUTUAL FUND CHECK-UP</p><h1>Your mutual fund check-up</h1></div>'+brand()+'</header>'}
 function landing(){
   const api=window.MFAdvisor||{},accept=api.accept||".csv,.xlsx,.xls,.pdf";
   app().innerHTML='<div class="page">'+top()+'<div class="start"><h2>See how your mutual funds are really doing</h2>'

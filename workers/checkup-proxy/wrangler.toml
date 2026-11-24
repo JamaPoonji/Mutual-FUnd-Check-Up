@@ -1,0 +1,14 @@
+name = "checkup-proxy"
+main = "index.js"
+compatibility_date = "2026-11-01"
+
+# Custom domain: Cloudflare creates the DNS record and certificate.
+routes = [
+  { pattern = "checkup.jamapoonji.com", custom_domain = true }
+]
+
+# Rate-limit counters (strongly consistent; KV silently did nothing here).
+[[d1_databases]]
+binding = "DB"
+database_name = "checkup-limits"
+database_id = "b71cfc8d-7790-449c-a741-304ba7c7c554"
