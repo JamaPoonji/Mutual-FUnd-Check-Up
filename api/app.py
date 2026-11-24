@@ -187,6 +187,7 @@ def home():
     return start_page()
 
 
+@app.get("/health")
 @app.get("/healthz")
 def healthz():
     try:
